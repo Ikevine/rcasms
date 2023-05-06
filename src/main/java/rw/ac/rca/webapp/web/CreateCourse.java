@@ -66,8 +66,8 @@ public class CreateCourse extends HttpServlet {
                 Course course = null;
                 try {
                     course = new Course(
-                            request.getParameter("name"),
-                            request.getParameter("code"),
+                             request.getParameter("name"),
+                             request.getParameter("code"),
                              Integer.parseInt(request.getParameter("min")),
                              Integer.parseInt(request.getParameter("max")),
                              simpleDateFormat.parse(request.getParameter("start")),

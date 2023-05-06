@@ -17,7 +17,6 @@ import org.hibernate.service.ServiceRegistry;
  * 
  */
 public class SmisSessionFactory {
-	
 	private static SessionFactory sessionFactory;
 	private static StandardServiceRegistryBuilder serviceRegistryBuilder;
 	private static String configFile = "hibernate.cfg.xml";

@@ -135,7 +135,7 @@
 		<input type="text" placeholder="Username" required name="username">
 		<input type="password" placeholder="Password" required name="password">
 		<input type="submit" value="Sign In">
-		<p>Create an account <span><a href="createuser.php?page=createuser"> Sign up</a>	</span></p>
+		<p>Create an account <span><a href="createuser.php?page=createuser"> Sign up</a></span></p>
 
 	</form>
 </div>

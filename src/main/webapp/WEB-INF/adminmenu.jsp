@@ -8,6 +8,9 @@
 		<li><a href="listuser.php?page=users&&action=list"><img
 				src="icons/application_view_list.png" /> List of users</a></li>
 
+		<li><a href="users.php?page=users"><img
+				src="icons/application_view_list.png" /> users</a></li>
+
 	</ul></li>
 <li><a
 	href="listemployees.php?page=employees&&user_role=adm&&action=list"><img

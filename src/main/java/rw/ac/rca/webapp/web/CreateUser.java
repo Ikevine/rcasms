@@ -19,7 +19,7 @@ import java.io.IOException;
 public class CreateUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private UserDAO userDAO = UserDAOImpl.getInstance();
-       
+
     /**
      * @see HttpServlet#HttpServlet()
      */
