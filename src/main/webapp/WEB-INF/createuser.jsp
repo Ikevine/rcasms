@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
-<!-- <%--<jsp:include page="headeradmin.jsp"><jsp:param--%>
+<%--<jsp:include page="headeradmin.jsp"><jsp:param--%>
 <%--		name="title" value="Create User" />--%>
 <%--</jsp:include>--%>
 <%--<div id="middle">--%>
@@ -55,7 +55,7 @@
 <%--			</table>--%>
 <%--		</form>--%>
 <%--</div>--%>
-<%--<%@ include file="footer.jsp"%>--%> -->
+<%--<%@ include file="footer.jsp"%>--%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -154,7 +154,8 @@
     <img src="https://media.licdn.com/dms/image/C560BAQEl6a9tUkSKfg/company-logo_200_200/0/1558604414993?e=2147483647&amp;v=beta&amp;t=liCSw94UkEjwbMZZh8N23ZMYixEAMmZNq2IftvsF97Y"
          alt="LinkedIn Logo">
     <h2>Sign In</h2>
-    <p>Hellow this </p>
+    <p>Welcome to RCA SMIS.Please enter your details.</p>
+    ${go}
 <c:if test="${error != null}">
 					<p>
 						<span style="color: red"> ${error}</span>

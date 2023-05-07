@@ -38,17 +38,15 @@ public class ListUser extends HttpServlet {
 		Object user = httpSession.getAttribute("authenticatedUser");
 		System.out.println("The user in session is: " + user);
 
-		if (pageRedirect != null) {
-			if (pageRedirect.equals("users") && request.getParameter("action").equals("list")) {
-
-				List<User> users = userDAO.getAllUsers();
-				httpSession.setAttribute("users", users);
-				UserRole[] userRoles = UserRole.values();
-				httpSession.setAttribute("userRoles", userRoles);
-				RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/users.jsp");
-				dispatcher.forward(request, response);
-			} 
-		} else {
+		try{
+			List<User> users = userDAO.getAllUsers();
+			httpSession.setAttribute("users", users);
+			UserRole[] userRoles = UserRole.values();
+			httpSession.setAttribute("userRoles", userRoles);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/users.jsp");
+			dispatcher.forward(request, response);
+		}
+		catch(Exception e){
 			httpSession.setAttribute("error", "Invalid User. Try again!");
 			RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/login.jsp");
 			dispatcher.forward(request, response);

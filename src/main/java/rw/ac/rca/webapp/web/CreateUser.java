@@ -64,8 +64,7 @@ public class CreateUser extends HttpServlet {
 			userDAO.saveOrUpdateUser(user);
 
 			httpSession.setAttribute("success", "Created successfully");
-			request.getRequestDispatcher("WEB-INF/createuser.jsp").forward(
-					request, response);
+			response.sendRedirect("listuser.php");
 
 		}
 		catch (Exception e) {

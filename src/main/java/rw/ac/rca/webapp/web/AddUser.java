@@ -48,7 +48,7 @@ public class AddUser extends HttpServlet {
            user.setPassword(hashpasw);
            userDAO.saveUser(user);
            httpSession.setAttribute("success" , "well done my baby");
-           request.getRequestDispatcher("WEB-INF/users.jsp").forward(request , response);
+           request.getRequestDispatcher("listuser.php").forward(request , response);
 
        }
        catch(Exception e ){

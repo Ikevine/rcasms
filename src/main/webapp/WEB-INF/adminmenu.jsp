@@ -2,15 +2,14 @@
 		src="icons/application_side_expand.png" /> Admin</a>
 	<ul class="noJS">
 
-		<li><a href="createuser.php?page=createuser"><img
+		<li><a href="/adduser.php?page=adduser"><img
 				src="icons/user_add.png" /> Create User</a></li>
 
 		<li><a href="listuser.php?page=users&&action=list"><img
 				src="icons/application_view_list.png" /> List of users</a></li>
 
-		<li><a href="users.php?page=users"><img
-				src="icons/application_view_list.png" /> users</a></li>
-
+		<li><a href="listcourses.php?page=createcourse"><img
+				src="icons/application_view_list.png" /> create course</a></li>
 	</ul></li>
 <li><a
 	href="listemployees.php?page=employees&&user_role=adm&&action=list"><img

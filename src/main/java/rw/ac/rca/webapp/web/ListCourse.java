@@ -36,24 +36,17 @@ public class ListCourse extends HttpServlet {
 		// TODO Auto-generated method stub
 		String pageRedirect = request.getParameter("page");
 
-		HttpSession httpSession = request.getSession();
-		Object user = httpSession.getAttribute("authenticatedUser");
-		System.out.println("The user in session is: " + user);
+				HttpSession httpSession = request.getSession();
+				Object user = httpSession.getAttribute("authenticatedUser");
+				System.out.println("The user in session is: " + user);
 
-		if (pageRedirect != null) {
-			if (pageRedirect.equals("courses") && request.getParameter("action").equals("list")) {
 
 				List<Course> courses = courseDAO.getAllCourses();
 				httpSession.setAttribute("courses", courses);
 				UserRole[] userRoles = UserRole.values();
 				httpSession.setAttribute("userRoles", userRoles);
 				request.getRequestDispatcher("WEB-INF/courses.jsp").forward(request , response);
-			}
-		} else {
-			httpSession.setAttribute("error", "Invalid User. Try again!");
-			RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/login.jsp");
-			dispatcher.forward(request, response);
-		}
+
 	}
 
 	/**
