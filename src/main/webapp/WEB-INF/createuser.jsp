@@ -4,6 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
+
 <%--<jsp:include page="headeradmin.jsp"><jsp:param--%>
 <%--		name="title" value="Create User" />--%>
 <%--</jsp:include>--%>
@@ -155,7 +156,6 @@
          alt="LinkedIn Logo">
     <h2>Sign In</h2>
     <p>Welcome to RCA SMIS.Please enter your details.</p>
-    ${go}
 <c:if test="${error != null}">
 					<p>
 						<span style="color: red"> ${error}</span>
@@ -166,6 +166,7 @@
             <span style="color: green"> ${success}</span>
         </p>
     </c:if>
+    
     <form  action="createuser.php?page=createuser" method="post">
         <input type="text" placeholder="Username" required name="username">
         <input type="text" placeholder="Email" required name="email">

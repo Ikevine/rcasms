@@ -9,7 +9,7 @@
 				src="icons/application_view_list.png" /> List of users</a></li>
 
 		<li><a href="listcourses.php?page=createcourse"><img
-				src="icons/application_view_list.png" /> create course</a></li>
+				src="icons/application_view_list.png" />List of courses</a></li>
 	</ul></li>
 <li><a
 	href="listemployees.php?page=employees&&user_role=adm&&action=list"><img
@@ -18,6 +18,9 @@
 <li><a class="idTabs" href="#students"><img
 		src="icons/application_side_expand.png" /> Students</a>
 	<ul class="noJS">
+		<li><a
+				href="createstudent.php?page=students&&user_role=adm&&action=list"><img
+				src="icons/application_view_list.png" /> Create Student</a></li>
 		<li><a
 			href="liststudents.php?page=students&&user_role=adm&&action=list"><img
 				src="icons/application_view_list.png" /> Students</a></li>

@@ -4,6 +4,7 @@
 package rw.ac.rca.webapp.orm;
 
  import javax.persistence.*;
+ import java.io.Serializable;
  import java.util.List;
 
 /**
@@ -11,7 +12,7 @@ package rw.ac.rca.webapp.orm;
  *
  */
 @Entity
-public class Student extends Person{
+public class Student extends Person implements Serializable {
 
 	/**
 	 * 
@@ -20,6 +21,12 @@ public class Student extends Person{
 	private boolean isInternational;
 	private boolean isPartTime;
 	private boolean isRepeating;
+	@OneToMany(cascade= CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "student")
+	private List<Enrol> enrols;
+	
+	@ManyToOne
+	@JoinColumn(name = "address_id" , referencedColumnName = "id")
+	private Address address;
 	
 	public Student() {
 	}
@@ -30,12 +37,6 @@ public class Student extends Person{
 		this.isRepeating = isRepeating;
 	}
 	
-	@OneToMany(cascade= CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "student")
-	private List<Enrol> enrols;
-	
-	@ManyToOne
-	@JoinColumn(name = "address_id")
-	private Address address;
 	
 	public boolean isInternational() {
 		return isInternational;

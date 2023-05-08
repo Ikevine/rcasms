@@ -18,11 +18,17 @@ public abstract class Person implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.TABLE)
 	int id;
-	private String firstName;
-	private String lastName;
+
+	private String fullName;
 	private Date dateOfBirth;
 	private String phoneNumber;
-	
+	public String getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
 	public int getId() {
 		return id;
 	}
@@ -31,23 +37,6 @@ public abstract class Person implements Serializable{
 		this.id = id;
 	}
 	
-	@Column(nullable = false)
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	
-	//@Column(nullable = false)
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
 
 	public Date getDateOfBirth() {
 		return dateOfBirth;
@@ -68,9 +57,8 @@ public abstract class Person implements Serializable{
 	public Person() {
 	}
 
-	public Person(String firstName, String lastName, Date dateOfBirth, String phoneNumber) {
-		this.firstName = firstName;
-		this.lastName = lastName;
+	public Person(String fullName, Date dateOfBirth, String phoneNumber) {
+		this.fullName = fullName;
 		this.dateOfBirth = dateOfBirth;
 		this.phoneNumber = phoneNumber;
 	}

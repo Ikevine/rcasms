@@ -82,7 +82,7 @@ public class CreateCourse extends HttpServlet {
                  try {
                     courseDAO.saveCourse(course);
                      request.setAttribute("success" , "Successfully created the Course" );
-                     request.getRequestDispatcher("WEB-INF/createCourse.jsp").forward(request , response);
+                     request.getRequestDispatcher("listcourses.php").forward(request , response);
                  }catch (Exception e){
                      request.setAttribute("error" , "Failed to create the Course" );
                      request.getRequestDispatcher("WEB-INF/createCourse.jsp").forward(request , response);

@@ -58,10 +58,22 @@
         <servlet-name>AddUser</servlet-name>
         <servlet-class>rw.ac.rca.webapp.web.AddUser</servlet-class>
     </servlet>
-<!--    <servlet>-->
-<!--        <servlet-name>CreateStudent</servlet-name>-->
-<!--        <servlet-class>rw.ac.rca.webapp.web.CreateStudent</servlet-class>-->
-<!--    </servlet>-->
+    <servlet>
+        <servlet-name>CreateStudent</servlet-name>
+        <servlet-class>rw.ac.rca.webapp.web.CreateStudent</servlet-class>
+    </servlet>
+  <servlet>
+    <servlet-name>ListStudents</servlet-name>
+    <servlet-class>rw.ac.rca.webapp.web.ListStudents</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>ListStudents</servlet-name>
+     <url-pattern>/Liststudents.php</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+      <servlet-name>CreateStudent</servlet-name>
+      <url-pattern>/createstudent.php</url-pattern>
+    </servlet-mapping>
 
     <servlet-mapping>
       <servlet-name>AddUser</servlet-name>
