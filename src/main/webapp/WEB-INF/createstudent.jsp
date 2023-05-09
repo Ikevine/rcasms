@@ -31,7 +31,6 @@ ${success}
     <input type="checkbox" name="partTime" value="part"> partTime <br>
     <input type="checkbox" name="repeating" value="repeat"> repeating <br>
     <input type="submit" value="Create Student">
-
 </form>
 </body>
 </html>

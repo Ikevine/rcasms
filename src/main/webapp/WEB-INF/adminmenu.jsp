@@ -8,7 +8,7 @@
 		<li><a href="listuser.php?page=users&&action=list"><img
 				src="icons/application_view_list.png" /> List of users</a></li>
 
-		<li><a href="listcourses.php?page=createcourse"><img
+		<li><a href="listcourses.php?page=listcourse"><img
 				src="icons/application_view_list.png" />List of courses</a></li>
 	</ul></li>
 <li><a
@@ -19,11 +19,11 @@
 		src="icons/application_side_expand.png" /> Students</a>
 	<ul class="noJS">
 		<li><a
-				href="createstudent.php?page=students&&user_role=adm&&action=list"><img
+				href="createstudent.php?page=students"><img
 				src="icons/application_view_list.png" /> Create Student</a></li>
 		<li><a
-			href="liststudents.php?page=students&&user_role=adm&&action=list"><img
-				src="icons/application_view_list.png" /> Students</a></li>
+			href="Liststudents.php?page=liststudents"><img
+				src="icons/application_view_list.png" />list Students</a></li>
 		<li><a
 			href="listparents.php?page=parents&&user_role=adm&&action=list"><img
 				src="icons/application_view_list.png" /> Parents</a></li>

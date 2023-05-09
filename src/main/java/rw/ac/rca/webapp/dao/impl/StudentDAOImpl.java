@@ -10,10 +10,15 @@ import java.util.List;
 public class StudentDAOImpl extends  DAO implements StudentDAO {
 
      public static final Logger LOG = Logger.getLogger(StudentDAOImpl.class);
-     public static StudentDAOImpl studentDAO = new StudentDAOImpl();
+     public static StudentDAOImpl instance ;
      private StudentDAOImpl(){}
-     public  static StudentDAOImpl getInstance(){
-          return studentDAO;
+     public static StudentDAOImpl getInstance() {
+          if (instance == null) {
+               return new StudentDAOImpl();
+
+          } else {
+               return instance;
+          }
      }
 
 
@@ -21,13 +26,15 @@ public class StudentDAOImpl extends  DAO implements StudentDAO {
      public Student saveStudent(Student student) {
          try{
               begin();
-              Student student1 = (Student) getSession().save(student);
+              getSession().save(student);
               commit();
-              return  student1;
+              return student;
          }
          catch (Exception e){
+              e.printStackTrace();
+              LOG.error("oooooop srry sweet I can't go");
               rollback();
-              return null;
+             return  null;
          }
      }
 
@@ -80,7 +87,7 @@ public class StudentDAOImpl extends  DAO implements StudentDAO {
      public List<Student> getAllStudents() {
           try{
                begin();
-               Query query = getSession().createQuery("from student");
+               Query query = getSession().createQuery("from Student");
                List<Student> students = query.list();
                commit();
                return students;

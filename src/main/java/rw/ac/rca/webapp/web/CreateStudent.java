@@ -27,34 +27,38 @@ private StudentDAO studentDAO = StudentDAOImpl.getInstance();
         HttpSession httpSession = request.getSession();
         Student student = new Student();
         String fullName = request.getParameter("fullName");
+
         Date dateOfBirth = null;
         try {
             dateOfBirth = simpleDateFormat.parse(request.getParameter("birth"));
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
+
         String phoneNumber = request.getParameter("phone");
         Boolean isInternation = Boolean.parseBoolean(request.getParameter("international"));
         Boolean isPartTime = Boolean.parseBoolean(request.getParameter("partTime"));
         Boolean isRepeating= Boolean.parseBoolean(request.getParameter("repeating"));
 
-        try{
-            student.setFullName(fullName);
-            student.setDateOfBirth(dateOfBirth);
-            student.setPhoneNumber(phoneNumber);
-            student.setInternational(isInternation);
-            student.setRepeating(isRepeating);
-            student.setPartTime(isPartTime);
+        student.setFullName(fullName);
+        student.setDateOfBirth(dateOfBirth);
+        student.setPhoneNumber(phoneNumber);
+        student.setInternational(isInternation);
+        student.setRepeating(isRepeating);
+        student.setPartTime(isPartTime);
 
-            studentDAO.saveStudent(student);
-            request.setAttribute("s", "Student is created successfully");
-            request.getRequestDispatcher("WEB-INF/createstudent.jsp").forward(request , response);
-        }
-        catch(Exception e){
+            try{
 
+               Student s1 =  studentDAO.saveStudent(student);
+               request.setAttribute("s", "Student is created successfully");
+               request.getRequestDispatcher("Liststudents.php").forward(request, response);
+
+            }
+
+            catch(Exception e){
                 request.setAttribute("f" , "Fail to create student");
                 request.getRequestDispatcher("WEB-INF/createstudent.jsp").forward(request , response);
-           }
-
+             }
+        }
     }
-}
+
