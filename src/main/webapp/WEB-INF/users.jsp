@@ -100,6 +100,9 @@
 										<td>${usr.userRole.getRoleDescription()}</td>
 										<td><input type="checkbox" name="usrIds"
 											value="${usr.id}" /></td>
+										<td>
+											<a href="deleteuser.php?id=${usr.id}">Delete user</a>
+										</td>
 									</tr>
 								</c:forEach>
 							</tbody>

@@ -46,9 +46,10 @@ public class AddUser extends HttpServlet {
            user.setEmail(email);
            user.setUserRole(userr);
            user.setPassword(hashpasw);
+
            userDAO.saveUser(user);
            httpSession.setAttribute("success" , "well done my baby");
-           request.getRequestDispatcher("listuser.php").forward(request , response);
+           request.getRequestDispatcher("WEB-INF/createuser.jsp").forward(request , response);
 
        }
        catch(Exception e ){

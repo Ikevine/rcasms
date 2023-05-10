@@ -10,15 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4227c579-e885-4dcc-a024-bef992e933eb" name="Changes" comment="Done to understand time to implement">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/liststudents.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/DeleteUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/impl/StudentDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/impl/StudentDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/CreateCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/CreateCourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/CreateStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/CreateStudent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/CreateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/CreateUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/ListStudents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/ListStudents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/adminmenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/adminmenu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/createstudent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/createstudent.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/impl/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/AddUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/AddUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +191,8 @@
       <workItem from="1683410349045" duration="2847000" />
       <workItem from="1683437560193" duration="17169000" />
       <workItem from="1683522817946" duration="11872000" />
-      <workItem from="1683535491937" duration="38201000" />
+      <workItem from="1683535491937" duration="39001000" />
+      <workItem from="1683697398050" duration="3943000" />
     </task>
     <task id="LOCAL-00001" summary="setting up working environment for rcasis">
       <created>1683238142812</created>
