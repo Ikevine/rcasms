@@ -10,13 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4227c579-e885-4dcc-a024-bef992e933eb" name="Changes" comment="Done to understand time to implement">
-      <change afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/DeleteUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/impl/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/AddUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/AddUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +186,8 @@
       <workItem from="1683437560193" duration="17169000" />
       <workItem from="1683522817946" duration="11872000" />
       <workItem from="1683535491937" duration="39001000" />
-      <workItem from="1683697398050" duration="3943000" />
+      <workItem from="1683697398050" duration="5354000" />
+      <workItem from="1683782817687" duration="4302000" />
     </task>
     <task id="LOCAL-00001" summary="setting up working environment for rcasis">
       <created>1683238142812</created>
