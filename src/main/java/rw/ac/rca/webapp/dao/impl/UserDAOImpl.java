@@ -107,10 +107,10 @@ public class UserDAOImpl extends DAO implements UserDAO {
 	 * @throws Exception
 	 */
 	@Override
-	public boolean deleteUser(int id) {
+	public boolean deleteUser(User user) {
 		try {
 			begin();
-			getSession().delete(id);
+			getSession().delete(user);
 			commit();
 			return true;
 		} catch (Exception e) {
@@ -248,6 +248,22 @@ public class UserDAOImpl extends DAO implements UserDAO {
 			rollback();
 		}
 		return user;
+	}
+
+	@Override
+	public void deleteUserById(int id) {
+		try {
+			begin();
+			Query query = getSession().createQuery("DELETE FROM User u WHERE u.id = :id");
+			query.setParameter("id" , id);
+			int del = query.executeUpdate();
+			commit();
+
+		}
+		catch(Exception e){
+			rollback();
+
+		}
 	}
 
 	@SuppressWarnings("unchecked")

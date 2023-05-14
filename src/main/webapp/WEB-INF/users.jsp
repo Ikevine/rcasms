@@ -91,6 +91,7 @@
 									<td>Check User</td>
 								</tr>
 							</thead>
+							${hy}
 							<tbody>
 								<c:forEach items="${users}" var="usr" varStatus="usrstatus">
 									<tr>
@@ -101,8 +102,8 @@
 										<td><input type="checkbox" name="usrIds"
 											value="${usr.id}" /></td>
 										<td>
-											<a href="deleteuser.php/id=${usr.id}">Delete user</a>
-											<a href="#">Update user</a>
+											<a href="/deleteuser.php?id=${usr.id}">Delete user</a>
+											<a href="#">edit user</a>
 										</td>
 									</tr>
 								</c:forEach>
