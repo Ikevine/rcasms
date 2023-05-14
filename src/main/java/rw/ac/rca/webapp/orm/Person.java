@@ -16,7 +16,7 @@ public abstract class Person implements Serializable{
 	
 	private static final long serialVersionUID = 2173199134252447177L;
 	@Id
-	@GeneratedValue(strategy = GenerationType.TABLE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int id;
 
 	private String fullName;

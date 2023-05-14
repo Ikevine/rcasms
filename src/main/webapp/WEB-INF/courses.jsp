@@ -101,6 +101,7 @@
               <td>Date Start</td>
               <td>Date End</td>
 <%--              <td>isCancelled</td>--%>
+
             </tr>
             </thead>
             <tbody>
@@ -116,6 +117,10 @@
 <%--                <td>${csr.isCancelled}</td>--%>
                 <td><input type="checkbox" name="usrIds"
                            value="${usr.id}" /></td>
+                <td>
+                  <a href="deleteuser.php?id=${csr.id}">Delete course</a>
+                  <a href="deleteuser.php?id=${csr.id}">Update course</a>
+                </td>
               </tr>
             </c:forEach>
             </tbody>

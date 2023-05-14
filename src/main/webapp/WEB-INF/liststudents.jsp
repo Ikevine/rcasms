@@ -55,6 +55,10 @@
                    <td>${std.partTime}</td>
                    <td>${std.repeating}</td>
                    <td>
+                       <a href="deleteuser.php?id=${std.id}">Delete student</a>
+                       <a href="deleteuser.php?id=${std.id}">Update student</a>
+                   </td>
+                   <td>
                        <input type="button" value="view more">
                    </td>
                </tr>

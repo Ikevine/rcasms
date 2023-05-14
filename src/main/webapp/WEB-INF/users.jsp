@@ -102,6 +102,7 @@
 											value="${usr.id}" /></td>
 										<td>
 											<a href="deleteuser.php?id=${usr.id}">Delete user</a>
+											<a href="deleteuser.php?id=${usr.id}">Update user</a>
 										</td>
 									</tr>
 								</c:forEach>
