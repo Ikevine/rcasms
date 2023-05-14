@@ -55,8 +55,8 @@
                    <td>${std.partTime}</td>
                    <td>${std.repeating}</td>
                    <td>
-                       <a href="deletestudent.php/id=${std.id}">Delete student</a>
-                       <a href="#">Update student</a>
+                       <a href="/updatestudent.php/id=${std.id}">Update student</a>
+                       <a href="/deletestudent.php/id=${std.id}">Delete student</a>
                    </td>
                    <td>
                        <input type="button" value="view more">
@@ -64,7 +64,7 @@
                </tr>
            </k:forEach>
        </tbody>
-       ${option}
+       ${hy}
    </table>
 </body>
 </html>

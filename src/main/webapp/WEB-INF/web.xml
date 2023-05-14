@@ -75,6 +75,7 @@
     <servlet-name>UpdateUser</servlet-name>
     <servlet-class>rw.ac.rca.webapp.web.UpdateUser</servlet-class>
   </servlet>
+
   <servlet-mapping>
     <servlet-name>UpdateUser</servlet-name>
     <url-pattern>/updateuser.php</url-pattern>
