@@ -2,7 +2,7 @@
 		src="icons/application_side_expand.png" /> Admin</a>
 	<ul class="noJS">
 
-		<li><a href="/adduser.php?page=adduser"><img
+		<li><a href="adduser.php?page=adduser"><img
 				src="icons/user_add.png" /> Create User</a></li>
 
 		<li><a href="listuser.php?page=users&&action=list"><img

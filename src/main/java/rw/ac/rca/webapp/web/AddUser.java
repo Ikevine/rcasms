@@ -6,55 +6,72 @@ import rw.ac.rca.webapp.orm.User;
 import rw.ac.rca.webapp.util.UserRole;
 import rw.ac.rca.webapp.util.Util;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+/**
+ * Servlet implementation class CreateUser
+ */
 public class AddUser extends HttpServlet {
-
-    private final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
     private UserDAO userDAO = UserDAOImpl.getInstance();
+
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
     public AddUser() {
         super();
     }
-    @Override
+
+    /**
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-         String pageRedirect = request.getParameter("page");
-         request.setAttribute("ah" , "bad luc");
-         HttpSession httpSession = request.getSession();
-         UserRole [] userRoles = UserRole.values();
-         httpSession.setAttribute("userRoles" , userRoles);
-         request.getRequestDispatcher("WEB-INF/adduser.jsp").forward(request , response);
+//        String pageRedirect = request.getParameter("page");
+        HttpSession httpSession = request.getSession();
+        UserRole[] userRoles = UserRole.values();
+        httpSession.setAttribute("userRoles", userRoles);
+        request.getRequestDispatcher("WEB-INF/adduser.jsp").forward(
+                request, response);
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    /**
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+     */
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException , IOException {
+        HttpSession httpSession = request.getSession();
+        User user = new User();
+        String usernameauth = request.getParameter("username");
+        String passwordauth = request.getParameter("password");
+        String userfullname = request.getParameter("userfullname");
+        String email = request.getParameter("email");
+        String userRole = request.getParameter("userRole");
+        UserRole usrr = UserRole.valueOf(userRole);
 
-       HttpSession httpSession = request.getSession();
-       User user = new User();
-       String username = request.getParameter("username");
-       String fullname = request.getParameter("userfullname");
-       String email = request.getParameter("email");
-       String password = request.getParameter("password");
-       String userrole = request.getParameter("userRole");
-       UserRole userr = UserRole.valueOf(userrole);
+        try {
+            String hashedPsw = Util.generateHashed512(passwordauth);
 
-       try{
-           String hashpasw = Util.generateHashed512(password);
-           user.setUsername(username);
-           user.setFullName(fullname);
-           user.setEmail(email);
-           user.setUserRole(userr);
-           user.setPassword(hashpasw);
+            user.setUsername(usernameauth);
+            user.setPassword(hashedPsw);
+            user.setFullName(userfullname);
+            user.setEmail(email);
+            user.setUserRole(usrr);
 
-           userDAO.saveUser(user);
-           httpSession.setAttribute("success" , "well done my baby");
-           request.getRequestDispatcher("WEB-INF/createuser.jsp").forward(request , response);
+            userDAO.saveOrUpdateUser(user);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("listuser.php");
+            dispatcher.forward(request, response);
 
-       }
-       catch(Exception e ){
-             httpSession.setAttribute("faill" , "Sorry you");
-             request.getRequestDispatcher("WEB-INF/createuser.jsp").forward(request , response);
         }
+        catch (Exception e) {
+            request.getRequestDispatcher("WEB-INF/createuser.jsp").forward(
+                    request, response);
+        }
+
     }
+
 }

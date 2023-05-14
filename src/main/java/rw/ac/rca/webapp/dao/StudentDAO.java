@@ -10,7 +10,7 @@ public interface StudentDAO {
 
     public Student saveStudent(Student student);
     public Student updateStudent(Student student);
-    public boolean deleteStudent (Student student);
+    public boolean deleteStudent (int id);
     public  Student getStudentById(int id);
     public List<Student> getAllStudents();
 }

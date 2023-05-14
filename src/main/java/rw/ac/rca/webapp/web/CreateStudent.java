@@ -49,7 +49,7 @@ private StudentDAO studentDAO = StudentDAOImpl.getInstance();
 
                 Student s1 = studentDAO.saveStudent(student);
                 request.setAttribute("s", "Student is created successfully");
-                request.getRequestDispatcher("WEB-INF/createstudent.jsp").forward(request, response);
+                request.getRequestDispatcher("Liststudents.php").forward(request, response);
 
             } catch (Exception e) {
                 request.setAttribute("f", "Fail to create student");

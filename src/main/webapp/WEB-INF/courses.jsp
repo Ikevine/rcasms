@@ -118,8 +118,8 @@
                 <td><input type="checkbox" name="usrIds"
                            value="${usr.id}" /></td>
                 <td>
-                  <a href="deleteuser.php?id=${csr.id}">Delete course</a>
-                  <a href="deleteuser.php?id=${csr.id}">Update course</a>
+                  <a href="#">Delete course</a>
+                  <a href="#">Update course</a>
                 </td>
               </tr>
             </c:forEach>

@@ -155,7 +155,7 @@
        alt="LinkedIn Logo">
   <h2>Sign In</h2>
   <p>Hellow this is kevine pls add details of new user.</p>
-  ${ah}
+
   <c:if test="${error != null}">
     <p>
       <span style="color: red"> ${error}</span>

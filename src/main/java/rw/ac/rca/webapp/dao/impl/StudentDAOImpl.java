@@ -53,10 +53,10 @@ public class StudentDAOImpl extends  DAO implements StudentDAO {
      }
 
      @Override
-     public boolean deleteStudent(Student student) {
+     public boolean deleteStudent(int id) {
           try {
                begin();
-               getSession().delete(student);
+               getSession().delete(id);
                commit();
                return true;
           }

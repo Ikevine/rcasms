@@ -66,14 +66,6 @@
     <servlet-name>ListStudents</servlet-name>
     <servlet-class>rw.ac.rca.webapp.web.ListStudents</servlet-class>
   </servlet>
-  <servlet>
-    <servlet-name>DeleteUser</servlet-name>
-    <servlet-class>rw.ac.rca.webapp.web.DeleteUser</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>DeleteUser</servlet-name>
-    <url-pattern>/deleteuser.php</url-pattern>
-  </servlet-mapping>
   <servlet-mapping>
      <servlet-name>ListStudents</servlet-name>
      <url-pattern>/Liststudents.php</url-pattern>

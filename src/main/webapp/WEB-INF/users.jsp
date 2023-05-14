@@ -101,8 +101,8 @@
 										<td><input type="checkbox" name="usrIds"
 											value="${usr.id}" /></td>
 										<td>
-											<a href="deleteuser.php?id=${usr.id}">Delete user</a>
-											<a href="deleteuser.php?id=${usr.id}">Update user</a>
+											<a href="deleteuser.php/id=${usr.id}">Delete user</a>
+											<a href="#">Update user</a>
 										</td>
 									</tr>
 								</c:forEach>
