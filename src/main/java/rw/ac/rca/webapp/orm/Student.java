@@ -14,56 +14,43 @@ package rw.ac.rca.webapp.orm;
 @Entity
 public class Student extends Person implements Serializable {
 
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = -8680703317249517930L;
-	private boolean isInternational;
-	private boolean isPartTime;
-	private boolean isRepeating;
-	@OneToMany(cascade= CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "student")
-	private List<Enrol> enrols;
-	
-	@ManyToOne
-	@JoinColumn(name = "address_id" , referencedColumnName = "id")
-	private Address address;
-	
-	public Student() {
+
+	private Boolean international;
+
+	public Boolean getInternational() {
+		return international;
 	}
-	
-	public Student(boolean isInternational, boolean isPartTime, boolean isRepeating) {
-		this.isInternational = isInternational;
-		this.isPartTime = isPartTime;
-		this.isRepeating = isRepeating;
+
+	public void setInternational(Boolean international) {
+		this.international = international;
 	}
-	
-	
-	public boolean isInternational() {
-		return isInternational;
+
+	public Boolean getRepeating() {
+		return repeating;
 	}
-	public void setInternational(boolean isInternational) {
-		this.isInternational = isInternational;
+
+	public void setRepeating(Boolean repeating) {
+		this.repeating = repeating;
 	}
-	public boolean isPartTime() {
-		return isPartTime;
+
+	public Boolean getPartTime() {
+		return partTime;
 	}
-	public void setPartTime(boolean isPartTime) {
-		this.isPartTime = isPartTime;
+
+	public void setPartTime(Boolean partTime) {
+		this.partTime = partTime;
 	}
-	
+
 	public List<Enrol> getEnrols() {
-   		return enrols;
+		return enrols;
 	}
-	public void setEnrollments(List<Enrol> enrols) {
+
+	public void setEnrols(List<Enrol> enrols) {
 		this.enrols = enrols;
 	}
-	
-	public boolean isRepeating() {
-		return isRepeating;
-	}
-	public void setRepeating(boolean isRepeating) {
-		this.isRepeating = isRepeating;
-	}
+
 	public Address getAddress() {
 		return address;
 	}
@@ -72,9 +59,13 @@ public class Student extends Person implements Serializable {
 		this.address = address;
 	}
 
-//	@Override
-//	String getAllNames() {
-//		return getFirstName()+ " "+ getLastName();
-//	}
-	
+	private Boolean repeating;
+	private Boolean partTime;
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "student")
+	private List<Enrol> enrols;
+
+	@ManyToOne
+	@JoinColumn(name = "address_id", referencedColumnName = "id")
+	private Address address;
+
 }

@@ -13,7 +13,15 @@
 	</ul></li>
 <li><a
 	href="listemployees.php?page=employees&&user_role=adm&&action=list"><img
-		src="icons/application_view_columns.png" /> Employees</a></li>
+		src="icons/application_view_columns.png" /> Courses</a>
+		<ul class="noJS">
+			<li><a href="createcourse.php?page=createcourse"><img
+					src="icons/application_view_list.png" />create courses</a></li>
+
+			<li><a href="listcourses.php?page=listcourse"><img
+					src="icons/application_view_list.png" />List of courses</a></li>
+		</ul>
+</li>
 
 <li><a class="idTabs" href="#students"><img
 		src="icons/application_side_expand.png" /> Students</a>

@@ -34,31 +34,27 @@ private StudentDAO studentDAO = StudentDAOImpl.getInstance();
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
-
         String phoneNumber = request.getParameter("phone");
-        Boolean isInternation = Boolean.parseBoolean(request.getParameter("international"));
-        Boolean isPartTime = Boolean.parseBoolean(request.getParameter("partTime"));
-        Boolean isRepeating= Boolean.parseBoolean(request.getParameter("repeating"));
-
+        Boolean inter = Boolean.valueOf(request.getParameter("inter"));
+        Boolean part = Boolean.valueOf(request.getParameter("part"));
+        Boolean repeat = Boolean.valueOf(request.getParameter("repeat"));
+        student.setInternational(inter);
+        student.setPartTime(part);
+        student.setRepeating(repeat);
         student.setFullName(fullName);
         student.setDateOfBirth(dateOfBirth);
         student.setPhoneNumber(phoneNumber);
-        student.setInternational(isInternation);
-        student.setRepeating(isRepeating);
-        student.setPartTime(isPartTime);
 
-            try{
+            try {
 
-               Student s1 =  studentDAO.saveStudent(student);
-               request.setAttribute("s", "Student is created successfully");
-               request.getRequestDispatcher("Liststudents.php").forward(request, response);
+                Student s1 = studentDAO.saveStudent(student);
+                request.setAttribute("s", "Student is created successfully");
+                request.getRequestDispatcher("WEB-INF/createstudent.jsp").forward(request, response);
 
+            } catch (Exception e) {
+                request.setAttribute("f", "Fail to create student");
+                request.getRequestDispatcher("WEB-INF/createstudent.jsp").forward(request, response);
             }
-
-            catch(Exception e){
-                request.setAttribute("f" , "Fail to create student");
-                request.getRequestDispatcher("WEB-INF/createstudent.jsp").forward(request , response);
-             }
         }
     }
 

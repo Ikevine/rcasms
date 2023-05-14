@@ -27,9 +27,9 @@ ${success}
     <input placeholder="Enter your full name" name="fullName"  required type="text">
     <input type="date" placeholder="Date of Birth" name="birth" required>
     <input type="text" placeholder="Phone number" name="phone" required>
-    <input type="checkbox" name="international" value="inter"> internation <br>
-    <input type="checkbox" name="partTime" value="part"> partTime <br>
-    <input type="checkbox" name="repeating" value="repeat"> repeating <br>
+    <input type="text" placeholder="True / False" name="inter" required>
+    <input type="text" placeholder="True / False" name="part" required>
+    <input type="text" placeholder="True / False" name="repeat" required>
     <input type="submit" value="Create Student">
 </form>
 </body>

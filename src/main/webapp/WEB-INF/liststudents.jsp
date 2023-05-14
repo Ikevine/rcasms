@@ -35,6 +35,7 @@
    <table>
        <thead>
         <tr>
+            <td>id</td>
             <td>Full names</td>
             <td>Birth</td>
             <td>phone</td>
@@ -50,10 +51,16 @@
                    <td>${std.fullName}</td>
                    <td>${std.dateOfBirth}</td>
                    <td>${std.phoneNumber}</td>
-<%--                   <td>${std.isInternational}</td>--%>
+                   <td>${std.international}</td>
+                   <td>${std.partTime}</td>
+                   <td>${std.repeating}</td>
+                   <td>
+                       <input type="button" value="view more">
+                   </td>
                </tr>
            </k:forEach>
        </tbody>
+       ${option}
    </table>
 </body>
 </html>
