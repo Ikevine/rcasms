@@ -36,6 +36,7 @@
 		<div>
 			<%@ include file="menu.jsp"%>
 		</div>
+
 		<div id="middle">
 			<c:if test="${authenticatedUser !=null}">
 				<div class="options">

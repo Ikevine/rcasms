@@ -10,10 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4227c579-e885-4dcc-a024-bef992e933eb" name="Changes" comment="Done to understand time to implement">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/updatestudent.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cc3b834c-0bab-4ab6-a5a3-20df46665df4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cc3b834c-0bab-4ab6-a5a3-20df46665df4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/liststudents.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/liststudents.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/createstudent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/createstudent.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/users.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +67,12 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/project_simple/rcasis/src/main/webapp&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/3D Objects/Y2/JAVA/rcasis&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.externalResources&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;fdc724e19ebad7da58369a8b26d236e4&quot;
   }
 }</component>
@@ -192,7 +195,15 @@
       <workItem from="1683697398050" duration="5354000" />
       <workItem from="1683782817687" duration="27125000" />
       <workItem from="1683924197983" duration="2546000" />
-      <workItem from="1684048236545" duration="31976000" />
+      <workItem from="1684048236545" duration="36346000" />
+      <workItem from="1684174671482" duration="530000" />
+      <workItem from="1684224346766" duration="3429000" />
+      <workItem from="1686297993514" duration="57000" />
+      <workItem from="1686301338320" duration="125000" />
+      <workItem from="1686646045879" duration="181000" />
+      <workItem from="1686646399521" duration="1360000" />
+      <workItem from="1686647816667" duration="3773000" />
+      <workItem from="1686682952612" duration="6353000" />
     </task>
     <task id="LOCAL-00001" summary="setting up working environment for rcasis">
       <created>1683238142812</created>
@@ -222,5 +233,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="setting up working environment for rcasis" />
     <option name="LAST_COMMIT_MESSAGE" value="setting up working environment for rcasis" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

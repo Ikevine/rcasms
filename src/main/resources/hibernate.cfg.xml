@@ -6,8 +6,8 @@
 		 
 		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
 		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/rcawebapp</property>
-		<property name="hibernate.connection.username">username</property>
-		<property name="hibernate.connection.password">password</property>
+		<property name="hibernate.connection.username">ishimwe</property>
+		<property name="hibernate.connection.password">keke@3</property>
 		
 		<property name="hibernate.session_factory_name">SmisSessionFactory</property>
 		<property name="hibernate.connection.pool_size">1</property>
@@ -20,7 +20,7 @@
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
 		<property name="hibernate.use_sql_comments">false</property>
-		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.hbm2ddl.auto">create-drop</property>
 		<property name="lazy">false</property>
 		<!-- c3p0 -->
 		<property name="hibernate.c3p0.min_size">10</property>
