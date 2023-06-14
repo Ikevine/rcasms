@@ -1,0 +1,20 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+//abstracts
+//base
+@import 'sass/base/center';
+//colors
+@import 'sass/abstracts/_colors';
+//typegrapher
+@import "sass/base/typegrapher";
+
+//layout
+@import 'sass/layout/navbar';
+
+//pages
+@import 'sass/pages/login';

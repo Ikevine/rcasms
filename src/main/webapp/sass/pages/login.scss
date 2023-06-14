@@ -1,0 +1,34 @@
+.login{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  @extend .flex;
+  gap:1px;
+  .left{
+    width: 48%;
+    height: 100%;
+    background-color: #218D09;
+    .form-a{
+      font-weight: 500;
+      font-size: 18px;
+    }
+    .iden{
+      width: 60%;
+      height: auto;
+      text-align: center;
+      .logo{
+
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+      }
+
+    }
+  }
+
+  .right{
+    width: 48%;
+    height: 100%;
+  }
+}

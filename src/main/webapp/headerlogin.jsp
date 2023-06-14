@@ -8,9 +8,9 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" href="main.scss" type="text/css" />
-
 	<title>${param.title}</title>
 </head>
+
 <body>
 	<br />
 	<br />
@@ -20,3 +20,4 @@
 		<div id="bannerlogin">
 			<div class="text_header_login">Rwanda Coding Academy</div>
 		</div>
+	</div>

@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.flex, .login, .navb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #05003A;
+}
+
+.small {
+  color: #05003A;
+  font-size: 18px;
+}
+
+btn-text {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+in-text {
+  font-weight: 400;
+  font-size: 18px;
+  color: #424242;
+}
+
+text-login {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.navb {
+  height: auto;
+  width: 100vw;
+  background-color: #FFFFFF;
+  padding: 2px;
+}
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  gap: 1px;
+}
+.login .left {
+  width: 48%;
+  height: 100%;
+  background-color: #218D09;
+}
+.login .left .form-a {
+  font-weight: 500;
+  font-size: 18px;
+}
+.login .left .iden {
+  width: 60%;
+  height: auto;
+  text-align: center;
+}
+.login .left .iden .logo {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.login .right {
+  width: 48%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */
