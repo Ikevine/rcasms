@@ -7,7 +7,7 @@
 <head>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" href="cssfile.css" type="text/css" />
+	<link rel="stylesheet" href="main.scss" type="text/css" />
 
 	<title>${param.title}</title>
 </head>
