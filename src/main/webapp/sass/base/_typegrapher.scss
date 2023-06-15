@@ -3,6 +3,11 @@
   font-size: 24px;
   color: $black;
 }
+.h12{
+  font-weight: bold;
+  font-size: 24px;
+  color: $secondary;
+}
 .small{
   color: $black;
   font-size: 18px;
@@ -20,4 +25,7 @@ text-login{
   font-weight: normal;
   font-size: 16px;
 }
-
+.p{
+   font-size: 16px;
+   color: $grey;
+}

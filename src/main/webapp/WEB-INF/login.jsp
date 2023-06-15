@@ -35,29 +35,47 @@
 <%--<%@ include file="footerlogin.jsp"%>--%>
 
 <%--//starting of login form--%>
+
 <div class="login">
-		left side
+  <%--		left side--%>
 		<div class="left">
-			<div class="iden">
-				<img src="../images/logo.jpg" alt="logo image" class="logo">
-				<h1 class="h1">Rwanda Coding Academy Student Management System</h1>
-				<p class="small">Welcome</p>
-			</div>
-			<form>
-				<input type="text" placeholder="Enter your username" class="inpu">
-				<input type="password" placeholder="Enter your password" class="inpu">
-				<button class="btn-primary">Create Account</button>
+      <%-- top left	--%>
+           <div class="login-tl">
+			   <div class="log-conta">
+				   <img src="../images/logo2.png" href="Logo">
+			   </div>
+			   <h1 class="h1">Rwanda Coding Academy Student Management System</h1>
+			   <small class="small">Welcome back</small>
+		   </div>
+	  <%-- form start here--%>
+			<form action="login.php" method="post" class="form">
+                <c:if test="${error != null}">
+    			   <p style="color: red">${error}</p>
+    	        </c:if>
+				<input type="text" placeholder="Enter your name" name="username" class="input">
+				<input type="password" placeholder="Enter your Password" name="password" class="input">
+				<input type="submit" class="btn-primary" value="Create Account" />
 			</form>
-			<div class="bottom-form">
-				<p class="small">Already have an account? <a href="#" class="form-a">Sign up</a></p>
-			</div>
+			<p class="p">Don't have account? <a href="createuser.php?page=createuser" class="anl">Sign up</a></p>
 		</div>
 	<%--	right side--%>
 		<div class="right">
-           <img src="../images/new.jpg" alt="student">
+
+			<div class="overl">
+				<div class="expll">
+					<h1 class="h12">Leading through Technical Innovation</h1>
+					<div class="middle">
+						<p class="white">We are school of young talend kid who want to bring new innovation in tech as well as in rwanda</p>
+					</div>
+					<%--explaining this--%>
+					<p class="exp2">This system management system is only for instructors , parents , students and discpline staff we welcome to this system</p>
+				</div>
+			</div>
+
 		</div>
 </div>
 
+<%----%>
 </body>
 </html>
 

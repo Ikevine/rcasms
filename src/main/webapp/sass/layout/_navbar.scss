@@ -1,0 +1,8 @@
+.nav{
+  width:100vw;
+  height:auto;
+  @extend  .flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: $secondary;
+}

@@ -5,16 +5,44 @@ body {
   text-decoration: none;
 }
 
-.flex, .login, .navb {
+.flex, .login .right .overl .expll, .login .right .overl, .login .right, .login .left .login-tl .log-conta, .login .left .login-tl, .login .left {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.flex-row, .login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.anl {
+  font-weight: bold;
+  font-size: 18px;
+  color: #05003A;
+}
+
+.white {
+  color: #FFFFFF;
 }
 
 .h1 {
   font-weight: bold;
   font-size: 24px;
   color: #05003A;
+}
+
+.h12 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #FFFFFF;
 }
 
 .small {
@@ -38,41 +66,89 @@ text-login {
   font-size: 16px;
 }
 
-.navb {
-  height: auto;
-  width: 100vw;
-  background-color: #FFFFFF;
-  padding: 2px;
+.p {
+  font-size: 16px;
+  color: #424242;
+}
+
+.btn-primary {
+  color: #FFFFFF;
+  background-color: #05003A;
+  padding: 0.5rem 2.5rem;
+  border-radius: 5px;
+  align-self: center;
+}
+.btn-primary:hover {
+  background-color: transparent;
+  border: 2px solid #35005E;
+  color: #35005E;
+}
+
+.input {
+  border: none;
+  border-bottom: 4px solid #05003A;
+  color: #424242;
+  padding: 1.2rem;
+  width: 100%;
+}
+.input:focus {
+  outline: none;
 }
 
 .login {
-  width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  gap: 1px;
+  width: 100vw;
+  background-color: black;
 }
 .login .left {
-  width: 48%;
+  width: 50%;
   height: 100%;
-  background-color: #218D09;
+  background-color: #FFFFFF;
 }
-.login .left .form-a {
-  font-weight: 500;
-  font-size: 18px;
-}
-.login .left .iden {
-  width: 60%;
+.login .left .login-tl {
+  width: 50%;
   height: auto;
+  padding: 2rem;
   text-align: center;
 }
-.login .left .iden .logo {
-  width: 5rem;
-  height: 5rem;
+.login .left .login-tl .log-conta {
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
+  background-color: ghostwhite;
+  overflow: hidden;
+}
+.login .left .login-tl .log-conta img {
+  width: 80%;
+  height: 80%;
 }
 .login .right {
-  width: 48%;
+  width: 50%;
   height: 100%;
+  position: relative;
+  background: url("../../images/new.jpg");
+}
+.login .right .overl {
+  color: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.login .right .overl .expll {
+  width: 80%;
+  height: auto;
+  color: #FFFFFF;
+}
+.login .right .overl .expll .middle {
+  width: 80%;
+  text-align: center;
+}
+.login .right .overl .expll .exp2 {
+  width: 90%;
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=main.css.map */

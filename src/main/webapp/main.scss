@@ -6,14 +6,22 @@ body{
 }
 
 //abstracts
+@import 'sass/abstracts/colors';
+@import 'sass/abstracts/mixins';
+@import 'sass/abstracts/varibales';
 //base
 @import 'sass/base/center';
-//colors
-@import 'sass/abstracts/_colors';
-//typegrapher
-@import "sass/base/typegrapher";
+@import 'sass/base/container';
+@import 'sass/base/fontFace';
+@import 'sass/base/typegrapher';
 
-//layout
+//Components
+@import 'sass/components/button';
+@import 'sass/components/input';
+@import 'sass/components/select';
+@import 'sass/components/form';
+
+//Layout
 @import 'sass/layout/navbar';
 
 //pages

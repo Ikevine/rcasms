@@ -11,7 +11,7 @@
 	<title>${param.title}</title>
 </head>
 <body>
-	<div id="layout">
+	<body id="layout">
 		<div id="banner">
 			<div class="bannerlogo"></div>
 			<div class="text_header">RCA Management Information System</div>
@@ -34,3 +34,8 @@
 		</div>
 
 		<%@ include file="menu.jsp"%>
+
+  </body>
+
+<%--	starting my custom css using jstl--%>
+<html/>
