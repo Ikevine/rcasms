@@ -6,36 +6,33 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" href="cssfile.css" type="text/css" />
-
+    <%--<link rel="stylesheet" href="cssfile.css" type="text/css" />--%>
+    <link rel="stylesheet" href="../main.css" typpe="text/css">
 	<title>${param.title}</title>
 </head>
 <body>
-	<body id="layout">
-		<div id="banner">
-			<div class="bannerlogo"></div>
-			<div class="text_header">RCA Management Information System</div>
-			<div class="right" style="text-align: right;">
-
-				<c:if test="${authenticatedUser !=null}">
-					<b><a href="listuser.php?page=profile&&id=${authenticatedUser.id}"><button>Profile
-						</button></a> | <img src="icons/user.png" /> <font color="#ffffff">${authenticatedUser.fullName}</font>
-						| <a href="login.php?logout=logout"><font color="#ffffff">Logout</font></a>
-					</b>
+         <c:if test="${authenticatedUser !=null}">
+<%--					<b>--%>
+<%--						<a href="listuser.php?page=profile&&id=${authenticatedUser.id}"><button>Profile</button></a>--%>
+<%--						<img src="../images/new.jpg" alt="user photo" />--%>
+<%--						<div class="ndetail">--%>
+<%--							<p class="np">${authenticatedUser.fullName}</p>--%>
+<%--							<p class="nsmall">${authenticatedUser.userRole}</p>--%>
+<%--						</div>--%>
+<%--						| <a href="login.php?logout=logout"><p class="nout">Logout</p></a>--%>
+<%--					</b>--%>
+			      <%@ include file="menu.jsp"%>
 				</c:if>
-				
-				<c:if test="${authenticatedUser ==null}">
+
+				<c:if test="${authenticatedUser == null}">
 					<div class="menu" align="left">
-						| <a href="login.php?"><font color="#ffffff">Login</font></a> |
+						<a href="login.php?"><p class="nout">Login</p></a> |
 					</div>
 				</c:if>
 			</div>
 
 		</div>
 
-		<%@ include file="menu.jsp"%>
 
-  </body>
+	</body>
 
-<%--	starting my custom css using jstl--%>
-<html/>

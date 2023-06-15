@@ -3,6 +3,7 @@ body{
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  list-style: none;
 }
 
 //abstracts
@@ -20,7 +21,7 @@ body{
 @import 'sass/components/input';
 @import 'sass/components/select';
 @import 'sass/components/form';
-
+@import 'sass/components/dropdown';
 //Layout
 @import 'sass/layout/navbar';
 

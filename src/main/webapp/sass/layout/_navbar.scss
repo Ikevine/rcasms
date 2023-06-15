@@ -1,8 +1,72 @@
 .nav{
-  width:100vw;
-  height:auto;
-  @extend  .flex;
+  width:100%;
+  height: 4rem;
+  background-color: burlywood;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 1.5rem;
-  background-color: $secondary;
+  overflow: hidden;
+
+  .nleft{
+    img{
+      width: 3.5rem;
+      height: 3.5rem;
+      align-self: center;
+    }
+  }
+
+  .nmiddle{
+
+    ul{
+      @extend .flex-row;
+      gap: 0.5rem;
+      color: $black;
+      list-style: none;
+      li{
+
+        a{
+          padding: 0.5rem 1rem;
+          border-radius: 5px;
+          color: $black;
+          &:hover{
+            background-color: $ascent;
+            color: $secondary;
+          }
+
+        }
+      }
+
+    }
+  }
+
+  .nright{
+    @extend .flex-row;
+    gap: 1.5rem;
+    img{
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+    }
+    .ndetail{
+      .np{
+        color: $black;
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .nsmall{
+         color: $grey;
+        font-weight: normal;
+        font-size: 13px;
+      }
+    }
+   .nout{
+     font-weight: 600;
+     font-size: 18px;
+     color: $black;
+     &:hover{
+       color:$ascent;
+     }
+   }
+
+  }
 }
