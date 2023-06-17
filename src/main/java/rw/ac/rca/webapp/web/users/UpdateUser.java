@@ -1,4 +1,4 @@
-package rw.ac.rca.webapp.web;
+package rw.ac.rca.webapp.web.users;
 
 import rw.ac.rca.webapp.dao.UserDAO;
 import rw.ac.rca.webapp.dao.impl.UserDAOImpl;

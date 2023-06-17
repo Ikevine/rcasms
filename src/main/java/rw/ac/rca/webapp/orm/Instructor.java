@@ -12,7 +12,7 @@ import java.util.Set;
  *
  */
 @Entity
-//@DiscriminatorValue("Instuctor")
+
 public class Instructor extends Person {
 	
 	/**

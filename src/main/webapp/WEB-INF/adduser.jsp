@@ -167,6 +167,7 @@
     </p>
   </c:if>
   <form  action="adduser.php?page=adduser" method="post">
+
     <input type="text" placeholder="Username" required name="username">
     <input type="text" placeholder="Email" required name="email">
     <input type="text" placeholder="Fullname" required name="userfullname">

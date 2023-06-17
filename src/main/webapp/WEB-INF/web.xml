@@ -31,7 +31,7 @@
     <description></description>
     <display-name>CreateUser</display-name>
     <servlet-name>CreateUser</servlet-name>
-    <servlet-class>rw.ac.rca.webapp.web.CreateUser</servlet-class>
+    <servlet-class>rw.ac.rca.webapp.web.users.CreateUser</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CreateUser</servlet-name>
@@ -41,7 +41,7 @@
     <description></description>
     <display-name>ListUser</display-name>
     <servlet-name>ListUser</servlet-name>
-    <servlet-class>rw.ac.rca.webapp.web.ListUser</servlet-class>
+    <servlet-class>rw.ac.rca.webapp.web.users.ListUser</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ListUser</servlet-name>
@@ -56,27 +56,66 @@
 
     <servlet>
         <servlet-name>AddUser</servlet-name>
-        <servlet-class>rw.ac.rca.webapp.web.AddUser</servlet-class>
+        <servlet-class>rw.ac.rca.webapp.web.users.AddUser</servlet-class>
     </servlet>
+    <servlet-mapping>
+      <servlet-name>AddUser</servlet-name>
+      <url-pattern>/adduser.php</url-pattern>
+    </servlet-mapping>
+
+
     <servlet>
         <servlet-name>CreateStudent</servlet-name>
-        <servlet-class>rw.ac.rca.webapp.web.CreateStudent</servlet-class>
+        <servlet-class>rw.ac.rca.webapp.web.students.CreateStudent</servlet-class>
     </servlet>
   <servlet>
     <servlet-name>ListStudents</servlet-name>
-    <servlet-class>rw.ac.rca.webapp.web.ListStudents</servlet-class>
+    <servlet-class>rw.ac.rca.webapp.web.students.ListStudents</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>DeleteUser</servlet-name>
-    <servlet-class>rw.ac.rca.webapp.web.DeleteUser</servlet-class>
+    <servlet-class>rw.ac.rca.webapp.web.users.DeleteUser</servlet-class>
   </servlet>
 
   <servlet>
     <servlet-name>UpdateUser</servlet-name>
-    <servlet-class>rw.ac.rca.webapp.web.UpdateUser</servlet-class>
+    <servlet-class>rw.ac.rca.webapp.web.users.UpdateUser</servlet-class>
+  </servlet>
+    <servlet>
+        <servlet-name>CreateEnrol</servlet-name>
+        <servlet-class>rw.ac.rca.webapp.web.enrols.CreateEnrol</servlet-class>
+    </servlet>
+  <servlet>
+    <servlet-name>ListEnrol</servlet-name>
+    <servlet-class>rw.ac.rca.webapp.web.enrols.ListEnrol</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CreatenrolLevelServlet</servlet-name>
+    <servlet-class>rw.ac.rca.webapp.web.enrolmentLevel.CreatenrolLevelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListEnrolLevel</servlet-name>
+    <servlet-class>rw.ac.rca.webapp.web.enrolmentLevel.ListEnrolLevel</servlet-class>
   </servlet>
 
   <servlet-mapping>
+    <servlet-name>CreatenrolLevelServlet</servlet-name>
+    <url-pattern>/createnrolevel.php</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListEnrolLevel</servlet-name>
+    <url-pattern>/listenrolevel.php</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListEnrol</servlet-name>
+    <url-pattern>/listenril.php</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+       <servlet-name>CreateEnrol</servlet-name>
+       <url-pattern>/createnrol.php</url-pattern>
+     </servlet-mapping>
+
+    <servlet-mapping>
     <servlet-name>UpdateUser</servlet-name>
     <url-pattern>/updateuser.php</url-pattern>
   </servlet-mapping>
@@ -94,10 +133,7 @@
       <url-pattern>/createstudent.php</url-pattern>
     </servlet-mapping>
 
-    <servlet-mapping>
-      <servlet-name>AddUser</servlet-name>
-      <url-pattern>/adduser.php</url-pattern>
-    </servlet-mapping>
+
 
     <servlet-mapping>
     <servlet-name>Login</servlet-name>

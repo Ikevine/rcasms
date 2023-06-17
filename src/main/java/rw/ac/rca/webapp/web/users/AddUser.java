@@ -1,4 +1,4 @@
-package rw.ac.rca.webapp.web;
+package rw.ac.rca.webapp.web.users;
 
 import rw.ac.rca.webapp.dao.UserDAO;
 import rw.ac.rca.webapp.dao.impl.UserDAOImpl;
@@ -6,7 +6,6 @@ import rw.ac.rca.webapp.orm.User;
 import rw.ac.rca.webapp.util.UserRole;
 import rw.ac.rca.webapp.util.Util;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -32,7 +31,7 @@ public class AddUser extends HttpServlet {
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        String pageRedirect = request.getParameter("page");
+        String pageRedirect = request.getParameter("page");
         HttpSession httpSession = request.getSession();
         UserRole[] userRoles = UserRole.values();
         httpSession.setAttribute("userRoles", userRoles);
@@ -63,12 +62,14 @@ public class AddUser extends HttpServlet {
             user.setUserRole(usrr);
 
             userDAO.saveOrUpdateUser(user);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("listuser.php");
-            dispatcher.forward(request, response);
+
+            httpSession.setAttribute("success", "Created successfully");
+            request.getRequestDispatcher("listuser.php").forward(request , response);
 
         }
         catch (Exception e) {
-            request.getRequestDispatcher("WEB-INF/createuser.jsp").forward(
+            httpSession.setAttribute("error", "Can't Create");
+            request.getRequestDispatcher("WEB-INF/adduser.jsp").forward(
                     request, response);
         }
 

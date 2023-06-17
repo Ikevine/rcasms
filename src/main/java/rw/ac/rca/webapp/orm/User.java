@@ -1,5 +1,5 @@
 /**
- * 
+ * author Ikevine
  */
 package rw.ac.rca.webapp.orm;
 
@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * @author Aphrodice Rwagaju
+ * @author Ikevine
  * 
  */
 @Entity

@@ -1,11 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-}
-
 .flex, .login .right .overl .expll, .login .right .overl, .login .right, .login .left .login-tl .log-conta, .login .left .login-tl, .login .left, .form {
   display: flex;
   flex-direction: column;

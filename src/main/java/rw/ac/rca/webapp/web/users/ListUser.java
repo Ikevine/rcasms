@@ -1,4 +1,4 @@
-package rw.ac.rca.webapp.web;
+package rw.ac.rca.webapp.web.users;
 
 import rw.ac.rca.webapp.dao.UserDAO;
 import rw.ac.rca.webapp.dao.impl.UserDAOImpl;
@@ -18,6 +18,7 @@ import java.util.List;
  * Servlet implementation class ListUser
  */
 public class ListUser extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
 	private UserDAO userDAO = UserDAOImpl.getInstance();
        
@@ -43,12 +44,12 @@ public class ListUser extends HttpServlet {
 			httpSession.setAttribute("users", users);
 			UserRole[] userRoles = UserRole.values();
 			httpSession.setAttribute("userRoles", userRoles);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/users.jsp");
-			dispatcher.forward(request, response);
+			request.getRequestDispatcher("WEB-INF/users.jsp").forward(request , response);
 		}
 		catch(Exception e){
 			httpSession.setAttribute("error", "Invalid User. Try again!");
-			RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/login.jsp");
+			e.printStackTrace();
+			RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/adduser.jsp");
 			dispatcher.forward(request, response);
 		}
 	}
