@@ -11,6 +11,12 @@
 
 		<li><a href="createnrolevel.php?page=createnrolevel"><img
 				src="icons/application_view_list.png" />create Enrol Level</a></li>
+
+		<li><a href="createaddress.php?page=createaddress"><img
+				src="icons/application_view_list.png" />create address</a></li>
+
+		<li><a href="listaddress.php?page=listaddress.php"><img
+				src="icons/application_view_list.png" />List of address</a></li>
 	</ul></li>
 <li><a
 	href="listemployees.php?page=employees&&user_role=adm&&action=list"><img

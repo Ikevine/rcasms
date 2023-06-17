@@ -97,8 +97,24 @@
     <servlet-name>ListEnrolLevel</servlet-name>
     <servlet-class>rw.ac.rca.webapp.web.enrolmentLevel.ListEnrolLevel</servlet-class>
   </servlet>
-
+    <servlet>
+        <servlet-name>CreateAddress</servlet-name>
+        <servlet-class>rw.ac.rca.webapp.web.address.CreateAddress</servlet-class>
+    </servlet>
+  <servlet>
+    <servlet-name>ListAddress</servlet-name>
+    <servlet-class>rw.ac.rca.webapp.web.address.ListAddress</servlet-class>
+  </servlet>
   <servlet-mapping>
+    <servlet-name>ListAddress</servlet-name>
+    <url-pattern>/listaddress.php</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+     <servlet-name>CreateAddress</servlet-name>
+     <url-pattern>/createaddress.php</url-pattern>
+   </servlet-mapping>
+
+    <servlet-mapping>
     <servlet-name>CreatenrolLevelServlet</servlet-name>
     <url-pattern>/createnrolevel.php</url-pattern>
   </servlet-mapping>

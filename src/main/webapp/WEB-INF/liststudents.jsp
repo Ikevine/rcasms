@@ -42,6 +42,7 @@
             <td>international</td>
             <td>partTime</td>
             <td>repeating</td>
+            <td>Address Code</td>
         </tr>
        </thead>
        <tbody>
@@ -54,6 +55,7 @@
                    <td>${std.international}</td>
                    <td>${std.partTime}</td>
                    <td>${std.repeating}</td>
+                   <td>${std.address.id}</td>
                    <td>
                        <a href="/updatestudent.php/id=${std.id}">Update student</a>
                        <a href="/deletestudent.php/id=${std.id}">Delete student</a>

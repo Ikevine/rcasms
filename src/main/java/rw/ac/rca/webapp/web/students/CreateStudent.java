@@ -1,8 +1,11 @@
 package rw.ac.rca.webapp.web.students;
 
 
+import rw.ac.rca.webapp.dao.AddressDAO;
 import rw.ac.rca.webapp.dao.StudentDAO;
+import rw.ac.rca.webapp.dao.impl.AddressDAOImpl;
 import rw.ac.rca.webapp.dao.impl.StudentDAOImpl;
+import rw.ac.rca.webapp.orm.Address;
 import rw.ac.rca.webapp.orm.Student;
 
 import javax.servlet.*;
@@ -14,10 +17,12 @@ import java.util.Date;
 
 public class CreateStudent extends HttpServlet {
 private StudentDAO studentDAO = StudentDAOImpl.getInstance();
+private AddressDAO addressDAO = AddressDAOImpl.getInstance();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String pageDirection = request.getParameter("page");
         HttpSession httpSession = request.getSession();
+
         request.getRequestDispatcher("WEB-INF/createstudent.jsp").forward(request , response);
     }
 
@@ -34,17 +39,23 @@ private StudentDAO studentDAO = StudentDAOImpl.getInstance();
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
+        //   my checkbox here
+        boolean inter = Boolean.parseBoolean(request.getParameter("inter"));
+        boolean part = Boolean.parseBoolean(request.getParameter("part"));
+        boolean repeat = Boolean.parseBoolean(request.getParameter("repeat"));
         String phoneNumber = request.getParameter("phone");
-        Boolean inter = Boolean.valueOf(request.getParameter("inter"));
-        Boolean part = Boolean.valueOf(request.getParameter("part"));
-        Boolean repeat = Boolean.valueOf(request.getParameter("repeat"));
-        student.setInternational(inter);
-        student.setPartTime(part);
-        student.setRepeating(repeat);
+        int address_code = Integer.parseInt(request.getParameter("address"));
+        Address address = addressDAO.getAddressById(address_code);
+
         student.setFullName(fullName);
         student.setDateOfBirth(dateOfBirth);
         student.setPhoneNumber(phoneNumber);
+        student.setRepeating(repeat);
+        student.setInternational(inter);
+        student.setPartTime(part);
 
+        student.setAddress(address);
+        System.out.println("Kevine look at here please sweet" + address);
             try {
 
                 Student s1 = studentDAO.saveStudent(student);

@@ -109,19 +109,13 @@
     <p style="color: red">${f}</p>
 </k:if>
 ${success}
-<form action="createstudent.php?page=createstudent" method="post">
-    <input placeholder="Enter your full name" name="fullName"  required type="text">
-    <input type="date" placeholder="Date of Birth" name="birth" required>
-    <input type="text" placeholder="Phone number" name="phone" required>
-    <div>
-        <label for="inter">Is International</label>
-        <input type="checkbox" name="inter" id="inter" value="true">
-        <label for="part">Is part Time</label>
-        <input type="checkbox" name="part" id="part" value="true">
-        <label for="repeat">Is repaeting</label>
-        <input type="checkbox" name="repeat" id="repeat" value="true">
-    </div>
-    <input type="text" placeholder="Enter address code" name="address">
+<form action="createaddress.php?page=createaddress" method="post">
+
+    <input placeholder="Enter your country name" name="country"  required type="text">
+    <input type="text" placeholder="Enter you city name" name="city" required>
+    <input type="text" placeholder="Enter streetAddress" name="street">
+    <input type="text" placeholder="Enter postalCode" name="postal">
+
     <input type="submit" value="Create Student">
 </form>
 </body>
