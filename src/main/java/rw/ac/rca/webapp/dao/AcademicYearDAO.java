@@ -16,7 +16,7 @@ public interface AcademicYearDAO {
 	public AcademicYear saveAcademicYear(AcademicYear academicYear);
 	public AcademicYear updateAcademicYear(AcademicYear academicYear);
 	public AcademicYear saveOrUpdateAcademicYear(AcademicYear academicYear);
-	public boolean deleteAcademicYear(AcademicYear academicYear);
+	public boolean deleteAcademicYear(int academicYear);
 	public AcademicYear getAcademicYearById(int id);
 	public List<AcademicYear> getAllAcademicYears();
 }
