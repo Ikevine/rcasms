@@ -42,7 +42,7 @@
     </tr>
     </thead>
     <tbody>
-    <k:forEach items="${enroLevelist}" var="el" varStatus="enrol">
+    <k:forEach items="${enrolLevel}" var="el" varStatus="enrol">
         <tr>
             <td>${el.id}</td>
             <td>${el.name}</td>

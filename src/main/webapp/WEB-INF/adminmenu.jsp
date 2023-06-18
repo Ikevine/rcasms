@@ -9,14 +9,24 @@
 		<li><a href="listuser.php?page=users&&action=list"><img
 				src="icons/application_view_list.png" /> List of users</a></li>
 
-		<li><a href="createnrolevel.php?page=createnrolevel"><img
-				src="icons/application_view_list.png" />create Enrol Level</a></li>
-
 		<li><a href="createaddress.php?page=createaddress"><img
 				src="icons/application_view_list.png" />create address</a></li>
 
 		<li><a href="listaddress.php?page=listaddress.php"><img
 				src="icons/application_view_list.png" />List of address</a></li>
+
+		<li><a href="createnrolevel.php?page=createnrolevel"><img
+				src="icons/application_view_list.png" />create Enrolment Level</a></li>
+
+		<li><a href="listenrolevel.php?page=listenrolevel"><img
+				src="icons/application_view_list.png" />List Enrolment Level</a></li>
+
+		<li><a href="createsemester.php?page=createsemester"><img
+				src="icons/application_view_list.png" />Create Semester</a></li>
+		<li><a href="listsemester.php?page=listsemester"><img
+				src="icons/application_view_list.png" />List Semeter</a></li>
+
+
 	</ul></li>
 <li><a
 	href="listemployees.php?page=employees&&user_role=adm&&action=list"><img

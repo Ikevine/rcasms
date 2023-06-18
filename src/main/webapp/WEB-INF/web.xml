@@ -105,7 +105,26 @@
     <servlet-name>ListAddress</servlet-name>
     <servlet-class>rw.ac.rca.webapp.web.address.ListAddress</servlet-class>
   </servlet>
+    <servlet>
+        <servlet-name>CreateSemester</servlet-name>
+        <servlet-class>rw.ac.rca.webapp.web.semester.CreateSemester</servlet-class>
+    </servlet>
+  <servlet>
+    <servlet-name>ListSemester</servlet-name>
+    <servlet-class>rw.ac.rca.webapp.web.semester.ListSemester</servlet-class>
+  </servlet>
+
   <servlet-mapping>
+    <servlet-name>ListSemester</servlet-name>
+    <url-pattern>/listsemester.php</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>CreateSemester</servlet-name>
+    <url-pattern>/createsemester.php</url-pattern>
+  </servlet-mapping>
+
+    <servlet-mapping>
     <servlet-name>ListAddress</servlet-name>
     <url-pattern>/listaddress.php</url-pattern>
   </servlet-mapping>

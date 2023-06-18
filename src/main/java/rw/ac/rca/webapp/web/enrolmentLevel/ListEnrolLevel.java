@@ -28,14 +28,8 @@ public class ListEnrolLevel extends HttpServlet {
         HttpSession httpSession = request.getSession();
         try{
             List<EnrollmentLevel> enrollmentLevelList = enrollmentLevelDAO.getAllLevels();
-
-            if(enrollmentLevelList == null) {
-                System.out.println("💕💕💕💕💕💕 it is null");
-            }
-            else {
-                httpSession.setAttribute("enroLevelist", enrollmentLevelList);
-                request.getRequestDispatcher("WEB-INF/listenrolment.jsp").forward(request, response);
-            }
+            httpSession.setAttribute("enrolLevel" , enrollmentLevelList);
+            request.getRequestDispatcher("WEB-INF/listenrolment.jsp").forward(request , response);
         }
         catch (Exception e){
             httpSession.setAttribute("error", "Invalid Enrol Level. Try again!");

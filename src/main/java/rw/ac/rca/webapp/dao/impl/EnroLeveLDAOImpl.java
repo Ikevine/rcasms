@@ -70,7 +70,11 @@ public  class EnroLeveLDAOImpl extends DAO implements EnrollmentLevelDAO {
     public boolean deleteEnrolment(int id) {
         try{
             begin();
-            getSession().delete(id);
+            Query query = getSession().createQuery("from EnrollmentLevel where id = :ref");
+            query.setInteger(":ref" , id);
+            EnrollmentLevel enrollmentLevel = (EnrollmentLevel) query.uniqueResult();
+            getSession().delete(enrollmentLevel);
+            commit();
             return true;
         }
         catch (Exception e){
@@ -83,7 +87,7 @@ public  class EnroLeveLDAOImpl extends DAO implements EnrollmentLevelDAO {
     public List<EnrollmentLevel> getAllLevels() {
         try{
             begin();
-            Query query = getSession().createQuery("from enrollment_level");
+            Query query = getSession().createQuery("from EnrollmentLevel");
             List<EnrollmentLevel> enrollmentLevelList = query.list();
             commit();
             return enrollmentLevelList;

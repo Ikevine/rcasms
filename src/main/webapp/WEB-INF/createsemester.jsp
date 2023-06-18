@@ -113,10 +113,12 @@
             <span style="color: green"> ${success}</span>
         </p>
     </c:if>
-    <form  action="createnrolevel.php?page=createnrolevel" method="post">
+    <form  action="createsemester.php?page=createsemester" method="post">
 
-        <input type="text" placeholder="Code for enrolmentLevel" required name="Ecode">
-        <input type="text" placeholder="Enter enrol name" required name="Ename">
+        <input type="text" placeholder="Enter semester code" required name="Scode">
+        <input type="text" placeholder="Enter semester name" required name="Sname">
+        <input type="date" placeholder="Enter semester startDate" name="Sdate">
+        <input type="date" placeholder="Enter Semester endDate" name="Edate">
 
         <input type="submit" value="Create Enrol Level">
 
