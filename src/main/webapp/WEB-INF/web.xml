@@ -113,6 +113,44 @@
     <servlet-name>ListSemester</servlet-name>
     <servlet-class>rw.ac.rca.webapp.web.semester.ListSemester</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>CreateAcademic</servlet-name>
+    <servlet-class>rw.ac.rca.webapp.web.academicYear.CreateAcademic</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListAcademic</servlet-name>
+    <servlet-class>rw.ac.rca.webapp.web.academicYear.ListAcademic</servlet-class>
+  </servlet>
+    <servlet>
+        <servlet-name>CreateParents</servlet-name>
+        <servlet-class>rw.ac.rca.webapp.web.parents.CreateParents</servlet-class>
+    </servlet>
+  <servlet>
+    <servlet-name>ListParents</servlet-name>
+    <servlet-class>rw.ac.rca.webapp.web.parents.ListParents</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ListParents</servlet-name>
+    <url-pattern>/listparents.php</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+      <servlet-name>CreateParents</servlet-name>
+      <url-pattern>/createparents.php</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet-mapping>
+    <servlet-name>ListAcademic</servlet-name>
+    <url-pattern>/listacademic.php</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>CreateAcademic</servlet-name>
+    <url-pattern>/createacademic.php</url-pattern>
+  </servlet-mapping>
 
   <servlet-mapping>
     <servlet-name>ListSemester</servlet-name>

@@ -66,7 +66,7 @@ public class AcademcYearDAOImpl extends DAO implements AcademicYearDAO {
         try{
             begin();
             Query query = getSession().createQuery("from AcademicYear where id=:ref");
-            query.setInteger(":ref", academicYear);
+            query.setInteger("ref", academicYear);
             AcademicYear academicYear1 = (AcademicYear) query.uniqueResult();
             getSession().delete(academicYear1);
             commit();
@@ -83,7 +83,7 @@ public class AcademcYearDAOImpl extends DAO implements AcademicYearDAO {
         try {
             begin();
             Query query = getSession().createQuery("from AcademicYear where id=:ref");
-            query.setInteger(":ref", id);
+            query.setInteger("ref", id);
             AcademicYear academicYear = (AcademicYear) query.uniqueResult();
             commit();
             return academicYear;

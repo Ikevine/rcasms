@@ -71,7 +71,7 @@ public  class EnroLeveLDAOImpl extends DAO implements EnrollmentLevelDAO {
         try{
             begin();
             Query query = getSession().createQuery("from EnrollmentLevel where id = :ref");
-            query.setInteger(":ref" , id);
+            query.setInteger("ref" , id);
             EnrollmentLevel enrollmentLevel = (EnrollmentLevel) query.uniqueResult();
             getSession().delete(enrollmentLevel);
             commit();

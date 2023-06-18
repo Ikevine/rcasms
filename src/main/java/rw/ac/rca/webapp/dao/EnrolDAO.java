@@ -8,7 +8,7 @@ import rw.ac.rca.webapp.orm.Enrol;
 import java.util.List;
 
 /**
- * @author Aphrodice Rwagaju
+ * @author Ikevine
  *
  */
 public interface EnrolDAO {

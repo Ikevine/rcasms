@@ -19,6 +19,7 @@ public class Student extends Person implements Serializable {
 
 	private Boolean international;
 
+
 	public Boolean getInternational() {
 		return international;
 	}
@@ -68,4 +69,14 @@ public class Student extends Person implements Serializable {
 	@JoinColumn(name = "address_id", referencedColumnName = "id")
 	private Address address;
 
+	public List<Parents> getParents() {
+		return parents;
+	}
+
+	public void setParents(List<Parents> parents) {
+		this.parents = parents;
+	}
+
+	@OneToMany(mappedBy = "student")
+    private List<Parents> parents;
 }

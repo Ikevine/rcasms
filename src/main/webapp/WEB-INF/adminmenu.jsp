@@ -27,6 +27,17 @@
 				src="icons/application_view_list.png" />List Semeter</a></li>
 
 
+		<li><a href="createacademic.php?page=createacademic"><img
+				src="icons/application_view_list.png" />Create Academic Year</a></li>
+		<li><a href="listsemester.php?page=listsemester"><img
+				src="icons/application_view_list.png" />List Academic Year</a></li>
+
+
+		<li><a href="createparents.php?page=createparents"><img
+				src="icons/application_view_list.png" />Create Parent</a></li>
+		<li><a href="listparents.php?page=listparents"><img
+				src="icons/application_view_list.png" />List of Parents</a></li>
+
 	</ul></li>
 <li><a
 	href="listemployees.php?page=employees&&user_role=adm&&action=list"><img
