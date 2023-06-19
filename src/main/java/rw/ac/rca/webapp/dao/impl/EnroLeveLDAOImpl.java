@@ -11,6 +11,7 @@ public  class EnroLeveLDAOImpl extends DAO implements EnrollmentLevelDAO {
 
     public static final Logger LOG = Logger.getLogger(EnroLeveLDAOImpl.class);
     private EnroLeveLDAOImpl(){};
+
     public static  EnroLeveLDAOImpl instance;
 
     public static EnroLeveLDAOImpl getInstance() {

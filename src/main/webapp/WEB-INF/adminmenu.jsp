@@ -38,6 +38,11 @@
 		<li><a href="listparents.php?page=listparents"><img
 				src="icons/application_view_list.png" />List of Parents</a></li>
 
+		<li><a href="createnrol.php?page=createnrol"><img
+				src="icons/application_view_list.png" />Create Enrol</a></li>
+		<li><a href="listenril.php?page=listenril"><img
+				src="icons/application_view_list.png" />List of Enrol</a></li>
+
 	</ul></li>
 <li><a
 	href="listemployees.php?page=employees&&user_role=adm&&action=list"><img

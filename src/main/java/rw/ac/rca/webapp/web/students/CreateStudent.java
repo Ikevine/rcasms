@@ -23,7 +23,7 @@ private AddressDAO addressDAO = AddressDAOImpl.getInstance();
         String pageDirection = request.getParameter("page");
         HttpSession httpSession = request.getSession();
 
-        request.getRequestDispatcher("WEB-INF/createstudent.jsp").forward(request , response);
+        request.getRequestDispatcher("WEB-INF/createnrol.jsp").forward(request , response);
     }
 
     @Override
@@ -44,6 +44,7 @@ private AddressDAO addressDAO = AddressDAOImpl.getInstance();
         boolean part = Boolean.parseBoolean(request.getParameter("part"));
         boolean repeat = Boolean.parseBoolean(request.getParameter("repeat"));
         String phoneNumber = request.getParameter("phone");
+
         int address_code = Integer.parseInt(request.getParameter("address"));
         Address address = addressDAO.getAddressById(address_code);
 

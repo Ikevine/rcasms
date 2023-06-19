@@ -10,7 +10,6 @@ public class ParentsDAOImpl  extends DAO implements ParentsDAO {
 
     public static ParentsDAOImpl instance ;
     private ParentsDAOImpl(){}
-
     public static ParentsDAOImpl getInstance() {
         if (instance == null) {
             return new ParentsDAOImpl();
@@ -29,7 +28,6 @@ public class ParentsDAOImpl  extends DAO implements ParentsDAO {
             return parents;
         }
         catch (Exception e){
-            e.printStackTrace();
             rollback();
             return null;
         }
@@ -41,7 +39,7 @@ public class ParentsDAOImpl  extends DAO implements ParentsDAO {
             begin();
             getSession().update(parents);
             commit();
-            return parents;
+            return  parents;
         }
         catch (Exception e){
             rollback();
@@ -53,15 +51,16 @@ public class ParentsDAOImpl  extends DAO implements ParentsDAO {
     public boolean deleteParent(int id) {
         try{
             begin();
-            Query query = getSession().createQuery("from parents where id = :ref");
+            Query query = getSession().createQuery("from Parents where id = :ref");
             query.setInteger("ref" , id);
-            Parents parent = (Parents) query.uniqueResult();
+            Parents parents =(Parents) query.uniqueResult();
+            getSession().delete(parents);
             commit();
-            return  true;
+            return true;
         }
         catch (Exception e){
             rollback();
-            return  false;
+            return false;
         }
     }
 
@@ -69,7 +68,7 @@ public class ParentsDAOImpl  extends DAO implements ParentsDAO {
     public Parents findParentById(int id) {
         try{
             begin();
-            Query query = getSession().createQuery("from parents where id = :ref");
+            Query query = getSession().createQuery("from Parents where id = :ref");
             query.setInteger("ref" , id);
             Parents parents =(Parents) query.uniqueResult();
             commit();
@@ -85,12 +84,13 @@ public class ParentsDAOImpl  extends DAO implements ParentsDAO {
     public List<Parents> getAllParents() {
         try{
             begin();
-            Query query = getSession().createQuery("from parents");
-            List<Parents>parents = query.list();
+            Query query = getSession().createQuery("from Parents");
+            List<Parents>parentsList = query.list();
             commit();
-            return parents;
+            return parentsList;
         }
         catch (Exception e){
+            e.printStackTrace();
             rollback();
             return null;
         }

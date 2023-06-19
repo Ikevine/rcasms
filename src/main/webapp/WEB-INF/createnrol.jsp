@@ -116,21 +116,14 @@
 
     <form  action="createnrol.php?page=createnrol" method="post">
 
-        <input type="text" placeholder="Username" required name="username">
-        <input type="text" placeholder="Email" required name="email">
-        <input type="text" placeholder="Fullname" required name="userfullname">
+        <input type="text" placeholder="grade" required name="grade">
+        <input type="date" name="Edate" placeholder="Enrol date"/>
+        <input type="text" placeholder="Academic" required name="academic">
+        <input type="text" placeholder="Course" required name="course">
+        <input type="text" placeholder="Enrol Level" required name="enrolLevel">
+        <input type="text" placeholder="Semester id" required name="semeter">
+        <input type="text" placeholder="Student id" required name="student">
 
-        <select name="userRole">
-            <option>Select Role</option>
-            <c:forEach items="${userRoles}" var="userrole">
-                varStatus="userrolestatus"
-                <option value="${userrole}">
-                    <c:out value="${userrole.getRoleDescription()}"/>
-                </option>
-            </c:forEach>
-        </select>
-
-        <input type="password" placeholder="Password" required name="password">
         <input type="submit" value="Sign Up">
         <p>Already have an account <span><a href="login.php?page=login"> Sign in</a>	</span></p>
     </form>

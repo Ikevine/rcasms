@@ -4,7 +4,6 @@ import rw.ac.rca.webapp.dao.ParentsDAO;
 import rw.ac.rca.webapp.dao.StudentDAO;
 import rw.ac.rca.webapp.dao.impl.ParentsDAOImpl;
 import rw.ac.rca.webapp.dao.impl.StudentDAOImpl;
-import rw.ac.rca.webapp.orm.Address;
 import rw.ac.rca.webapp.orm.Parents;
 import rw.ac.rca.webapp.orm.Student;
 
@@ -35,7 +34,6 @@ public class CreateParents extends HttpServlet {
         Parents parents = new Parents();
 
         String fullName = request.getParameter("name");
-
         Date dateOfBirth = null;
         try {
             dateOfBirth = simpleDateFormat.parse(request.getParameter("birth"));
@@ -45,8 +43,11 @@ public class CreateParents extends HttpServlet {
         //   my checkbox here
 
         String phoneNumber = request.getParameter("phone");
+
         int student_no = Integer.parseInt(request.getParameter("st_number"));
+
         Student student = studentDAO.getStudentById(student_no);
+
 
         parents.setFullName(fullName);
         parents.setPhoneNumber(phoneNumber);
@@ -56,7 +57,7 @@ public class CreateParents extends HttpServlet {
 
         try {
 
-            parentsDAO.saveParent(parents);
+            Parents parents1= parentsDAO.saveParent(parents);
             request.setAttribute("s", "Parent is created successfully");
             request.getRequestDispatcher("listparents.php").forward(request, response);
 

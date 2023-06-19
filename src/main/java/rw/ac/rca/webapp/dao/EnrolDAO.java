@@ -16,7 +16,7 @@ public interface EnrolDAO {
 	public Enrol saveEnrol(Enrol enrol);
 	public Enrol updateEnrol(Enrol enrol);
 	public Enrol saveOrUpdateEnrol(Enrol enrol);
-	public boolean deleteEnrol(Enrol enrol);
+	public boolean deleteEnrol(int enrol);
 	public Enrol getEnrolById(int EnrolId);
 	public List<Enrol> getAllEnrols();
 	

@@ -71,7 +71,7 @@ public class StudentDAOImpl extends  DAO implements StudentDAO {
      public Student getStudentById(int id) {
          try{
               begin();
-              Query query = getSession().createQuery("from student where id = :ref");
+              Query query = getSession().createQuery("from Student where id = :ref");
               query.setInteger("ref" , id);
               Student student = (Student) query.uniqueResult();
               commit();
