@@ -64,10 +64,13 @@ public class AddressDAOImpl extends DAO implements AddressDAO {
 
 
     @Override
-    public boolean deleteAddress(Address address) {
+    public boolean deleteAddress(int address) {
         try{
             begin();
-            getSession().delete(address);
+            Query query = getSession().createQuery("from Address where id= :ref");
+            query.setInteger("ref", address);
+            Address address1 = (Address) query.uniqueResult();
+            getSession().delete(address1);
             commit();
             return  true;
         }

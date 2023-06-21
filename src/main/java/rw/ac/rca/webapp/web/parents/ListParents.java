@@ -18,10 +18,16 @@ public class ListParents extends HttpServlet {
 
         String pageDirection = request.getParameter("page");
         HttpSession httpSession = request.getSession();
-        List<Parents>parentsList = parentsDAO.getAllParents();
-        System.out.println(parentsList + "Hereeeee");
-        httpSession.setAttribute("parents",parentsList);
-        request.getRequestDispatcher("WEB-INF/viewparent.jsp").forward(request ,response);
+        try {
+            List<Parents>parentsList = parentsDAO.getAllParents();
+            httpSession.setAttribute("parents",parentsList);
+            request.getRequestDispatcher("WEB-INF/viewparent.jsp").forward(request ,response);
+        }
+        catch (Exception e){
+            System.out.println("eeeeerooo");
+            e.printStackTrace();
+        }
+
     }
 
     @Override

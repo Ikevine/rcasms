@@ -16,7 +16,6 @@ public class UpdateUser extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         HttpSession httpSession = request.getSession();
-
         int id = Integer.parseInt(request.getParameter("id"));
         User existing = userDAO.getUserById(id);
         UserRole[] userRoles = UserRole.values();

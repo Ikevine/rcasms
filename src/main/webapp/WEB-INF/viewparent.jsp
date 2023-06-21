@@ -32,21 +32,18 @@
                     <th class="haction">action</th>
                 </tr>
 
-                <c:forEach items="${users}" var="usr" varStatus="usrstatus">
+                <c:forEach items="${parents}" var="par" varStatus="usrstatus">
                     <tr>
-                        <td>${std.id}</td>
-                        <td>${std.fullName}</td>
-                        <td>${std.dateOfBirth}</td>
-                        <td>${std.phoneNumber}</td>
-                        <td>${std.student.id}</td>
+                        <td>${par.id}</td>
+                        <td>${par.fullName}</td>
+                        <td>${par.dateOfBirth}</td>
+                        <td>${par.phoneNumber}</td>
+                        <td>${par.student.id}</td>
                         <td class="action">
-                            <a href="/deleteuser.php?id=${usr.id}" class="view">
-                                <p>View</p>
-                            </a>
-                            <a href="/updateuser.php?id=${usr.id}" class="view">
+                            <a href="/updateuser.php?id=${par.id}" class="view">
                                 <p>Edit</p>
                             </a>
-                            <a href="/deleteuser.php?id=${usr.id}" class="view">
+                            <a href="/deleteparent.php?id=${par.id}" class="view">
                                 <p>Delete</p>
                             </a>
                         </td>

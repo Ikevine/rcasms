@@ -5,6 +5,7 @@ import rw.ac.rca.webapp.dao.StudentDAO;
 import rw.ac.rca.webapp.dao.impl.ParentsDAOImpl;
 import rw.ac.rca.webapp.dao.impl.StudentDAOImpl;
 import rw.ac.rca.webapp.orm.Parents;
+import rw.ac.rca.webapp.orm.Semester;
 import rw.ac.rca.webapp.orm.Student;
 
 import javax.servlet.*;
@@ -14,16 +15,18 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class CreateParents extends HttpServlet {
-
-     private ParentsDAO parentsDAO = ParentsDAOImpl.getInstance();
-     private StudentDAO studentDAO = StudentDAOImpl.getInstance();
+public class UpdateParent extends HttpServlet {
+    private ParentsDAO parentsDAO = ParentsDAOImpl.getInstance();
+    private StudentDAO studentDAO = StudentDAOImpl.getInstance();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String pageDirection = request.getParameter("page");
+
         HttpSession httpSession = request.getSession();
-        request.getRequestDispatcher("WEB-INF/adparent.jsp").forward(request , response);
+        int id = Integer.parseInt(request.getParameter("id"));
+        Parents existing = parentsDAO.findParentById(id);
+        request.setAttribute("exist" , existing);
+
     }
 
     @Override

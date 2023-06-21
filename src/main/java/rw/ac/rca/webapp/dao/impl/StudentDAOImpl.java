@@ -56,7 +56,10 @@ public class StudentDAOImpl extends  DAO implements StudentDAO {
      public boolean deleteStudent(int id) {
           try {
                begin();
-               getSession().delete(id);
+               Query query = getSession().createQuery("from Student where id= :ref");
+               query.setInteger("ref",id);
+               Student student =(Student) query.uniqueResult();
+               getSession().delete(student);
                commit();
                return true;
           }

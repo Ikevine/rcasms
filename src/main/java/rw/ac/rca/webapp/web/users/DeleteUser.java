@@ -13,10 +13,10 @@ public class DeleteUser extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         request.setAttribute("hy" , "I think we good know");
-        request.getRequestDispatcher("listuser.php").forward(request , response);
         int id =Integer.parseInt(request.getParameter("id"));
         try{
             userDAO.deleteUserById(id);
+            request.getRequestDispatcher("listuser.php").forward(request , response);
         }
         catch (Exception e){e.printStackTrace();}
     }
