@@ -48,7 +48,7 @@
     <tr>
       <td>${std.id}</td>
       <td>${std.grade}</td>
-      <td>${std.enrollmentDate.id}</td>
+      <td>${std.enrollmentDate}</td>
       <td>${std.semester.id}</td>
       <td>${std.enrollmentLevel.id}</td>
       <td>${std.academicYear.id}</td>

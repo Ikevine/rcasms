@@ -35,7 +35,7 @@ public class CreateUser extends HttpServlet {
 		HttpSession httpSession = request.getSession();
 		UserRole[] userRoles = UserRole.values();
 		httpSession.setAttribute("userRoles", userRoles);
-		request.getRequestDispatcher("WEB-INF/createuser.jsp").forward(
+		request.getRequestDispatcher("WEB-INF/adduser.jsp").forward(
 				request, response);
 	}
 
@@ -64,12 +64,12 @@ public class CreateUser extends HttpServlet {
 			userDAO.saveOrUpdateUser(user);
 
 			httpSession.setAttribute("success", "Created successfully");
-			request.getRequestDispatcher("WEB-INF/createuser.jsp").forward(request , response);
+			request.getRequestDispatcher("listuser.php").forward(request , response);
 
 		}
 		catch (Exception e) {
 			httpSession.setAttribute("error", "Can't Create");
-			request.getRequestDispatcher("WEB-INF/createuser.jsp").forward(
+			request.getRequestDispatcher("WEB-INF/adduser.jsp").forward(
 					request, response);
 		}
 
