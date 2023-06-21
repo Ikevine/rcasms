@@ -41,7 +41,7 @@ public class CreateCourse extends HttpServlet {
         if (pageRedirect != null) {
             System.out.println("The print statement is and the only is: " + pageRedirect);
             if (pageRedirect.equals("createcourse")) {
-                request.getRequestDispatcher("WEB-INF/createCourse.jsp").forward(request, response);
+                request.getRequestDispatcher("WEB-INF/adcourse.jsp").forward(request, response);
             } else {
                 request.setAttribute("error ", "No user found");
                 request.getRequestDispatcher("WEB-INF/login.jsp").forward(request, response);

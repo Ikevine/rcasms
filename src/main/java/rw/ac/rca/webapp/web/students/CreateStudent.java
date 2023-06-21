@@ -22,7 +22,6 @@ private AddressDAO addressDAO = AddressDAOImpl.getInstance();
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String pageDirection = request.getParameter("page");
         HttpSession httpSession = request.getSession();
-
         request.getRequestDispatcher("WEB-INF/adstudent.jsp").forward(request , response);
     }
 
@@ -45,8 +44,17 @@ private AddressDAO addressDAO = AddressDAOImpl.getInstance();
         boolean repeat = Boolean.parseBoolean(request.getParameter("repeat"));
         String phoneNumber = request.getParameter("phone");
 
-        int address_code = Integer.parseInt(request.getParameter("address"));
-        Address address = addressDAO.getAddressById(address_code);
+//        take the student address
+        Address address = new Address();
+        String country = request.getParameter("country");
+        String streetCode  = request.getParameter("street");
+        String city = request.getParameter("city");
+        String postcode = request.getParameter("postal");
+
+        address.setCountry(country);
+        address.setCity(city);
+        address.setStreetAddress(streetCode);
+        address.setPostalCode(postcode);
 
         student.setFullName(fullName);
         student.setDateOfBirth(dateOfBirth);
@@ -54,11 +62,10 @@ private AddressDAO addressDAO = AddressDAOImpl.getInstance();
         student.setRepeating(repeat);
         student.setInternational(inter);
         student.setPartTime(part);
-
         student.setAddress(address);
-        System.out.println("Kevine look at here please sweet" + address);
             try {
 
+                addressDAO.saveAddress(address);
                 Student s1 = studentDAO.saveStudent(student);
                 request.setAttribute("s", "Student is created successfully");
                 request.getRequestDispatcher("Liststudents.php").forward(request, response);

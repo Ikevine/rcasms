@@ -49,7 +49,6 @@ public class UpdateParent extends HttpServlet {
 
         int student_no = Integer.parseInt(request.getParameter("st_number"));
         Student student = studentDAO.getStudentById(student_no);
-        System.out.println(student.getFullName() + "Keke this is my name");
 
         parents.setFullName(fullName);
         parents.setPhoneNumber(phoneNumber);

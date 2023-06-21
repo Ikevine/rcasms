@@ -25,7 +25,6 @@ public class UpdateStudent extends HttpServlet {
         HttpSession httpSession = request.getSession();
         int id = Integer.parseInt(request.getParameter("id"));
         Student existing = studentDAO.getStudentById(id);
-
         request.setAttribute("exist" , existing);
 
 

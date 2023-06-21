@@ -32,25 +32,34 @@
             </div>
             <div class="indesc">
                 <input type="text" class="input" placeholder="Enter phone number" name="phone">
-                <input type="text" class="input" placeholder="Enter password" name="address">
-            </div>
-            <div class="indesc">
                 <fieldset>
                     <legend>Select the study state</legend>
                     <div class="check">
-                        <input type="checkbox" id="1" value="true"/>
+                        <input type="radio" id="1" value="true" name="inter"/>
                         <label for="1">International</label>
                     </div>
                     <div class="check">
-                        <input type="checkbox" id="2" value="true"/>
+                        <input type="radio" id="2" value="true" name="part"/>
                         <label for="2">part Time</label>
                     </div>
                     <div class="check">
-                        <input type="checkbox" id="3" value="true"/>
+                        <input type="radio" id="3" value="true" name="repeat"/>
                         <label for="3">Is repaeting</label>
                     </div>
                 </fieldset>
             </div>
+                <div class="desf">
+                    <h1>Address detail</h1>
+                </div>
+                <div class="indesc">
+                    <input type="text" class="input" placeholder="Enter  country name" name="country">
+                    <input type="text" class="input" placeholder="Enter city" name="city">
+                </div>
+                <div class="indesc">
+                    <input type="text" class="input" placeholder="Enter street address" name="street">
+                    <input type="text" class="input" placeholder="Enter postal code" name="postal">
+                </div>
+
             <div class="dcenter">
                 <button class="btn">Create user</button>
             </div>

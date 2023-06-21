@@ -28,9 +28,6 @@
                     <th>Full names</th>
                     <th>Birth</th>
                     <th>Phone</th>
-                    <th>International</th>
-                    <th>Part time</th>
-                    <th>Repeating</th>
                     <th>Address Code</th>
                     <th class="haction">action</th>
                 </tr>
@@ -41,12 +38,9 @@
                         <td>${std.fullName}</td>
                         <td>${std.dateOfBirth}</td>
                         <td>${std.phoneNumber}</td>
-                        <td>${std.international}</td>
-                        <td>${std.partTime}</td>
-                        <td>${std.repeating}</td>
-                        <td>${std.address.id}</td>
+                        <td>${std.address.city}</td>
                         <td class="action">
-                            <a href="/deleteuser.php?id=${std.id}" class="view">
+                            <a href="/viewd.php?id=${std.id}" class="view">
                                 <p>View</p>
                             </a>
                             <a href="/updatestudent.php?id=${std.id}" class="view">

@@ -45,7 +45,7 @@ public class ListCourse extends HttpServlet {
 				httpSession.setAttribute("courses", courses);
 				UserRole[] userRoles = UserRole.values();
 				httpSession.setAttribute("userRoles", userRoles);
-				request.getRequestDispatcher("WEB-INF/courses.jsp").forward(request , response);
+				request.getRequestDispatcher("WEB-INF/viewcourse.jsp").forward(request , response);
 
 	}
 

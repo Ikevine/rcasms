@@ -43,6 +43,12 @@
                     <div class="icon">
                         <img src="../assets/icon/student.png" alt="icon" >
                     </div>
+                    <a href="displaypage.php?direct=courses">Courses</a>
+                </li>
+                <li>
+                    <div class="icon">
+                        <img src="../assets/icon/student.png" alt="icon" >
+                    </div>
                     <a href="displaypage.php?direct=enrollevel">Enrollment Level</a>
                 </li>
                 <li>

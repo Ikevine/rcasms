@@ -32,9 +32,6 @@
             </div>
             <div class="indesc">
                 <input type="text" class="input" value="${exist.phoneNumber}" name="phone">
-                <input type="text" class="input" value="${exist.address.id}" name="address">
-            </div>
-            <div class="indesc">
                 <fieldset>
                     <legend>Select the study state</legend>
                     <div class="check">
@@ -50,6 +47,17 @@
                         <label for="3">Is repaeting</label>
                     </div>
                 </fieldset>
+            </div>
+            <div class="desf">
+                <h1>Address detail</h1>
+            </div>
+            <div class="indesc">
+                <input type="text" class="input" value="${exist.address.country}" name="country">
+                <input type="text" class="input" value="${exist.address.city}" name="city">
+            </div>
+            <div class="indesc">
+                <input type="text" class="input" value="${exist.address.streetAddress}" name="street">
+                <input type="text" class="input" value="${exist.address.postalCode}" name="postal">
             </div>
             <div class="dcenter">
                 <button class="btn">Create user</button>

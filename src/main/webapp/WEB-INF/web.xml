@@ -189,7 +189,35 @@
     <servlet-name>UpdateAcademic</servlet-name>
     <servlet-class>rw.ac.rca.webapp.web.academicYear.UpdateAcademic</servlet-class>
   </servlet>
+    <servlet>
+        <servlet-name>ViewD</servlet-name>
+        <servlet-class>rw.ac.rca.webapp.web.students.ViewD</servlet-class>
+    </servlet>
+  <servlet>
+    <servlet-name>DeleteCourse</servlet-name>
+    <servlet-class>rw.ac.rca.webapp.web.DeleteCourse</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateCourse</servlet-name>
+    <servlet-class>rw.ac.rca.webapp.web.UpdateCourse</servlet-class>
+  </servlet>
   <servlet-mapping>
+    <servlet-name>UpdateCourse</servlet-name>
+    <url-pattern>/updatecourse.php</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>DeleteCourse</servlet-name>
+    <url-pattern>/deletecourse.php</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet-mapping>
+    <servlet-name>ViewD</servlet-name>
+    <url-pattern>/viewd.php</url-pattern>
+  </servlet-mapping>
+
+    <servlet-mapping>
     <servlet-name>UpdateAcademic</servlet-name>
     <url-pattern>/updateacademic.php</url-pattern>
   </servlet-mapping>
