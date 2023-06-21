@@ -47,6 +47,19 @@ a {
   align-items: center;
   flex-direction: column;
 }
+.container2 .dright .upper_desc {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.container2 .dright .upper_desc p {
+  font-size: 15px;
+  color: #424242;
+}
 
 .log {
   width: 5rem;
@@ -111,6 +124,8 @@ text-login {
   color: #FFFFFF;
   border-radius: 5px;
   font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
   transition: all 400ms ease-in-out;
 }
 .btn:hover {
@@ -387,6 +402,12 @@ fieldset .check input[type=checkbox]:checked::after {
   background-color: #FFFFFF;
   padding: 0.5rem;
   border-radius: 5px;
+  position: relative;
+}
+.tbody #sidebtn {
+  position: absolute;
+  right: 0;
+  top: -40%;
 }
 .tbody table {
   width: 100%;

@@ -11,6 +11,15 @@
   .dright{
     width: 82%;
     @include flex;
+    .upper_desc{
+      margin-bottom: 4rem;
+      @include flex;
+      gap: 0.2rem;
+      p{
+        font-size: 15px;
+        color: $grey;
+      }
+    }
   }
   background-color: $body;
 }

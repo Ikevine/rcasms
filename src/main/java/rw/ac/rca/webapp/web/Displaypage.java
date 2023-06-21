@@ -24,7 +24,7 @@ public class Displaypage extends HttpServlet {
                   break;
 
               case  "user":
-                  request.getRequestDispatcher("WEB-INF/viewuser.jsp").forward(request,response);
+                  request.getRequestDispatcher("listuser.php").forward(request,response);
                   break;
 
               case "semester":

@@ -7,15 +7,21 @@
 --%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ include file="upperlink.jsp"%>
-
+<title>View user</title>
 <div class="container2">
-<%--    right side--%>
+<%--    left side--%>
     <div class="dleft">
         <%@ include file="sidebar.jsp" %>
     </div>
-<%--    left side--%>
+<%--    right--%>
     <div class="dright">
+        <div class="upper_desc">
+            <h1>Students</h1>
+            <p>Here is the list of all students and the operation on them</p>
+        </div>
+
         <div class="tbody">
+            <button class="btn" id="sidebtn">Hellow</button>
             <table>
                 <tr>
                     <th>ID</th>
@@ -31,9 +37,9 @@
                     <td>${usr.fullName}</td>
                     <td>${usr.email}</td>
                     <td>${usr.userRole.getRoleDescription()}</td>
-                    <td><input type="checkbox" name="usrIds"
-                               value="${usr.id}" /></td>
-                    <td>
+<%--                    <td><input type="checkbox" name="usrIds"--%>
+<%--                               value="${usr.id}" /></td>--%>
+<%--                    <td>--%>
                     <td class="action">
                         <a href="/deleteuser.php?id=${usr.id}" class="view">
                             <p>View</p>

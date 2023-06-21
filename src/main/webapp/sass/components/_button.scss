@@ -5,6 +5,8 @@
   color: $secondary;
   border-radius: 5px;
   font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
   @include transition;
 
   &:hover{

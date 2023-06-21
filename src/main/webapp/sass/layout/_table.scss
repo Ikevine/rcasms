@@ -3,13 +3,18 @@
   background-color: $secondary;
   padding: 0.5rem;
   border-radius: 5px;
+  position: relative;
+  #sidebtn{
+    position: absolute;
+    right: 0;
+    top: -40%;
+  }
   table{
     width: 100%;
     @include flex;
   }
   table, th , td{
     border-collapse: collapse;
-
   }
 
   th{

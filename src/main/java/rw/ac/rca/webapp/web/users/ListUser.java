@@ -44,7 +44,7 @@ public class ListUser extends HttpServlet {
 			httpSession.setAttribute("users", users);
 			UserRole[] userRoles = UserRole.values();
 			httpSession.setAttribute("userRoles", userRoles);
-			request.getRequestDispatcher("WEB-INF/users.jsp").forward(request , response);
+			request.getRequestDispatcher("WEB-INF/viewuser.jsp").forward(request , response);
 		}
 		catch(Exception e){
 			httpSession.setAttribute("error", "Invalid User. Try again!");

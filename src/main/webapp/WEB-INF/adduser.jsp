@@ -4,9 +4,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
-<%--<jsp:include page="headeradmin.jsp"><jsp:param--%>
-<%--		name="title" value="Create User" />--%>
-<%--</jsp:include>--%>
+<jsp:include page="headeradmin.jsp"><jsp:param
+		name="title" value="Create User" />
+</jsp:include>
 <%--<div id="middle">--%>
 <%--		<h2 style="text-align: left;">--%>
 <%--			<b>Enter User Details</b>--%>
