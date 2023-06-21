@@ -22,7 +22,7 @@ public class ListAcademic extends HttpServlet {
         try{
             List<AcademicYear> academicYears = academicYearDAO.getAllAcademicYears();
             httpSession.setAttribute("academic" , academicYears);
-            request.getRequestDispatcher("WEB-INF/listacademic.jsp").forward(request , response);
+            request.getRequestDispatcher("WEB-INF/viewacademic.jsp").forward(request , response);
         }
         catch (Exception e){
             httpSession.setAttribute("error", "Invalid Academic year Level. Try again!");

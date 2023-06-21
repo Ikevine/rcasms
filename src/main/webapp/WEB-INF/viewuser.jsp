@@ -21,7 +21,7 @@
         </div>
 
         <div class="tbody">
-            <a href="aduser.jsp" class="btn" id="sidebtn">Add user</a>
+            <a href="adduser.php?page=adduser" class="btn" id="sidebtn">Add user</a>
             <table>
                 <tr>
                     <th>ID</th>

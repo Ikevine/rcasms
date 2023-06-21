@@ -21,7 +21,7 @@
         </div>
 
         <div class="tbody">
-            <button class="btn" id="sidebtn">Hellow</button>
+            <a href="createnrolevel.php?page=createnrolevel" class="btn" id="sidebtn">Add level</a>
             <table>
                 <tr>
                     <th>ID</th>

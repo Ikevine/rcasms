@@ -1,5 +1,7 @@
 /**
- * 
+ *
+ /**
+ *
  */
 package rw.ac.rca.webapp.util;
 
@@ -12,9 +14,9 @@ import org.hibernate.service.ServiceRegistry;
 
 /**
  * Session factory for smis configures hibernate configuration file
- * 
+ *
  * @author Aphrodice Rwagaju
- * 
+ *
  */
 public class SmisSessionFactory {
 	private static SessionFactory sessionFactory;
@@ -22,13 +24,13 @@ public class SmisSessionFactory {
 	private static String configFile = "hibernate.cfg.xml";
 	private static Configuration configuration;
 	private static ServiceRegistry serviceRegistry;
-	
+
 	private SmisSessionFactory() {
 	}
 
 	/**
 	 * gets instance
-	 * 
+	 *
 	 * @return sessionFactory
 	 */
 	private static SessionFactory getInstance() throws HibernateException{
@@ -45,7 +47,7 @@ public class SmisSessionFactory {
 
 	/**
 	 * gets session
-	 * 
+	 *
 	 * @return session
 	 */
 	public static Session getSession() {
@@ -57,3 +59,4 @@ public class SmisSessionFactory {
 	}
 
 }
+

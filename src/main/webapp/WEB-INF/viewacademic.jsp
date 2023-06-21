@@ -21,7 +21,7 @@
         </div>
 
         <div class="tbody">
-            <button class="btn" id="sidebtn">Hellow</button>
+            <a href="createacademic.php?page=createacademic" class="btn" id="sidebtn">Add year</a>
             <table>
                 <tr>
                     <th>ID</th>

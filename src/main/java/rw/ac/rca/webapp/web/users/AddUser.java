@@ -61,7 +61,7 @@ public class AddUser extends HttpServlet {
             user.setEmail(email);
             user.setUserRole(usrr);
 
-            userDAO.saveOrUpdateUser(user);
+            userDAO.saveUser(user);
 
             httpSession.setAttribute("success", "Created successfully");
             request.getRequestDispatcher("listuser.php").forward(request , response);
@@ -69,7 +69,7 @@ public class AddUser extends HttpServlet {
         }
         catch (Exception e) {
             httpSession.setAttribute("error", "Can't Create");
-            request.getRequestDispatcher("WEB-INF/adduser.jsp").forward(
+            request.getRequestDispatcher("WEB-INF/aduser.jsp").forward(
                     request, response);
         }
 

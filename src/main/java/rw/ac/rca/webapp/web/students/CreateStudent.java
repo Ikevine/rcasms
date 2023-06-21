@@ -23,7 +23,7 @@ private AddressDAO addressDAO = AddressDAOImpl.getInstance();
         String pageDirection = request.getParameter("page");
         HttpSession httpSession = request.getSession();
 
-        request.getRequestDispatcher("WEB-INF/createnrol.jsp").forward(request , response);
+        request.getRequestDispatcher("WEB-INF/adstudent.jsp").forward(request , response);
     }
 
     @Override
@@ -65,7 +65,7 @@ private AddressDAO addressDAO = AddressDAOImpl.getInstance();
 
             } catch (Exception e) {
                 request.setAttribute("f", "Fail to create student");
-                request.getRequestDispatcher("WEB-INF/createstudent.jsp").forward(request, response);
+                request.getRequestDispatcher("WEB-INF/adstudent.jsp").forward(request, response);
             }
         }
     }

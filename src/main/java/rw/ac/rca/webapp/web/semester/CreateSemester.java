@@ -20,7 +20,7 @@ public class CreateSemester extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String pageRedirect = request.getParameter("page");
         HttpSession httpSession = request.getSession();
-        request.getRequestDispatcher("WEB-INF/createsemester.jsp").forward(
+        request.getRequestDispatcher("WEB-INF/adsemester.jsp").forward(
                 request, response);
     }
 
@@ -57,7 +57,7 @@ public class CreateSemester extends HttpServlet {
         }
         catch (Exception e){
             httpSession.setAttribute("error", "Can't Create");
-            request.getRequestDispatcher("WEB-INF/createnrolevel.jsp").forward(request, response);
+            request.getRequestDispatcher("WEB-INF/adsemester.jsp").forward(request, response);
         }
     }
 }

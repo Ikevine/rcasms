@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package rw.ac.rca.webapp.util;
 
@@ -9,7 +9,7 @@ import java.security.NoSuchAlgorithmException;
 
 /**
  * @author Aphrodice Rwagaju
- * 
+ *
  */
 public class Util {
 
@@ -52,7 +52,7 @@ public class Util {
 		}
 		return out;
 	}
-	
+
 	public static String staticGeneratedHash512(String st) {
 		MessageDigest md;
 		String out = "";

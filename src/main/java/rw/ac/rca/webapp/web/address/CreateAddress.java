@@ -15,7 +15,7 @@ public class CreateAddress extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         HttpSession httpSession = request.getSession();
-        request.getRequestDispatcher("WEB-INF/createaddress.jsp").forward(
+        request.getRequestDispatcher("WEB-INF/adaddresss.jsp").forward(
                 request, response);
     }
 
@@ -39,7 +39,7 @@ public class CreateAddress extends HttpServlet {
         }
         catch (Exception e){
             httpSession.setAttribute("error", "Can't Create");
-            request.getRequestDispatcher("WEB-INF/createaddress.jsp").forward(
+            request.getRequestDispatcher("WEB-INF/adaddresss.jsp").forward(
                     request, response);
         }
     }

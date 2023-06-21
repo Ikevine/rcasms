@@ -18,7 +18,6 @@ import java.io.IOException;
  * Servlet implementation class Login
  */
 public class Login extends HttpServlet {
-
 	private static final long serialVersionUID = 1L;
 	public static final Logger LOG = Logger.getLogger(Login.class);
 	private UserDAO userDAO = UserDAOImpl.getInstance();
@@ -93,7 +92,7 @@ public class Login extends HttpServlet {
 
 					if (privilege.equals(UserRole.ADMINISTRATOR)) {
 						request.getRequestDispatcher("WEB-INF/viewuser.jsp").forward(request, response);
-					} else if (authenticatedUser != null && privilege.equals(UserRole.GUEST)) {
+					} else if  (privilege.equals(UserRole.GUEST)) {
 						request.getRequestDispatcher("WEB-INF/homeguest.jsp").forward(request, response);
 					} else if (privilege.equals(UserRole.EMPLOYEE)) {
 						request.getRequestDispatcher("WEB-INF/homeemployee.jsp").forward(request, response);

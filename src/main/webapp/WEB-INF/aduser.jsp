@@ -7,7 +7,8 @@
 --%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ include file="upperlink.jsp"%>
-<title>View user</title>
+<title>add user</title>
+
 <div class="container2">
     <%--    left side--%>
     <div class="dleft">
@@ -17,13 +18,13 @@
     <div class="dright">
         <div class="upper_desc">
             <h1>Users</h1>
-            <p>Here is the list of all students and the operation on them</p>
+            <p>Here is the list of all user and the operation on them</p>
         </div>
 
         <form class="cinput" action="adduser.php?page=adduser" method="post">
 
             <div class="desf">
-                <h1>Student detail</h1>
+                <h1>User detail</h1>
             </div>
             <div class="indesc">
                 <input type="text" class="input" placeholder="Enter full name" name="userfullname">
@@ -50,7 +51,7 @@
                 </div>
             </div>
             <div class="dcenter">
-                <button class="btn">Create</button>
+                <button class="btn">Create user</button>
             </div>
 
         </form>

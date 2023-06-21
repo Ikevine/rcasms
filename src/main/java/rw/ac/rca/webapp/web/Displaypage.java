@@ -39,6 +39,10 @@ public class Displaypage extends HttpServlet {
                   request.getRequestDispatcher("listenril.php").forward(request , response);
                   break;
 
+              case "address":
+                  request.getRequestDispatcher("listaddress.php").forward(request ,response);
+                  break;
+
               default:
                   break;
 

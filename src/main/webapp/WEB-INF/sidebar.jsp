@@ -51,6 +51,12 @@
                     </div>
                     <a href="displaypage.php?direct=enroll">Enrollment</a>
                 </li>
+                <li>
+                    <div class="icon">
+                        <img src="../assets/icon/student.png" alt="icon" >
+                    </div>
+                    <a href="displaypage.php?direct=address">Address</a>
+                </li>
 
             </ul>
 

@@ -21,7 +21,7 @@ public class CreateAcademic extends HttpServlet {
 
         String pageRedirect = request.getParameter("page");
         HttpSession httpSession = request.getSession();
-        request.getRequestDispatcher("WEB-INF/createacademyear.jsp").forward(
+        request.getRequestDispatcher("WEB-INF/addacademic.jsp").forward(
                 request, response);
     }
 
@@ -42,7 +42,7 @@ public class CreateAcademic extends HttpServlet {
         }
         catch (Exception e){
             httpSession.setAttribute("error", "Can't Create");
-            request.getRequestDispatcher("WEB-INF/createacademyear.jsp").forward(request, response);
+            request.getRequestDispatcher("WEB-INF/addacademic.jsp").forward(request, response);
         }
     }
 }

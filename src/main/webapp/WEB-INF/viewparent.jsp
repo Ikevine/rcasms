@@ -21,7 +21,7 @@
         </div>
 
         <div class="tbody">
-            <button class="btn" id="sidebtn">Hellow</button>
+            <a href="createparents.php?page=createparents" class="btn" id="sidebtn">Add parent</a>
             <table>
                 <tr>
                     <th>ID</th>

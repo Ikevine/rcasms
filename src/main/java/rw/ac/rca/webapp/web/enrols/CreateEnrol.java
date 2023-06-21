@@ -25,7 +25,7 @@ public class CreateEnrol extends HttpServlet {
 
         String pageDirection = request.getParameter("page");
         HttpSession httpSession = request.getSession();
-        request.getRequestDispatcher("WEB-INF/createnrol.jsp").forward(request , response);
+        request.getRequestDispatcher("WEB-INF/adenrol.jsp").forward(request , response);
 
     }
 
@@ -72,7 +72,7 @@ public class CreateEnrol extends HttpServlet {
 
         } catch (Exception e) {
             request.setAttribute("f", "Fail to create student");
-            request.getRequestDispatcher("WEB-INF/createnrol.jsp").forward(request, response);
+            request.getRequestDispatcher("WEB-INF/adenrol.jsp").forward(request, response);
         }
     }
 }

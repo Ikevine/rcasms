@@ -34,7 +34,7 @@ public class ListEnrolLevel extends HttpServlet {
         catch (Exception e){
             httpSession.setAttribute("error", "Invalid Enrol Level. Try again!");
             e.printStackTrace();
-            RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/createnrolevel.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/viewenrollevel.jsp");
             dispatcher.forward(request, response);
         }
    }

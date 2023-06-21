@@ -21,7 +21,7 @@
         </div>
 
         <div class="tbody">
-            <button class="btn" id="sidebtn">Hellow</button>
+            <a href="createaddress.php?page=createaddress" class="btn" id="sidebtn">Add address</a>
             <table>
                 <tr>
                     <th>ID</th>

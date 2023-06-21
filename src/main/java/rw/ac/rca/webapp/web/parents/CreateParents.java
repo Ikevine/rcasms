@@ -23,7 +23,7 @@ public class CreateParents extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String pageDirection = request.getParameter("page");
         HttpSession httpSession = request.getSession();
-        request.getRequestDispatcher("WEB-INF/createparents.jsp").forward(request , response);
+        request.getRequestDispatcher("WEB-INF/adparent.jsp").forward(request , response);
     }
 
     @Override
@@ -63,7 +63,7 @@ public class CreateParents extends HttpServlet {
 
         } catch (Exception e) {
             request.setAttribute("f", "Fail to create student");
-            request.getRequestDispatcher("WEB-INF/createparents.jsp").forward(request, response);
+            request.getRequestDispatcher("WEB-INF/adparent.jsp").forward(request, response);
         }
     }
 }

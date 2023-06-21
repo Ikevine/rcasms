@@ -20,11 +20,11 @@ public class ListAddress extends HttpServlet {
           httpSession.setAttribute("addresses" , addresses);
 
           httpSession.setAttribute("success" , "Look the list");
-          request.getRequestDispatcher("WEB-INF/listaddress.jsp").forward(request , response);
+          request.getRequestDispatcher("WEB-INF/viewaddress.jsp").forward(request , response);
       }
       catch (Exception e){
           httpSession.setAttribute("error" , "Sorry we failed to do it");
-          request.getRequestDispatcher("WEB-INF/viewaddress");
+          request.getRequestDispatcher("WEB-INF/viewaddress.jsp");
       }
 
     }
