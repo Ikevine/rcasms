@@ -92,7 +92,7 @@ public class Login extends HttpServlet {
 					httpSession.setAttribute("privilege", privilege);
 
 					if (privilege.equals(UserRole.ADMINISTRATOR)) {
-						request.getRequestDispatcher("WEB-INF/homeadmin.jsp").forward(request, response);
+						request.getRequestDispatcher("WEB-INF/viewuser.jsp").forward(request, response);
 					} else if (authenticatedUser != null && privilege.equals(UserRole.GUEST)) {
 						request.getRequestDispatcher("WEB-INF/homeguest.jsp").forward(request, response);
 					} else if (privilege.equals(UserRole.EMPLOYEE)) {
