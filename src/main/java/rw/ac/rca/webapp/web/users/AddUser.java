@@ -35,7 +35,7 @@ public class AddUser extends HttpServlet {
         HttpSession httpSession = request.getSession();
         UserRole[] userRoles = UserRole.values();
         httpSession.setAttribute("userRoles", userRoles);
-        request.getRequestDispatcher("WEB-INF/adduser.jsp").forward(
+        request.getRequestDispatcher("WEB-INF/aduser.jsp").forward(
                 request, response);
     }
 
