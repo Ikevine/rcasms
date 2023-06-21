@@ -27,6 +27,7 @@ public class UpdateEnrol extends HttpServlet {
         Enrol existing = enrolDAO.getEnrolById(id);
         request.setAttribute("exist" , existing);
 
+        request.getRequestDispatcher("WEB-INF/upenrol.jsp").forward(request , response);
     }
 
     @Override
@@ -66,13 +67,13 @@ public class UpdateEnrol extends HttpServlet {
 
         try {
 
-            Enrol E1 = enrolDAO.saveEnrol(enrol);
+            Enrol E1 = enrolDAO.updateEnrol(enrol);
             request.setAttribute("s", "Student is created successfully");
             request.getRequestDispatcher("listenril.php").forward(request, response);
 
         } catch (Exception e) {
             request.setAttribute("f", "Fail to create student");
-            request.getRequestDispatcher("WEB-INF/adenrol.jsp").forward(request, response);
+            request.getRequestDispatcher("WEB-INF/upenrol.jsp").forward(request, response);
         }
     }
 }

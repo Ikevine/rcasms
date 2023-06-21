@@ -19,6 +19,7 @@ public class UpdateAddress extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         Address existing = addressDAO.getAddressById(id);
         request.setAttribute("exist" , existing);
+        request.getRequestDispatcher("WEB-INF/upaddress.jsp").forward(request , response);
     }
 
     @Override
@@ -35,13 +36,13 @@ public class UpdateAddress extends HttpServlet {
             address.setStreetAddress(streetCode);
             address.setPostalCode(postcode);
 
-            addressDAO.saveAddress(address);
+            addressDAO.updateAddress(address);
             httpSession.setAttribute("success", "Created successfully");
             request.getRequestDispatcher("listaddress.php").forward(request,response);
         }
         catch (Exception e){
             httpSession.setAttribute("error", "Can't Create");
-            request.getRequestDispatcher("WEB-INF/adaddresss.jsp").forward(
+            request.getRequestDispatcher("WEB-INF/upaddress.jsp").forward(
                     request, response);
         }
     }

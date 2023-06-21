@@ -40,7 +40,7 @@
                         <td>${par.phoneNumber}</td>
                         <td>${par.student.id}</td>
                         <td class="action">
-                            <a href="/updateuser.php?id=${par.id}" class="view">
+                            <a href="/updateparent.php?id=${par.id}" class="view">
                                 <p>Edit</p>
                             </a>
                             <a href="/deleteparent.php?id=${par.id}" class="view">

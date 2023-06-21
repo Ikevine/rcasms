@@ -37,7 +37,7 @@
                         <td>${el.code}</td>
 
                         <td class="action">
-                            <a href="/updateuser.php?id=${usr.id}" class="view">
+                            <a href="/updateenrolevel.php?id=${el.id}" class="view">
                                 <p>Edit</p>
                             </a>
                             <a href="/deletelevel.php?id=${el.id}" class="view">

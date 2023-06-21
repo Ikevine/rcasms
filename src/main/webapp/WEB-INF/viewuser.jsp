@@ -37,13 +37,8 @@
                     <td>${usr.fullName}</td>
                     <td>${usr.email}</td>
                     <td>${usr.userRole.getRoleDescription()}</td>
-<%--                    <td><input type="checkbox" name="usrIds"--%>
-<%--                               value="${usr.id}" /></td>--%>
-<%--                    <td>--%>
+
                     <td class="action">
-                        <a href="/deleteuser.php?id=${usr.id}" class="view">
-                            <p>View</p>
-                        </a>
                         <a href="/updateuser.php?id=${usr.id}" class="view">
                             <p>Edit</p>
                         </a>

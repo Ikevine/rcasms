@@ -199,7 +199,7 @@
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>UpdateEnrolevel</servlet-name>
-    <url-pattern>/updateenrolevel</url-pattern>
+    <url-pattern>/updateenrolevel.php</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>UpdateEnrol</servlet-name>

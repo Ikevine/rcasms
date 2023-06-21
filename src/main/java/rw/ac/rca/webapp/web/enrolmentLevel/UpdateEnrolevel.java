@@ -24,6 +24,7 @@ public class UpdateEnrolevel extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         EnrollmentLevel existing = enrollmentLevelDAO.getEnrolmentLevel(id);
         request.setAttribute("exist" , existing);
+        request.getRequestDispatcher("WEB-INF/uplevel.jsp").forward(request , response);
     }
 
     @Override
@@ -37,13 +38,13 @@ public class UpdateEnrolevel extends HttpServlet {
             enrollmentLevel.setCode(enrolCode);
             enrollmentLevel.setName(enrolName);
 
-            enrollmentLevelDAO.saveLevel(enrollmentLevel);
+            enrollmentLevelDAO.updateLevel(enrollmentLevel);
             httpSession.setAttribute("success", "Created successfully");
             request.getRequestDispatcher("listenrolevel.php").forward(request , response);
         }
         catch (Exception e){
             httpSession.setAttribute("error", "Can't Create");
-            request.getRequestDispatcher("WEB-INF/adenrollevel.jsp").forward(request, response);
+            request.getRequestDispatcher("WEB-INF/uplevel.jsp").forward(request, response);
         }
     }
 }

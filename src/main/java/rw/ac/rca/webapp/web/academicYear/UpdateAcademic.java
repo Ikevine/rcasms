@@ -22,6 +22,8 @@ public class UpdateAcademic extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         AcademicYear existing = academicYearDAO.getAcademicYearById(id);
         request.setAttribute("exist" , existing);
+
+        request.getRequestDispatcher("WEB-INF/upacade.jsp").forward(request , response);
     }
 
     @Override

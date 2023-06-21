@@ -41,7 +41,7 @@
                         <td>${add.postalCode}</td>
 
                         <td class="action">
-                            <a href="/updateuser.php?id=${usr.id}" class="view">
+                            <a href="/updateaddress.php?id=${add.id}" class="view">
                                 <p>Edit</p>
                             </a>
                             <a href="/deleteaddress.php?id=${add.id}" class="view">

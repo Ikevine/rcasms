@@ -26,7 +26,7 @@ public class UpdateParent extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         Parents existing = parentsDAO.findParentById(id);
         request.setAttribute("exist" , existing);
-
+        request.getRequestDispatcher("WEB-INF/upparent.jsp").forward(request , response);
     }
 
     @Override
@@ -60,7 +60,7 @@ public class UpdateParent extends HttpServlet {
 
         try {
 
-            parentsDAO.saveParent(parents);
+            parentsDAO.updateParent(parents);
             request.setAttribute("s", "Parent is created successfully");
             request.getRequestDispatcher("listparents.php").forward(request, response);
 
@@ -68,7 +68,7 @@ public class UpdateParent extends HttpServlet {
             request.setAttribute("f", "Fail to create student");
             e.printStackTrace();
             System.out.println("Keke this is my name");
-            request.getRequestDispatcher("WEB-INF/adparent.jsp").forward(request, response);
+            request.getRequestDispatcher("WEB-INF/upparent.jsp").forward(request, response);
         }
     }
 }

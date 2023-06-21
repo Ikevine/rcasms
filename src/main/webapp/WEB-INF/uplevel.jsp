@@ -7,7 +7,7 @@
 --%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ include file="upperlink.jsp"%>
-<title>create ACYear</title>
+<title>create enroll</title>
 
 <div class="container2">
   <%--    left side--%>
@@ -17,25 +17,24 @@
   <%--    right--%>
   <div class="dright">
     <div class="upper_desc">
-      <h1>Academic</h1>
+      <h1>Enrollment Level</h1>
       <p>Here is the list of all students and the operation on them</p>
     </div>
 
-    <form class="cinput" action="updateacademic.php?page=updateacademic&&id=${exist.id}" method="post">
+    <form class="cinput" action="updateenrolevel.php?page=updateenrolevel&&id=${exist.id}" method="post">
 
       <div class="desf">
-        <h1>Academic detail</h1>
+        <h1>Student detail</h1>
       </div>
       <div class="indesc">
-        <input type="text" class="input" value="${exist.name}" name="Aname">
-        <input type="text" class="input" value="${exist.code}" name="Acode">
+        <input type="text" class="input" value="${exist.name}" name="Ecode">
+        <input type="text" class="input" value="${exist.code}" name="Ename">
       </div>
-
       <div class="dcenter">
-        <button class="btn">Add academic</button>
+        <button class="btn">Add level</button>
       </div>
 
     </form>
 
   </div>
-  <%@ include file="downlink.jsp"%>
+<%@ include file="downlink.jsp"%>

@@ -23,7 +23,7 @@ public class UpdateSemester extends HttpServlet {
         Semester existing = semesterDAO.findBySemesterId(id);
         request.setAttribute("exist" , existing);
 
-        request.getRequestDispatcher("WEB-INF/adsemester.jsp").forward(
+        request.getRequestDispatcher("WEB-INF/upsemester.jsp").forward(
                 request, response);
     }
 
@@ -54,13 +54,13 @@ public class UpdateSemester extends HttpServlet {
             semester.setStartDate(Sdate);
             semester.setEndDate(Edate);
 
-            semesterDAO.saveSemeter(semester);
+            semesterDAO.updateSemester(semester);
             httpSession.setAttribute("success", "Created successfully");
             request.getRequestDispatcher("listsemester.php").forward(request , response);
         }
         catch (Exception e){
             httpSession.setAttribute("error", "Can't Create");
-            request.getRequestDispatcher("WEB-INF/adsemester.jsp").forward(request, response);
+            request.getRequestDispatcher("WEB-INF/upsemester.jsp").forward(request, response);
         }
     }
 }

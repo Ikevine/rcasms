@@ -43,7 +43,7 @@
                         <td>${std.academicYear.id}</td>
 
                         <td class="action">
-                            <a href="/updateuser.php?id=${usr.id}" class="view">
+                            <a href="/updateaddress.php?id=${std.id}" class="view">
                                 <p>Edit</p>
                             </a>
                             <a href="/deletenrol.php?id=${usr.id}" class="view">

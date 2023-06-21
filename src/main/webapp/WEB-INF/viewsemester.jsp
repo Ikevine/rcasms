@@ -41,7 +41,7 @@
                         <td>${sm.endDate}</td>
 
                         <td class="action">
-                            <a href="/updateuser.php?id=${sm.id}" class="view">
+                            <a href="/updatesemester.php?id=${sm.id}" class="view">
                                 <p>Edit</p>
                             </a>
                             <a href="/deletesemester.php?id=${sm.id}" class="view">

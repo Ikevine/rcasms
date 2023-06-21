@@ -21,18 +21,18 @@
             <p>Here is the list of all students and the operation on them</p>
         </div>
 
-        <form class="cinput" action="updatestudent.php?page=updatestudent" method="post">
+        <form class="cinput" action="updatestudent.php?page=updatestudent&&id=${exist.id}" method="post">
 
             <div class="desf">
                 <h1>Student detail</h1>
             </div>
             <div class="indesc">
-                <input type="text" class="input" placeholder="Enter full name" name="fullName">
-                <input type="date" class="input" placeholder="Enter date of birth" name="birth">
+                <input type="text" class="input" value="${exist.fullName}" name="fullName">
+                <input type="date" class="input" value="${exist.dateOfBirth}" name="birth">
             </div>
             <div class="indesc">
-                <input type="text" class="input" placeholder="Enter phone number" name="phone">
-                <input type="text" class="input" placeholder="Enter password" name="address">
+                <input type="text" class="input" value="${exist.phoneNumber}" name="phone">
+                <input type="text" class="input" value="${exist.address.id}" name="address">
             </div>
             <div class="indesc">
                 <fieldset>
