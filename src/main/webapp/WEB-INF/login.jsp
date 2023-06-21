@@ -17,25 +17,6 @@
 	<link rel="stylesheet" href="../main.css">
 </head>
 <body>
-<%--<div class="container">--%>
-<%--	<img src="https://media.licdn.com/dms/image/C560BAQEl6a9tUkSKfg/company-logo_200_200/0/1558604414993?e=2147483647&amp;v=beta&amp;t=liCSw94UkEjwbMZZh8N23ZMYixEAMmZNq2IftvsF97Y" alt="LinkedIn Logo">--%>
-<%--	<h2>Sign In</h2>--%>
-<%--	<p>Welcome to RCA SMIS.Please enter your details.</p>--%>
-<%--	<c:if test="${error != null}">--%>
-<%--			<p style="color: red">${error}</p>--%>
-<%--	</c:if>--%>
-<%--	<form action="login.php" method="post">--%>
-<%--		<input type="text" placeholder="Username" required name="username">--%>
-<%--		<input type="password" placeholder="Password" required name="password">--%>
-<%--		<input type="submit" value="Sign In">--%>
-<%--		<p>Create an account <span><a href="createuser.php?page=createuser"> Sign up</a></span></p>--%>
-
-<%--	</form>--%>
-<%--</div>--%>
-<%--<%@ include file="footerlogin.jsp"%>--%>
-
-<%--//starting of login form--%>
-
 <div class="login">
   <%--		left side--%>
 		<div class="left">

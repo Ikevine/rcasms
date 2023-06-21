@@ -10,13 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4227c579-e885-4dcc-a024-bef992e933eb" name="Changes" comment="Done to understand time to implement">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/sass/abstracts/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sass/abstracts/_colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/sass/abstracts/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sass/abstracts/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/sass/abstracts/_varibales.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sass/abstracts/_varibales.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/sass/base/_center.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sass/base/_center.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/sass/base/_typegrapher.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sass/base/_typegrapher.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/sass/components/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sass/components/_button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/sass/components/_form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sass/components/_form.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sass/main.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,10 +29,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="SCSS File" />
         <option value="Interface" />
         <option value="Class" />
         <option value="Jsp File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -221,7 +221,7 @@
       <workItem from="1687040980274" duration="10914000" />
       <workItem from="1687077629053" duration="35609000" />
       <workItem from="1687287100943" duration="514000" />
-      <workItem from="1687293604137" duration="1471000" />
+      <workItem from="1687293604137" duration="2273000" />
     </task>
     <task id="LOCAL-00001" summary="setting up working environment for rcasis">
       <created>1683238142812</created>
