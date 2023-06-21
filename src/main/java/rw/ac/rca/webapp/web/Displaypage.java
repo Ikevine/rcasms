@@ -16,11 +16,11 @@ public class Displaypage extends HttpServlet {
 //       switch case for matching
           switch (pageRedirect){
               case "student":
-                  request.getRequestDispatcher("WEB-INF/viewstudent.jsp").forward(request,response);
+                  request.getRequestDispatcher("Liststudents.php").forward(request,response);
                   break;
 
               case "parent":
-                  request.getRequestDispatcher("WEB-INF/viewparent.jsp").forward(request,response);
+                  request.getRequestDispatcher("listparents.php").forward(request,response);
                   break;
 
               case  "user":
@@ -28,15 +28,15 @@ public class Displaypage extends HttpServlet {
                   break;
 
               case "semester":
-                  request.getRequestDispatcher("WEB-INF/viewsemester.jsp").forward(request,response);
+                  request.getRequestDispatcher("listsemester.php").forward(request,response);
                   break;
 
               case "enrollevel":
-                  request.getRequestDispatcher("WEB-INF/viewenrollevel.jsp").forward(request , response);
+                  request.getRequestDispatcher("listenrolevel.php").forward(request , response);
                   break;
 
               case "enroll":
-                  request.getRequestDispatcher("WEB-INF/viewenroll.jsp").forward(request , response);
+                  request.getRequestDispatcher("listenril.php").forward(request , response);
                   break;
 
               default:

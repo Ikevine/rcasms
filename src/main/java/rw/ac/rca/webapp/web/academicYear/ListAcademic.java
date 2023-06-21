@@ -27,7 +27,7 @@ public class ListAcademic extends HttpServlet {
         catch (Exception e){
             httpSession.setAttribute("error", "Invalid Academic year Level. Try again!");
             e.printStackTrace();
-            RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/createacademyear.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/viewacademic.jsp");
             dispatcher.forward(request, response);
         }
     }

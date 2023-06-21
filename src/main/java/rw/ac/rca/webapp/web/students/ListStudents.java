@@ -21,7 +21,7 @@ public class ListStudents extends HttpServlet {
         HttpSession httpSession = request.getSession();
         List<Student> studentsI = studentDAO.getAllStudents();
         httpSession.setAttribute("students",studentsI);
-        request.getRequestDispatcher("WEB-INF/liststudents.jsp").forward(request ,response);
+        request.getRequestDispatcher("WEB-INF/viewstudent.jsp").forward(request ,response);
     }
 
     @Override

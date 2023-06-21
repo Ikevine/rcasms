@@ -21,7 +21,7 @@ public class ListParents extends HttpServlet {
         List<Parents>parentsList = parentsDAO.getAllParents();
         System.out.println(parentsList + "Hereeeee");
         httpSession.setAttribute("parents",parentsList);
-        request.getRequestDispatcher("WEB-INF/listparents.jsp").forward(request ,response);
+        request.getRequestDispatcher("WEB-INF/viewparent.jsp").forward(request ,response);
     }
 
     @Override

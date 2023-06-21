@@ -21,7 +21,7 @@ public class ListSemester extends HttpServlet {
         try{
             List<Semester> semesters = semesterDAO.getallSemester();
             httpSession.setAttribute("sms",semesters);
-            request.getRequestDispatcher("WEB-INF/listsemester.jsp").forward(request , response);
+            request.getRequestDispatcher("WEB-INF/viewsemester.jsp").forward(request , response);
         }
         catch (Exception e){
             httpSession.setAttribute("error", "Invalid Enrol Level. Try again!");

@@ -19,7 +19,7 @@ public class ListEnrol extends HttpServlet {
         HttpSession httpSession = request.getSession();
         List<Enrol> enrols = enrolDAO.getAllEnrols();
         httpSession.setAttribute("enrols",enrols);
-        request.getRequestDispatcher("WEB-INF/listenrol.jsp").forward(request ,response);
+        request.getRequestDispatcher("WEB-INF/viewenroll.jsp").forward(request ,response);
     }
 
     @Override

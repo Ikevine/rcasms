@@ -24,7 +24,7 @@ public class ListAddress extends HttpServlet {
       }
       catch (Exception e){
           httpSession.setAttribute("error" , "Sorry we failed to do it");
-          request.getRequestDispatcher("WEB-INF/createaddress.jsp");
+          request.getRequestDispatcher("WEB-INF/viewaddress");
       }
 
     }
