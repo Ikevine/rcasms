@@ -16,7 +16,7 @@
 <%--    right--%>
     <div class="dright">
         <div class="upper_desc">
-            <h1>Students</h1>
+            <h1>Users</h1>
             <p>Here is the list of all students and the operation on them</p>
         </div>
 
