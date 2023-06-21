@@ -40,7 +40,7 @@ public class UpdateParent extends HttpServlet {
         Date dateOfBirth = null;
         try {
             dateOfBirth = simpleDateFormat.parse(request.getParameter("birth"));
-        } catch (ParseException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
         //   my checkbox here

@@ -10,23 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4227c579-e885-4dcc-a024-bef992e933eb" name="Changes" comment="Done to understand time to implement">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/upaddress.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/upenrol.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/uplevel.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/upparent.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/upsemester.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/academicYear/UpdateAcademic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/academicYear/UpdateAcademic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/address/UpdateAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/address/UpdateAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/enrolmentLevel/UpdateEnrolevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/enrolmentLevel/UpdateEnrolevel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/enrols/UpdateEnrol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/enrols/UpdateEnrol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/parents/UpdateParent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/parents/UpdateParent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/semester/UpdateSemester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/semester/UpdateSemester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/upacade.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/upacade.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/updatestudent.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/upstudent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/upstudent.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/viewuser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/viewuser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +217,7 @@
       <workItem from="1687077629053" duration="35609000" />
       <workItem from="1687287100943" duration="514000" />
       <workItem from="1687293604137" duration="23099000" />
-      <workItem from="1687347135259" duration="23611000" />
+      <workItem from="1687347135259" duration="24745000" />
     </task>
     <task id="LOCAL-00001" summary="setting up working environment for rcasis">
       <created>1683238142812</created>
