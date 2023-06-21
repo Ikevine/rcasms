@@ -1,15 +1,14 @@
-.btn-primary{
+.btn{
+  padding: 0.8rem 2.5rem;
+  border: none;
+  background-color: $ascent;
   color: $secondary;
-  background-color: $black;
-  padding: 1.2rem 2.5rem;
   border-radius: 5px;
-  align-self: center;
-  font-size: 18px;
-  font-weight: 500;
-  margin-top: 2.5rem;
+  @include transition;
+
   &:hover{
     background-color: transparent;
-    border: 2px solid $ascent;
-    color: $ascent;
+    color: $black;
+    border: 1px solid $ascent;
   }
 }

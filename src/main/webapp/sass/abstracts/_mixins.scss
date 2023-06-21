@@ -1,14 +1,18 @@
-.flex{
+@mixin flex(){
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-.flex-row{
+@mixin flex-row(){
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+@mixin transition(){
+  transition: all 400ms ease-in-out;
 }
 a{
   text-decoration: none;
