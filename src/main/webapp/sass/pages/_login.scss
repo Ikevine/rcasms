@@ -28,7 +28,7 @@
   //right side
   .Lright{
     width: 60%;
-    background:url('../../assets/image/new.jpg');
+    background:url('../../images/new.jpg');
     position: relative;
     .overlay{
       position: absolute;
@@ -40,21 +40,23 @@
       color: $secondary;
       @include flex;
       .ovhead{
-        width: 55%;
+        width: 60%;
         margin: 1.5rem;
         @include flex;
         gap: 0.4rem;
         h2{
           font-size: 30px;
+          text-align: center;
         }
+      }
+      .ovdown{
+        width: 80%;
+        text-align: center;
         p{
           text-align: center;
           color: $bg;
           width: 90%;
         }
-      }
-      .ovdown{
-        width: 80%;
       }
     }
   }

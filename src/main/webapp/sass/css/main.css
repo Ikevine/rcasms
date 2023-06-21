@@ -110,6 +110,7 @@ text-login {
   background-color: #35005E;
   color: #FFFFFF;
   border-radius: 5px;
+  font-weight: 600;
   transition: all 400ms ease-in-out;
 }
 .btn:hover {
@@ -464,7 +465,7 @@ fieldset .check input[type=checkbox]:checked::after {
 }
 .container .Lright, .container2 .Lright {
   width: 60%;
-  background: url("../../assets/image/new.jpg");
+  background: url("../../images/new.jpg");
   position: relative;
 }
 .container .Lright .overlay, .container2 .Lright .overlay {
@@ -482,7 +483,7 @@ fieldset .check input[type=checkbox]:checked::after {
   flex-direction: column;
 }
 .container .Lright .overlay .ovhead, .container2 .Lright .overlay .ovhead {
-  width: 55%;
+  width: 60%;
   margin: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -493,12 +494,14 @@ fieldset .check input[type=checkbox]:checked::after {
 }
 .container .Lright .overlay .ovhead h2, .container2 .Lright .overlay .ovhead h2 {
   font-size: 30px;
-}
-.container .Lright .overlay .ovhead p, .container2 .Lright .overlay .ovhead p {
   text-align: center;
-  color: #F0F0F0;
-  width: 90%;
 }
 .container .Lright .overlay .ovdown, .container2 .Lright .overlay .ovdown {
   width: 80%;
+  text-align: center;
+}
+.container .Lright .overlay .ovdown p, .container2 .Lright .overlay .ovdown p {
+  text-align: center;
+  color: #F0F0F0;
+  width: 90%;
 }

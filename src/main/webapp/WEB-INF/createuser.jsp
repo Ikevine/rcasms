@@ -57,135 +57,117 @@
 <%--		</form>--%>
 <%--</div>--%>
 <%--<%@ include file="footer.jsp"%>--%>
+<%--<!DOCTYPE html>--%>
+<%--<html>--%>
+<%--<head>--%>
+<%--    <title>RCA SMIS</title>--%>
+<%--    <link rel="preconnect" href="https://fonts.googleapis.com">--%>
+<%--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>--%>
+<%--    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">--%>
+<%--</head>--%>
+<%--<body>--%>
+<%--<div class="container">--%>
+<%--    <img src="https://media.licdn.com/dms/image/C560BAQEl6a9tUkSKfg/company-logo_200_200/0/1558604414993?e=2147483647&amp;v=beta&amp;t=liCSw94UkEjwbMZZh8N23ZMYixEAMmZNq2IftvsF97Y"--%>
+<%--         alt="LinkedIn Logo">--%>
+<%--    <h2>Sign In</h2>--%>
+<%--    <p>Welcome to RCA SMIS.Please enter your details.</p>--%>
+<%--<c:if test="${error != null}">--%>
+<%--					<p>--%>
+<%--						<span style="color: red"> ${error}</span>--%>
+<%--					</p>--%>
+<%--			</c:if>--%>
+<%--    <c:if test="${success != null}">--%>
+<%--        <p>--%>
+<%--            <span style="color: green"> ${success}</span>--%>
+<%--        </p>--%>
+<%--    </c:if>--%>
+<%--    --%>
+<%--    <form  action="createuser.php?page=createuser" method="post">--%>
+<%--        <input type="text" placeholder="Username" required name="username">--%>
+<%--        <input type="text" placeholder="Email" required name="email">--%>
+<%--        <input type="text" placeholder="Fullname" required name="userfullname">--%>
+<%--        <select name="userRole">--%>
+<%--            <option>Select Role</option>--%>
+<%--            <c:forEach items="${userRoles}" var="userrole">--%>
+<%--                varStatus="userrolestatus"--%>
+<%--                <option value="${userrole}">--%>
+<%--                    <c:out value="${userrole.getRoleDescription()}"/>--%>
+<%--                </option>--%>
+<%--            </c:forEach>--%>
+<%--        </select>--%>
+<%--        <input type="password" placeholder="Password" required name="password">--%>
+<%--        <input type="submit" value="Sign Up">--%>
+<%--        <p>Already have an account <span><a href="login.php?page=login"> Sign in</a>	</span></p>--%>
+<%--    </form>--%>
+
+<%--</div>--%>
+<%--</body>--%>
+<%--</html>--%>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>RCA SMIS</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f2f2f2;
-        }
-
-        .container {
-            margin: 50px auto;
-            margin-top: 10%;
-            width: 400px;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-            position: relative;
-            justify-content: center;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .container img {
-            position: absolute;
-            top: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background-color: #ffffff;
-            padding: 5px;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        h2 {
-            text-align: center;
-            color: #333333;
-            font-family: 'Quicksand', sans-serif;
-        }
-
-        p, a {
-            text-align: center;
-            font-family: 'Quicksand', sans-serif;
-            text-decoration: none;
-        }
-
-        input[type="text"], input[type="password"] {
-            width: 93%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #f2f2f2;
-            color: #333333;
-            font-size: 16px;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #29375A;
-            color: #ffffff;
-            font-size: 16px;
-            cursor: pointer;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        select {
-            width: 98%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #f2f2f2;
-            color: #333333;
-            font-size: 16px;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        option {
-            color: #333333;
-        }
-
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesame -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="../../sass/css/main.css">
 </head>
 <body>
 <div class="container">
-    <img src="https://media.licdn.com/dms/image/C560BAQEl6a9tUkSKfg/company-logo_200_200/0/1558604414993?e=2147483647&amp;v=beta&amp;t=liCSw94UkEjwbMZZh8N23ZMYixEAMmZNq2IftvsF97Y"
-         alt="LinkedIn Logo">
-    <h2>Sign In</h2>
-    <p>Welcome to RCA SMIS.Please enter your details.</p>
-<c:if test="${error != null}">
-					<p>
-						<span style="color: red"> ${error}</span>
-					</p>
-			</c:if>
-    <c:if test="${success != null}">
-        <p>
-            <span style="color: green"> ${success}</span>
-        </p>
-    </c:if>
-    
-    <form  action="createuser.php?page=createuser" method="post">
-        <input type="text" placeholder="Username" required name="username">
-        <input type="text" placeholder="Email" required name="email">
-        <input type="text" placeholder="Fullname" required name="userfullname">
-        <select name="userRole">
-            <option>Select Role</option>
-            <c:forEach items="${userRoles}" var="userrole">
-                varStatus="userrolestatus"
-                <option value="${userrole}">
-                    <c:out value="${userrole.getRoleDescription()}"/>
-                </option>
-            </c:forEach>
-        </select>
-        <input type="password" placeholder="Password" required name="password">
-        <input type="submit" value="Sign Up">
-        <p>Already have an account <span><a href="login.php?page=login"> Sign in</a>	</span></p>
-    </form>
+    <div class="Lleft">
+        <div class="Lmain">
+
+            <div class="log">
+                <img src="../images/logo2.png" alt="logo">
+            </div>
+
+            <h1>Rwanda Coding Academy Student Management System</h1>
+            <p class="small">Welcome back</p>
+            <div class="lform">
+                <form action="createuser.php?page=createuser" method="post" class="form">
+                    <input type="text" placeholder="Enter your username" class="input" name="username" required>
+                    <input type="text" placeholder="Enter your full name" class="input" name="userfullname" required>
+                    <input type="email" placeholder="Enter your email" class="input" name="email" required>
+                    <div class="select-container">
+                        <select class="select-box" name="userRole">
+                            <option value="value">Select Role</option>
+                            <c:forEach items="${userRoles}" var="userrole">
+
+                                 <option value="${userrole}">
+                                   <c:out value="${userrole.getRoleDescription()}"/>
+                                 </option>
+
+                            </c:forEach>
+                        </select>
+                        <div class="icon1">
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                    <input type="password" placeholder="Password" required name="password" class="input">
+
+                    <button class="btn">Sign up</button>
+
+                </form>
+                <p class="allr">Already have an account?<a href="login.php?page=login" class="llink">Sign in</a> </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- right side start here -->
+    <div class="Lright">
+        <div class="overlay">
+            <div class="ovhead">
+                <h2>Leading through digital Innovation</h2>
+            </div>
+            <div class="ovdown">
+                <p>This system management system is only for instructors , parents , students and discpline staff we welcome to this system</p>
+            </div>
+        </div>
+
+    </div>
 
 </div>
 </body>
 </html>
-

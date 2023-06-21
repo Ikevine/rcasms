@@ -4,6 +4,7 @@
   background-color: $ascent;
   color: $secondary;
   border-radius: 5px;
+  font-weight: 600;
   @include transition;
 
   &:hover{
