@@ -49,6 +49,12 @@
                     <div class="icon">
                         <img src="../assets/icon/student.png" alt="icon" >
                     </div>
+                    <a href="displaypage.php?direct=academic">Academic Year</a>
+                </li>
+                <li>
+                    <div class="icon">
+                        <img src="../assets/icon/student.png" alt="icon" >
+                    </div>
                     <a href="displaypage.php?direct=enrollevel">Enrollment Level</a>
                 </li>
                 <li>
@@ -63,7 +69,6 @@
                     </div>
                     <a href="displaypage.php?direct=address">Address</a>
                 </li>
-
             </ul>
 
         </div>

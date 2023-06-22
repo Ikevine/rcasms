@@ -27,20 +27,31 @@
                 <h1>Student detail</h1>
             </div>
             <div class="indesc">
-                <input type="text" class="input" placeholder="Enter full name" name="userfullname">
-                <input type="text" class="input" placeholder="Enter username" name="username">
-            </div>
-            <div class="indesc">
-                <input type="text" class="input" placeholder="Enter Email" name="email">
-                <input type="password" class="input" placeholder="Enter password" name="password">
+                <input type="date" class="input" placeholder="Enter enrol date" name="Edate">
+                <input type="text" class="input" placeholder="Enter grade" name="grade">
             </div>
             <div class="indesc">
                 <div class="select-container">
                     <select class="select-box" name="userRole">
-                        <option value="value">Select Role</option>
-                        <c:forEach items="${userRoles}" var="userrole">
-                            <option value="${userrole}">
-                                <c:out value="${userrole.getRoleDescription()}"/>
+                        <option value="value">Select Semester</option>
+                        <c:forEach items="${semesters}" var="semester">
+                            <option value="${semester.name}">
+                                <c:out value="${semester.name}"/>
+                            </option>
+                        </c:forEach>
+                    </select>
+                    <div class="icon1">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+
+<%--                secondary--%>
+                <div class="select-container">
+                    <select class="select-box" name="userRole">
+                        <option value="value">Select Academic Year</option>
+                        <c:forEach items="${academics}" var="academy">
+                            <option value="${academy.name}">
+                                <c:out value="${academy.name}"/>
                             </option>
 
                         </c:forEach>
@@ -50,6 +61,46 @@
                     </div>
                 </div>
             </div>
+
+<%--            another main box--%>
+
+            <div class="indesc">
+                <div class="select-container">
+                    <select class="select-box" name="userRole">
+                        <option value="value">Select course</option>
+                        <c:forEach items="${courses}" var="course">
+                            <option value="${course.name}">
+                                <c:out value="${course.name}"/>
+                            </option>
+
+                        </c:forEach>
+                    </select>
+                    <div class="icon1">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+
+                <%--                secondary--%>
+                <div class="select-container">
+                    <select class="select-box" name="userRole">
+                        <option value="value">Select Level</option>
+                        <c:forEach items="${level}" var="leve">
+                            <option value="${leve.name}">
+                                <c:out value="${leve.name}"/>
+                            </option>
+
+                        </c:forEach>
+                    </select>
+                    <div class="icon1">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+<%--              last link here--%>
+            <div class="indesc">
+                <input type="text" class="input" placeholder="Enter student ID" name="student">
+            </div>
+
             <div class="dcenter">
                 <button class="btn">Create user</button>
             </div>

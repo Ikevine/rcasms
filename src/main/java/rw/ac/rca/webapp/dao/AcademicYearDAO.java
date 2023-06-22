@@ -19,4 +19,5 @@ public interface AcademicYearDAO {
 	public boolean deleteAcademicYear(int academicYear);
 	public AcademicYear getAcademicYearById(int id);
 	public List<AcademicYear> getAllAcademicYears();
+	public AcademicYear getByName(String name);
 }

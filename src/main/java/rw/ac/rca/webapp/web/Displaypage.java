@@ -45,7 +45,8 @@ public class Displaypage extends HttpServlet {
               case "courses":
                   request.getRequestDispatcher("listcourses.php").forward(request , response);
                   break;
-
+              case "academic":
+                  request.getRequestDispatcher("listacademic.php").forward(request , response);
               default:
                   break;
 

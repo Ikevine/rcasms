@@ -12,4 +12,7 @@ public interface EnrollmentLevelDAO {
     public boolean deleteEnrolment(int id);
     public List<EnrollmentLevel> getAllLevels();
 
+    public EnrollmentLevel getByName(String name);
+
+
 }

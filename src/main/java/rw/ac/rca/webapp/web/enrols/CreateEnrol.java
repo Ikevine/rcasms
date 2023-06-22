@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class CreateEnrol extends HttpServlet {
 
@@ -24,7 +25,21 @@ public class CreateEnrol extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String pageDirection = request.getParameter("page");
+
         HttpSession httpSession = request.getSession();
+
+        List<Student> studentsI = studentDAO.getAllStudents();
+        List<Semester>semesters = semesterDAO.getallSemester();
+        List<Course>courses= courseDAO.getAllCourses();
+        List<EnrollmentLevel> enrollmentLevelList = enrollmentLevelDAO.getAllLevels();
+        List<AcademicYear>academicYears = academicYearDAO.getAllAcademicYears();
+
+        httpSession.setAttribute("students",studentsI);
+        httpSession.setAttribute("semesters" , semesters);
+        httpSession.setAttribute("courses" , courses);
+        httpSession.setAttribute("level" , enrollmentLevelList);
+        httpSession.setAttribute("academics" , academicYears);
+
         request.getRequestDispatcher("WEB-INF/adenrol.jsp").forward(request , response);
 
     }
@@ -44,17 +59,18 @@ public class CreateEnrol extends HttpServlet {
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
-        int academic_year = Integer.parseInt(request.getParameter("academic"));
-        int course_id = Integer.parseInt(request.getParameter("course"));
-        int enrolLevel_id = Integer.parseInt(request.getParameter("enrolLevel"));
-        int semester = Integer.parseInt(request.getParameter("semeter"));
-        int student_id = Integer.parseInt(request.getParameter("student"));
 
-        AcademicYear academicYear = academicYearDAO.getAcademicYearById(academic_year);
-        Course course = courseDAO.getCourseById(course_id);
-        EnrollmentLevel enrollmentLevel = enrollmentLevelDAO.getEnrolmentLevel(enrolLevel_id);
-        Semester semester1 = semesterDAO.findBySemesterId(semester);
-        Student student = studentDAO.getStudentById(student_id);
+        String academic_year = request.getParameter("academic");
+        String course_id = request.getParameter("course");
+        String enrolLevel_id = request.getParameter("enrolLevel");
+        String semester = request.getParameter("semeter");
+        String student_id = request.getParameter("student");
+
+        AcademicYear academicYear = academicYearDAO.getByName(academic_year);
+        Course course = courseDAO.getByName(course_id);
+        EnrollmentLevel enrollmentLevel = enrollmentLevelDAO.getByName(enrolLevel_id);
+        Semester semester1 = semesterDAO.getByName(semester);
+        Student student = studentDAO.getByFullname(student_id);
 
         enrol.setEnrollmentDate(enrolDate);
         enrol.setCourse(course);

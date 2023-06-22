@@ -110,4 +110,22 @@ public class CourseDAOImpl extends DAO implements CourseDAO {
 			return null;
 		}
 	}
+
+	@Override
+	public Course getByName(String name) {
+		try{
+			begin();
+			Query query = getSession().createQuery(
+					"from Course where name= :ref");
+			query.setString("ref" , name);
+			Course course = (Course) query.uniqueResult();
+			commit();
+			return course;
+
+		}
+		catch (Exception e){
+			rollback();
+			return null;
+		}
+	}
 }

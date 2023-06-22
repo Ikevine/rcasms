@@ -100,4 +100,20 @@ public class StudentDAOImpl extends  DAO implements StudentDAO {
                return  null;
           }
      }
+
+     @Override
+     public Student getByFullname(String fullname) {
+          try{
+               begin();
+               Query query = getSession().createQuery("from Student where fullName = :ref");
+               query.setString("ref" , fullname);
+               Student student = (Student) query.uniqueResult();
+               commit();
+               return student;
+          }
+          catch (Exception e){
+               rollback();
+               return null;
+          }
+     }
 }

@@ -38,15 +38,15 @@
                         <td>${std.id}</td>
                         <td>${std.grade}</td>
                         <td>${std.enrollmentDate}</td>
-                        <td>${std.semester.id}</td>
-                        <td>${std.enrollmentLevel.id}</td>
-                        <td>${std.academicYear.id}</td>
+                        <td>${std.semester.name}</td>
+                        <td>${std.enrollmentLevel.name}</td>
+                        <td>${std.academicYear.name}</td>
 
                         <td class="action">
                             <a href="/updateaddress.php?id=${std.id}" class="view">
                                 <p>Edit</p>
                             </a>
-                            <a href="/deletenrol.php?id=${usr.id}" class="view">
+                            <a href="/deletenrol.php?id=${std.id}" class="view">
                                 <p>Delete</p>
                             </a>
                         </td>

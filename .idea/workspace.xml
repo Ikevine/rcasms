@@ -10,25 +10,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4227c579-e885-4dcc-a024-bef992e933eb" name="Changes" comment="Done to understand time to implement">
-      <change afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/DeleteCourse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/UpdateCourse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/students/ViewD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/adcourse.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/upcourse.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/viewcourse.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/viewd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/CreateCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/CreateCourse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/AcademicYearDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/AcademicYearDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/CourseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/CourseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/EnrollmentLevelDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/EnrollmentLevelDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/SemesterDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/SemesterDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/StudentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/impl/AcademcYearDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/impl/AcademcYearDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/impl/CourseDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/impl/CourseDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/impl/EnroLeveLDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/impl/EnroLeveLDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/impl/SemesterDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/impl/SemesterDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/impl/StudentDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/dao/impl/StudentDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/Displaypage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/Displaypage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/ListCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/ListCourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/parents/UpdateParent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/parents/UpdateParent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/students/CreateStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/students/CreateStudent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/students/UpdateStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/students/UpdateStudent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/adstudent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/adstudent.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/enrols/CreateEnrol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rw/ac/rca/webapp/web/enrols/CreateEnrol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/adenrol.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/adenrol.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/sidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/sidebar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/upstudent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/upstudent.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/viewstudent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/viewstudent.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/viewd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/viewd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/viewenroll.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/viewenroll.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sass/base/_center.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sass/base/_center.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sass/base/_container.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sass/base/_container.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sass/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sass/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +237,7 @@
       <workItem from="1687287100943" duration="514000" />
       <workItem from="1687293604137" duration="23099000" />
       <workItem from="1687347135259" duration="25394000" />
-      <workItem from="1687380388564" duration="6507000" />
+      <workItem from="1687380388564" duration="15786000" />
     </task>
     <task id="LOCAL-00001" summary="setting up working environment for rcasis">
       <created>1683238142812</created>

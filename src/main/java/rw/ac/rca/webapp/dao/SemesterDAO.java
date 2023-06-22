@@ -11,4 +11,6 @@ public interface SemesterDAO {
     public  Semester findBySemesterId(int semesterId);
     public List<Semester> getallSemester();
 
+    public Semester getByName(String name);
+
 }
