@@ -15,6 +15,7 @@
     left: 0;
     background-color: rgb(0, 0, 0,50%);
     @include flex;
+    gap: 0.8rem;
     .desc{
       width: 80%;
       text-align: center;
@@ -25,9 +26,13 @@
       h1{
         margin: 0.8rem;
       }
+      h2{
+        font-size: 13px;
+        font-weight: 700;
+      }
       p{
         color: $grey;
-
+        font-size: 14px;
       }
     }
   }

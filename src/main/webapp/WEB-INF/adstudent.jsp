@@ -61,7 +61,7 @@
                 </div>
 
             <div class="dcenter">
-                <button class="btn">Create user</button>
+                <button class="btn">Add student</button>
             </div>
 
         </form>

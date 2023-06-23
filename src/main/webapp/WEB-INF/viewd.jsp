@@ -38,15 +38,15 @@
                         </div>
                         <div class="detail">
                             <h3>Address</h3>
-                            <p>Kigali</p>
+                            <p>Kigali , Rwanda , Nyarugenge</p>
                         </div>
                     </div>
                 </div>
                 <div class="rdetail">
                     <div class="dlink">
-                        <a href="#">First Semester</a>
-                        <a href="#">second Semester</a>
-                        <a href="#">Third Semester</a>
+                        <a href="#">1 Semester</a>
+                        <a href="#">2 Semester</a>
+                        <a href="#">3 Semester</a>
                     </div>
                     <div class="tbody">
                         <table>
@@ -67,5 +67,4 @@
                 </div>
             </div>
         </div>
-   </div>
 <%@ include file="downlink.jsp"%>

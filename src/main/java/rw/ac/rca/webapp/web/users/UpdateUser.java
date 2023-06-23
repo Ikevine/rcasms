@@ -21,7 +21,7 @@ public class UpdateUser extends HttpServlet {
         UserRole[] userRoles = UserRole.values();
         httpSession.setAttribute("userRoles", userRoles);
         request.setAttribute("exist" , existing);
-        request.getRequestDispatcher("WEB-INF/updateuser.jsp").forward(request , response);
+        request.getRequestDispatcher("WEB-INF/upuser.jsp").forward(request , response);
     }
 
     @Override
@@ -29,6 +29,7 @@ public class UpdateUser extends HttpServlet {
 
 //        getting the user
         int id = Integer.parseInt(request.getParameter("id"));
+
         User existing = userDAO.getUserById(id);
         HttpSession httpSession = request.getSession();
 

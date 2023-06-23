@@ -17,8 +17,8 @@
     <%--    right--%>
     <div class="dright">
         <div class="upper_desc">
-            <h1>Users</h1>
-            <p>Here is the list of all students and the operation on them</p>
+            <h1>Update Student</h1>
+            <p>These are information usually assigned to the student</p>
         </div>
 
         <form class="cinput" action="updatestudent.php?page=updatestudent&&id=${exist.id}" method="post">
@@ -27,11 +27,11 @@
                 <h1>Student detail</h1>
             </div>
             <div class="indesc">
-                <input type="text" class="input" value="${exist.fullName}" name="fullName">
-                <input type="date" class="input" value="${exist.dateOfBirth}" name="birth">
+                <input type="text" class="input" placeholder="${exist.fullName}" name="fullName">
+                <input type="date" class="input" placeholder="${exist.dateOfBirth}" name="birth">
             </div>
             <div class="indesc">
-                <input type="text" class="input" value="${exist.phoneNumber}" name="phone">
+                <input type="text" class="input" placeholder="${exist.phoneNumber}" name="phone">
                 <fieldset>
                     <legend>Select the study state</legend>
                     <div class="check">
@@ -52,15 +52,15 @@
                 <h1>Address detail</h1>
             </div>
             <div class="indesc">
-                <input type="text" class="input" value="${exist.address.country}" name="country">
-                <input type="text" class="input" value="${exist.address.city}" name="city">
+                <input type="text" class="input" placeholder="${exist.address.country}" name="country">
+                <input type="text" class="input" placeholder="${exist.address.city}" name="city">
             </div>
             <div class="indesc">
-                <input type="text" class="input" value="${exist.address.streetAddress}" name="street">
-                <input type="text" class="input" value="${exist.address.postalCode}" name="postal">
+                <input type="text" class="input" placeholder="${exist.address.streetAddress}" name="street">
+                <input type="text" class="input" placeholder="${exist.address.postalCode}" name="postal">
             </div>
             <div class="dcenter">
-                <button class="btn">Create user</button>
+                <button class="btn">Update Student</button>
             </div>
 
         </form>

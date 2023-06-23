@@ -33,6 +33,7 @@ public class UpdateStudent extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         HttpSession httpSession = request.getSession();
         Student student = new Student();
@@ -44,28 +45,49 @@ public class UpdateStudent extends HttpServlet {
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
+
+        //need to confirm that user actually exist
+        Student exist = studentDAO.getStudentById(Integer.parseInt(request.getParameter("id")));
+
+        //setting new configuration
+
+
+
+
+
+
         //   my checkbox here
         boolean inter = Boolean.parseBoolean(request.getParameter("inter"));
         boolean part = Boolean.parseBoolean(request.getParameter("part"));
         boolean repeat = Boolean.parseBoolean(request.getParameter("repeat"));
         String phoneNumber = request.getParameter("phone");
 
-        int address_code = Integer.parseInt(request.getParameter("address"));
-        Address address = addressDAO.getAddressById(address_code);
+        Address address = new Address();
+        String country = request.getParameter("country");
+        String streetCode  = request.getParameter("street");
+        String city = request.getParameter("city");
+        String postcode = request.getParameter("postal");
 
-        student.setFullName(fullName);
-        student.setDateOfBirth(dateOfBirth);
-        student.setPhoneNumber(phoneNumber);
-        student.setRepeating(repeat);
-        student.setInternational(inter);
-        student.setPartTime(part);
+        address.setCountry(country);
+        address.setCity(city);
+        address.setStreetAddress(streetCode);
+        address.setPostalCode(postcode);
 
         student.setAddress(address);
+
         System.out.println("Kevine look at here please sweet" + address);
         try {
+            exist.setAddress(address);
+            exist.setPartTime(part);
+            exist.setRepeating(repeat);
+            exist.setFullName(fullName);
+            exist.setPhoneNumber(phoneNumber);
+            exist.setInternational(inter);
 
+            //updating the address
             Student s1 = studentDAO.updateStudent(student);
-            request.setAttribute("s", "Student is created successfully");
+
+            request.setAttribute("s", "Student is updated successfully");
             request.getRequestDispatcher("Liststudents.php").forward(request, response);
 
         } catch (Exception e) {

@@ -26,9 +26,9 @@ public class StudentDAOImpl extends  DAO implements StudentDAO {
      public Student saveStudent(Student student) {
          try{
               begin();
-              getSession().save(student);
+             Student student1 = (Student) getSession().save(student);
               commit();
-              return student;
+              return student1;
          }
          catch (Exception e){
               e.printStackTrace();

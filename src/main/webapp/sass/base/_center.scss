@@ -39,13 +39,16 @@
 }
 
 .container3{
-  background-color: red;
   @include flex-row;
-  width: 80%;
+  width:auto;
+  padding: 0.5rem;
+  border-radius: 5px;
+  gap: 0.8rem;
   .ldetail{
     background-color: white;
-    width: 50%;
-
+    width: auto;
+    border-radius: 5px;
+    padding: 0.4rem;
     .dh1{
       width: 100%;
       text-align: center;
@@ -72,17 +75,21 @@
     }
   }
   .rdetail{
-    width: 50%;
-    background-color: green;
+    width: auto;
+    padding: 0.3rem;
+    background-color: $secondary;
+    border-radius: 5px;
+    padding: 0.3rem;
     .dlink{
       display: flex;
+      // flex-wrap: wrap;
       gap: 0.2rem;
       a{
         padding:0.5rem 0.8rem;
         background-color: white;
         margin-bottom: 0.5rem;
         color: $black;
-        font-weight: 500;
+        font-weight: 600;
         border-radius: 5px;
         &:hover{
           background-color: $ascent;
@@ -92,4 +99,3 @@
     }
   }
 }
-
