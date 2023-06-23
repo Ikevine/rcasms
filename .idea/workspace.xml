@@ -9,7 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="4227c579-e885-4dcc-a024-bef992e933eb" name="Changes" comment="Done to understand time to implement" />
+=======
+    <list default="true" id="4227c579-e885-4dcc-a024-bef992e933eb" name="Changes" comment="Done to understand time to implement">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+>>>>>>> dca49f1b3d8be7b0302e46305630d3911f9723b5
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -217,10 +223,13 @@
       <workItem from="1687347135259" duration="25394000" />
       <workItem from="1687380388564" duration="15786000" />
       <workItem from="1687411778388" duration="999000" />
+<<<<<<< HEAD
       <workItem from="1687505741722" duration="481000" />
       <workItem from="1687528172244" duration="2132000" />
       <workItem from="1687533397773" duration="7816000" />
       <workItem from="1687545906879" duration="650000" />
+=======
+>>>>>>> dca49f1b3d8be7b0302e46305630d3911f9723b5
     </task>
     <task id="LOCAL-00001" summary="setting up working environment for rcasis">
       <created>1683238142812</created>
