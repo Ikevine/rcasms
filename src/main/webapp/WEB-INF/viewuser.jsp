@@ -39,10 +39,10 @@
                     <td>${usr.userRole.getRoleDescription()}</td>
 
                     <td class="action">
-                        <a href="/updateuser.php?id=${usr.id}" class="view">
+                        <a href="/updateuser.php?id=${usr.id}" class="update">
                             <p>Edit</p>
                         </a>
-                        <a href="/deleteuser.php?id=${usr.id}" class="view">
+                        <a href="/deleteuser.php?id=${usr.id}" class="delete">
                             <p>Delete</p>
                         </a>
                     </td>

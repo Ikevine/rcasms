@@ -41,10 +41,10 @@
                         <td>${sm.endDate}</td>
 
                         <td class="action">
-                            <a href="/updatesemester.php?id=${sm.id}" class="view">
+                            <a href="/updatesemester.php?id=${sm.id}" class="update">
                                 <p>Edit</p>
                             </a>
-                            <a href="/deletesemester.php?id=${sm.id}" class="view">
+                            <a href="/deletesemester.php?id=${sm.id}" class="delete">
                                 <p>Delete</p>
                             </a>
                         </td>

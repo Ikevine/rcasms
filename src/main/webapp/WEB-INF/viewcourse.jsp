@@ -40,10 +40,10 @@
             <td>${csr.minStudent}</td>
             <td>${csr.start}</td>
             <td class="action">
-              <a href="/updatecourse.php?id=${csr.id}" class="view">
+              <a href="/updatecourse.php?id=${csr.id}" class="update">
                 <p>Edit</p>
               </a>
-              <a href="/deletecourse.php?id=${csr.id}" class="view">
+              <a href="/deletecourse.php?id=${csr.id}" class="delete">
                 <p>Delete</p>
               </a>
             </td>

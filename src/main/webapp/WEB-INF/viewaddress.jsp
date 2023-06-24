@@ -28,7 +28,7 @@
                     <th>Country</th>
                     <th>City</th>
                     <th>Street Addres</th>
-                    <th></th>
+                    <th>Code</th>
                     <th class="haction">action</th>
                 </tr>
 
@@ -41,10 +41,10 @@
                         <td>${add.postalCode}</td>
 
                         <td class="action">
-                            <a href="/updateaddress.php?id=${add.id}" class="view">
+                            <a href="/updateaddress.php?id=${add.id}" class="update">
                                 <p>Edit</p>
                             </a>
-                            <a href="/deleteaddress.php?id=${add.id}" class="view">
+                            <a href="/deleteaddress.php?id=${add.id}" class="delete">
                                 <p>Delete</p>
                             </a>
                         </td>

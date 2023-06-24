@@ -43,10 +43,10 @@
                             <a href="/viewd.php?id=${std.id}" class="view">
                                 <p>View</p>
                             </a>
-                            <a href="/updatestudent.php?id=${std.id}" class="view">
+                            <a href="/updatestudent.php?id=${std.id}" class="update">
                                 <p>Edit</p>
                             </a>
-                            <a href="/deletestudent.php?id=${std.id}" class="view">
+                            <a href="/deletestudent.php?id=${std.id}" class="delete">
                                 <p>Delete</p>
                             </a>
                         </td>

@@ -37,10 +37,10 @@
                         <td>${acad.code}</td>
 
                         <td class="action">
-                            <a href="/updateacademic.php?id=${acad.id}" class="view">
+                            <a href="/updateacademic.php?id=${acad.id}" class="update">
                                 <p>Edit</p>
                             </a>
-                            <a href="/deleteacademic.php?id=${acad.id}" class="view">
+                            <a href="/deleteacademic.php?id=${acad.id}" class="delete">
                                 <p>Delete</p>
                             </a>
                         </td>

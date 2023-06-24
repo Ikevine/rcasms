@@ -7,9 +7,10 @@
   #sidebtn{
     position: absolute;
     right: 0;
-    top: -40%;
+    top: 0;
   }
   table{
+    margin-top: 2.5rem;
     width: 100%;
     @include flex;
   }
@@ -37,16 +38,13 @@
         display: flex;
         gap: 0.5rem;
         .view{
-          padding: 0.3rem 1.2rem;
-          color: $black;
-          border: none;
-          border-radius: 5px;
-          font-weight: 400;
-          background-color: $bg;
-          &:hover{
-            background-color: $ascent;
-            color: $secondary;
-          }
+          @include btnview(green);
+        }
+        .delete{
+          @include btnview(red)
+        }
+        .update{
+          @include btnview($ascent);
         }
 
       }

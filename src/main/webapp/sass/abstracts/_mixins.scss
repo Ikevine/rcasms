@@ -14,6 +14,18 @@
 @mixin transition(){
   transition: all 400ms ease-in-out;
 }
+@mixin btnview($color){
+  padding: 0.3rem 1.2rem;
+  color: $black;
+  border: none;
+  border-radius: 5px;
+  font-weight: 400;
+  background-color: $bg;
+  &:hover{
+    background-color:$color;
+    color: $secondary;
+  }
+}
 a{
   text-decoration: none;
 }

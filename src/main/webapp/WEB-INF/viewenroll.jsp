@@ -43,10 +43,10 @@
                         <td>${std.academicYear.name}</td>
 
                         <td class="action">
-                            <a href="/updatenrol.php?id=${std.id}" class="view">
+                            <a href="/updatenrol.php?id=${std.id}" class="update">
                                 <p>Edit</p>
                             </a>
-                            <a href="/deletenrol.php?id=${std.id}" class="view">
+                            <a href="/deletenrol.php?id=${std.id}" class="delete">
                                 <p>Delete</p>
                             </a>
                         </td>
