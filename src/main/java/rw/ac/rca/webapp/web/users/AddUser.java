@@ -61,7 +61,7 @@ public class AddUser extends HttpServlet {
             user.setEmail(email);
             user.setUserRole(usrr);
 
-            userDAO.saveUser(user);
+            userDAO.saveOrUpdateUser(user);
 
             httpSession.setAttribute("success", "Created successfully");
             request.getRequestDispatcher("listuser.php").forward(request , response);

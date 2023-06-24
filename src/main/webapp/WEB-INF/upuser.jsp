@@ -21,18 +21,17 @@
             <p>Here is the list of all user and the operation on them</p>
         </div>
 
-        <form class="cinput" action="adduser.php?page=adduser" method="post">
-
+        <form class="cinput" action="updateuser.php?page=updateuser&&id=${exist.id}" method="post">
             <div class="desf">
                 <h1>User detail</h1>
             </div>
             <div class="indesc">
-                <input type="text" class="input" placeholder="Enter full name" name="userfullname">
-                <input type="text" class="input" placeholder="Enter username" name="username">
+                <input type="text" class="input" value="${exist.fullName}" name="userfullname">
+                <input type="text" class="input" value="${exist.username}"  name="username">
             </div>
             <div class="indesc">
-                <input type="text" class="input" placeholder="Enter Email" name="email">
-                <input type="password" class="input" value="" name="password">
+                <input type="text" class="input" value="${exist.email}" name="email">
+                <input type="password" class="input" value="${exist.password}" name="password">
             </div>
             <div class="indesc">
                 <div class="select-container">
@@ -51,10 +50,10 @@
                 </div>
             </div>
             <div class="dcenter">
-                <button class="btn">Create user</button>
+                <button class="btn">Update user</button>
             </div>
 
         </form>
 
-</div>
-<%@ include file="downlink.jsp"%>
+    </div>
+    <%@ include file="downlink.jsp"%>
