@@ -21,7 +21,7 @@
     </div>
 
     <div class="tbody">
-      <a href="createcourse.php?page=createcourse" class="btn" id="sidebtn">Add parent</a>
+      <a href="createcourse.php?page=createcourse" class="btn" id="sidebtn">Add course</a>
       <table>
         <tr>
           <th>ID</th>

@@ -28,7 +28,7 @@
       </div>
       <div class="indesc">
         <input type="text" class="input" value="${exist.fullName}" name="name">
-        <input type="date" class="input" value="${exist.dateOfBirth}" name="birth">
+        <input type="text" class="input" value="${exist.dateOfBirth}" name="birth">
       </div>
       <div class="indesc">
         <input type="text" class="input" value="${exist.phoneNumber}" name="phone">

@@ -26,7 +26,7 @@
                 <h1>Student detail</h1>
             </div>
             <div class="indesc">
-                <input type="date" class="input" value="${exist.enrollmentDate}" name="Edate">
+                <input type="text" class="input" value="${exist.enrollmentDate}" name="Edate">
                 <input type="text" class="input" value="${exist.grade}" name="grade">
             </div>
             <div class="indesc">

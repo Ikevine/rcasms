@@ -31,8 +31,8 @@
                 <input type="text" class="input" value="${exist.code}" name="Scode">
             </div>
             <div class="indesc">
-                <input type="date" class="input" value="${exist.startDate}" name="Sdate">
-                <input type="date" class="input" value="${exist.endDate}" name="Edate">
+                <input type="text" class="input" value="${exist.startDate}" name="Sdate">
+                <input type="text" class="input" value="${exist.endDate}" name="Edate">
             </div>
 
             <div class="dcenter">

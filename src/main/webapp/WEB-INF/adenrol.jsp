@@ -27,7 +27,7 @@
                 <h1>Student detail</h1>
             </div>
             <div class="indesc">
-                <input type="date" class="input" placeholder="Enter enrol date" name="Edate">
+                <input type="text" class="input" placeholder="Enter enrol date[YYYY-MM-DD]" name="Edate">
                 <input type="text" class="input" placeholder="Enter grade" name="grade">
             </div>
             <div class="indesc">

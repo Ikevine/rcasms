@@ -28,7 +28,7 @@
             </div>
             <div class="indesc">
                 <input type="text" class="input" placeholder="Enter full name" name="fullName">
-                <input type="date" class="input" placeholder="Enter date of birth" name="birth">
+                <input type="text" class="input" placeholder="Enter date of birth[YYYY-MM-DD]" name="birth">
             </div>
             <div class="indesc">
                 <input type="text" class="input" placeholder="Enter phone number" name="phone">

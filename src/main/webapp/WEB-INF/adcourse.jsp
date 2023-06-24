@@ -35,8 +35,8 @@
                 <input type="number" class="input" placeholder="Enter max student" name="max">
             </div>
             <div class="indesc">
-                <input type="date" class="input" placeholder="Enter start date" name="start">
-                <input type="date" class="input" placeholder="Enter end date" name="end">
+                <input type="text" class="input" placeholder="Enter start date[YYYY-MM-DD]" name="start">
+                <input type="text" class="input" placeholder="Enter end date[YYYY-MM-DD]" name="end">
             </div>
             <div class="dcenter">
                 <button class="btn">Add course</button>

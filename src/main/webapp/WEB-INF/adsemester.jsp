@@ -31,8 +31,8 @@
                 <input type="text" class="input" placeholder="Enter semester code" name="Scode">
             </div>
             <div class="indesc">
-                <input type="date" class="input" placeholder="Enter semester start date" name="Sdate">
-                <input type="date" class="input" placeholder="Enter semster end date" name="Edate">
+                <input type="text" class="input" placeholder="Enter semester start date[YYYY-MM-DD]" name="Sdate">
+                <input type="text" class="input" placeholder="Enter semster end date[YYYY-MM-DD]" name="Edate">
             </div>
 
             <div class="dcenter">

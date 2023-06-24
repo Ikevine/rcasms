@@ -35,8 +35,8 @@
                 <input type="number" class="input" value="${exist.maxStudent}" name="max">
             </div>
             <div class="indesc">
-                <input type="date" class="input" value="${exist.start}" name="start">
-                <input type="date" class="input" value="${exist.end}" name="end">
+                <input type="text" class="input" value="${exist.start}" name="start">
+                <input type="text" class="input" value="${exist.end}" name="end">
             </div>
             <div class="dcenter">
                 <button class="btn">Add course</button>

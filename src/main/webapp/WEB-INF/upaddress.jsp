@@ -18,7 +18,7 @@
   <div class="dright">
     <div class="upper_desc">
       <h1>Address</h1>
-      <p>Here is the list of all students and the operation on them</p>
+      <p>Here is the list of all Address and the operation on them</p>
     </div>
 
     <form class="cinput" action="updateaddress.php?page=updateaddress&&id=${exist.id}" method="post">

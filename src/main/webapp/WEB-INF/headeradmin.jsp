@@ -12,15 +12,7 @@
 </head>
 <body>
          <c:if test="${authenticatedUser !=null}">
-<%--					<b>--%>
-<%--						<a href="listuser.php?page=profile&&id=${authenticatedUser.id}"><button>Profile</button></a>--%>
-<%--						<img src="../images/new.jpg" alt="user photo" />--%>
-<%--						<div class="ndetail">--%>
-<%--							<p class="np">${authenticatedUser.fullName}</p>--%>
-<%--							<p class="nsmall">${authenticatedUser.userRole}</p>--%>
-<%--						</div>--%>
-<%--						| <a href="login.php?logout=logout"><p class="nout">Logout</p></a>--%>
-<%--					</b>--%>
+
 			      <%@ include file="menu.jsp"%>
 				</c:if>
 
