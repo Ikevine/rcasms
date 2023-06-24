@@ -21,8 +21,10 @@ public class UpdateSemester extends HttpServlet {
         HttpSession httpSession = request.getSession();
         int id = Integer.parseInt(request.getParameter("id"));
         Semester existing = semesterDAO.findBySemesterId(id);
-        request.setAttribute("exist" , existing);
 
+        System.out.println(existing.getName() + "now here name");
+
+        request.setAttribute("exist" , existing);
         request.getRequestDispatcher("WEB-INF/upsemester.jsp").forward(
                 request, response);
     }
@@ -32,7 +34,10 @@ public class UpdateSemester extends HttpServlet {
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         HttpSession httpSession = request.getSession();
-        Semester semester = new Semester();
+
+
+        int id = Integer.parseInt(request.getParameter("id"));
+        Semester existingSemester = semesterDAO.findBySemesterId(id);
 
         Date Sdate = null;
         Date Edate = null;
@@ -49,13 +54,14 @@ public class UpdateSemester extends HttpServlet {
         String code = request.getParameter("Scode");
 
         try{
-            semester.setCode(code);
-            semester.setName(name);
-            semester.setStartDate(Sdate);
-            semester.setEndDate(Edate);
+            existingSemester.setCode(code);
+            existingSemester.setName(name);
+            existingSemester.setStartDate(Sdate);
+            existingSemester.setEndDate(Edate);
 
-            semesterDAO.updateSemester(semester);
+            semesterDAO.updateSemester(existingSemester);
             httpSession.setAttribute("success", "Created successfully");
+
             request.getRequestDispatcher("listsemester.php").forward(request , response);
         }
         catch (Exception e){

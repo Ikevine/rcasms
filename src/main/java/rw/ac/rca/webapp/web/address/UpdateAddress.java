@@ -25,18 +25,22 @@ public class UpdateAddress extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession httpSession = request.getSession();
-        Address address = new Address();
+
         String country = request.getParameter("country");
         String streetCode  = request.getParameter("street");
         String city = request.getParameter("city");
         String postcode = request.getParameter("postal");
-        try{
-            address.setCountry(country);
-            address.setCity(city);
-            address.setStreetAddress(streetCode);
-            address.setPostalCode(postcode);
 
-            addressDAO.updateAddress(address);
+        int id = Integer.parseInt(request.getParameter("id"));
+        Address existingaddress = addressDAO.getAddressById(id);
+
+        try{
+            existingaddress.setCountry(country);
+            existingaddress.setCity(city);
+            existingaddress.setStreetAddress(streetCode);
+            existingaddress.setPostalCode(postcode);
+
+            addressDAO.updateAddress(existingaddress);
             httpSession.setAttribute("success", "Created successfully");
             request.getRequestDispatcher("listaddress.php").forward(request,response);
         }

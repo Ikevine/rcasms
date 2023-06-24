@@ -34,7 +34,9 @@ public class UpdateParent extends HttpServlet {
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         HttpSession httpSession = request.getSession();
-        Parents parents = new Parents();
+
+        int id = Integer.parseInt(request.getParameter("id"));
+        Parents existingParent = parentsDAO.findParentById(id);
 
         String fullName = request.getParameter("name");
         Date dateOfBirth = null;
@@ -50,16 +52,17 @@ public class UpdateParent extends HttpServlet {
         int student_no = Integer.parseInt(request.getParameter("st_number"));
         Student student = studentDAO.getStudentById(student_no);
 
-        parents.setFullName(fullName);
-        parents.setPhoneNumber(phoneNumber);
-        parents.setDateOfBirth(dateOfBirth);
+        existingParent.setFullName(fullName);
+        existingParent.setPhoneNumber(phoneNumber);
+        existingParent.setDateOfBirth(dateOfBirth);
 
-        parents.setStudent(student);
+        existingParent.setStudent(student);
 
 
         try {
 
-            parentsDAO.updateParent(parents);
+            parentsDAO.updateParent(existingParent);
+
             request.setAttribute("s", "Parent is created successfully");
             request.getRequestDispatcher("listparents.php").forward(request, response);
 

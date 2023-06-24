@@ -30,15 +30,20 @@ public class UpdateEnrolevel extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession httpSession = request.getSession();
-        EnrollmentLevel enrollmentLevel = new EnrollmentLevel();
+
         String enrolName = request.getParameter("Ename");
         String enrolCode = request.getParameter("Ecode");
 
-        try{
-            enrollmentLevel.setCode(enrolCode);
-            enrollmentLevel.setName(enrolName);
 
-            enrollmentLevelDAO.updateLevel(enrollmentLevel);
+        int id = Integer.parseInt(request.getParameter("id"));
+        EnrollmentLevel existinglevel = enrollmentLevelDAO.getEnrolmentLevel(id);;
+
+        try{
+            existinglevel.setCode(enrolCode);
+            existinglevel.setName(enrolName);
+
+            enrollmentLevelDAO.updateLevel(existinglevel);
+
             httpSession.setAttribute("success", "Created successfully");
             request.getRequestDispatcher("listenrolevel.php").forward(request , response);
         }

@@ -68,7 +68,7 @@ public class SemesterDAOImpl extends DAO implements SemesterDAO {
         try {
             begin();
             Query query = getSession().createQuery("from Semester where id = :ref");
-            query.setInteger(":ref", semesterId);
+            query.setInteger("ref", semesterId);
             Semester semester = (Semester) query.uniqueResult();
             commit();
             return semester;
@@ -98,7 +98,7 @@ public class SemesterDAOImpl extends DAO implements SemesterDAO {
         try{
             begin();
             Query query = getSession().createQuery("from Semester where name = :ref");
-            query.setString(":ref", name);
+            query.setString("ref", name);
             Semester semester = (Semester) query.uniqueResult();
             commit();
             return semester;
