@@ -21,20 +21,28 @@ public class UpdateStudent extends HttpServlet {
     private AddressDAO addressDAO = AddressDAOImpl.getInstance();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         HttpSession httpSession = request.getSession();
         int id = Integer.parseInt(request.getParameter("id"));
         Student existing = studentDAO.getStudentById(id);
         request.setAttribute("exist" , existing);
-
-
         request.getRequestDispatcher("WEB-INF/upstudent.jsp").forward(request , response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        //        getting the student
+        int id = Integer.parseInt(request.getParameter("id"));
+        Student existing = studentDAO.getStudentById(id);
+
+        Address existingAddress = existing.getAddress();
+
         HttpSession httpSession = request.getSession();
+
+        System.out.println(existing.getFullName() + "my fullname here kevine");
+        System.out.println(existing.getAddress().getCountry() + "my country");
+
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Student student = new Student();
         String fullName = request.getParameter("fullName");
 
@@ -50,26 +58,37 @@ public class UpdateStudent extends HttpServlet {
         boolean repeat = Boolean.parseBoolean(request.getParameter("repeat"));
         String phoneNumber = request.getParameter("phone");
 
-        int address_code = Integer.parseInt(request.getParameter("address"));
-        Address address = addressDAO.getAddressById(address_code);
 
-        student.setFullName(fullName);
-        student.setDateOfBirth(dateOfBirth);
-        student.setPhoneNumber(phoneNumber);
-        student.setRepeating(repeat);
-        student.setInternational(inter);
-        student.setPartTime(part);
+//        update student
+        String country = request.getParameter("country");
+        String streetCode  = request.getParameter("street");
+        String city = request.getParameter("city");
+        String postcode = request.getParameter("postal");
 
-        student.setAddress(address);
-        System.out.println("Kevine look at here please sweet" + address);
+
+
         try {
+            existingAddress.setPostalCode(postcode);
+            existingAddress.setCity(city);
+            existingAddress.setCountry(country);
+            existingAddress.setStreetAddress(streetCode);
 
-            Student s1 = studentDAO.updateStudent(student);
+             existing.setAddress(existingAddress);
+             existing.setFullName(fullName);
+             existing.setInternational(inter);
+             existing.setRepeating(repeat);
+             existing.setPhoneNumber(phoneNumber);
+             existing.setDateOfBirth(dateOfBirth);
+             existing.setPartTime(part);
+
+            Student s1 = studentDAO.updateStudent(existing);
+            addressDAO.updateAddress(existingAddress);
             request.setAttribute("s", "Student is created successfully");
             request.getRequestDispatcher("Liststudents.php").forward(request, response);
 
         } catch (Exception e) {
             request.setAttribute("f", "Fail to create student");
+            e.printStackTrace();
             request.getRequestDispatcher("WEB-INF/upstudent.jsp").forward(request, response);
         }
     }

@@ -29,14 +29,16 @@ public class UpdateAcademic extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession httpSession = request.getSession();
+        int id = Integer.parseInt(request.getParameter("id"));
+        AcademicYear existingacademicYear = academicYearDAO.getAcademicYearById(id);
 
-        AcademicYear academicYear = new AcademicYear();
         String code = request.getParameter("Acode");
         String name = request.getParameter("Aname");
+
         try{
-            academicYear.setCode(code);
-            academicYear.setName(name);
-            academicYearDAO.updateAcademicYear(academicYear);
+            existingacademicYear.setCode(code);
+            existingacademicYear.setName(name);
+            academicYearDAO.updateAcademicYear(existingacademicYear);
 
             httpSession.setAttribute("success", "Created successfully");
             request.getRequestDispatcher("listacademic.php").forward(request , response);

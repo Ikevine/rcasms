@@ -35,15 +35,15 @@
                 <fieldset>
                     <legend>Select the study state</legend>
                     <div class="check">
-                        <input type="checkbox" id="1" value="true"/>
+                        <input type="radio" id="1" value="true"/>
                         <label for="1">International</label>
                     </div>
                     <div class="check">
-                        <input type="checkbox" id="2" value="true"/>
+                        <input type="radio" id="2" value="true"/>
                         <label for="2">part Time</label>
                     </div>
                     <div class="check">
-                        <input type="checkbox" id="3" value="true"/>
+                        <input type="radio" id="3" value="true"/>
                         <label for="3">Is repaeting</label>
                     </div>
                 </fieldset>
@@ -60,7 +60,7 @@
                 <input type="text" class="input" value="${exist.address.postalCode}" name="postal">
             </div>
             <div class="dcenter">
-                <button class="btn">Create user</button>
+                <button class="btn">Update user</button>
             </div>
 
         </form>
