@@ -51,6 +51,9 @@
                     </div>
                 </div>
                 <div class="rdetail">
+                    <div class="enrol">
+                        <h1>All courses enrolled in</h1>
+                    </div>
                     <div class="tbody">
                         <table>
                             <tr>

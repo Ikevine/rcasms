@@ -17,14 +17,14 @@
     <%--    right--%>
     <div class="dright">
         <div class="upper_desc">
-            <h1>Users</h1>
-            <p>Here is the list of all students and the operation on them</p>
+            <h1>Course</h1>
+            <p>Here is the list of all courses and the operation on them</p>
         </div>
 
         <form class="cinput" action="createcourse.php?page=createcourse" method="post">
 
             <div class="desf">
-                <h1>Student detail</h1>
+                <h1>Course detail</h1>
             </div>
             <div class="indesc">
                 <input type="text" class="input" placeholder="Enter course name" name="name">

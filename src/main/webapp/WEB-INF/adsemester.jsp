@@ -24,7 +24,7 @@
         <form class="cinput" action="createsemester.php?page=createsemester" method="post">
 
             <div class="desf">
-                <h1>Student detail</h1>
+                <h1>Semester detail</h1>
             </div>
             <div class="indesc">
                 <input type="text" class="input" placeholder="Enter semester name" name="Sname">

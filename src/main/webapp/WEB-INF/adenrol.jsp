@@ -17,8 +17,8 @@
     <%--    right--%>
     <div class="dright">
         <div class="upper_desc">
-            <h1>Users</h1>
-            <p>Here is the list of all students and the operation on them</p>
+            <h1>Enrollment</h1>
+            <p>Add enrollment and the operation on them</p>
         </div>
 
         <form class="cinput" action="createnrol.php?page=createnrol" method="post">
@@ -102,7 +102,7 @@
             </div>
 
             <div class="dcenter">
-                <button class="btn">Create user</button>
+                <button class="btn">Add enroll</button>
             </div>
 
         </form>

@@ -17,7 +17,7 @@
     <%--    right--%>
     <div class="dright">
         <div class="upper_desc">
-            <h1>Users</h1>
+            <h1>Student</h1>
             <p>Here is the list of all students and the operation on them</p>
         </div>
 
@@ -61,7 +61,7 @@
                 </div>
 
             <div class="dcenter">
-                <button class="btn">Create user</button>
+                <button class="btn">Add student</button>
             </div>
 
         </form>

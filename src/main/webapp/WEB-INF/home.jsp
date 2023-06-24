@@ -7,7 +7,7 @@
 --%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ include file="upperlink.jsp"%>
-<title>View academic year</title>
+<title>Overview</title>
 <div class="container2">
     <%--    left side--%>
     <div class="dleft">
