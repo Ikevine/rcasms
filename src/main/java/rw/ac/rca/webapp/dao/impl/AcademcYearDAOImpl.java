@@ -116,11 +116,13 @@ public class AcademcYearDAOImpl extends DAO implements AcademicYearDAO {
             Query query = getSession().createQuery("from AcademicYear where name= :ref");
             query.setString("ref", name);
             AcademicYear academicYear = (AcademicYear) query.uniqueResult();
+            System.out.println(academicYear + "keke quick");
             commit();
             return academicYear;
         }
         catch (Exception e){
             rollback();
+            e.printStackTrace();
             return null;
         }
     }

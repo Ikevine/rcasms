@@ -32,7 +32,7 @@
             </div>
             <div class="indesc">
                 <div class="select-container">
-                    <select class="select-box" name="userRole">
+                    <select class="select-box" name="semeter">
                         <option value="value">Select Semester</option>
                         <c:forEach items="${semesters}" var="semester">
                             <option value="${semester.name}">
@@ -47,7 +47,7 @@
 
 <%--                secondary--%>
                 <div class="select-container">
-                    <select class="select-box" name="userRole">
+                    <select class="select-box" name="academic">
                         <option value="value">Select Academic Year</option>
                         <c:forEach items="${academics}" var="academy">
                             <option value="${academy.name}">
@@ -66,7 +66,7 @@
 
             <div class="indesc">
                 <div class="select-container">
-                    <select class="select-box" name="userRole">
+                    <select class="select-box" name="course">
                         <option value="value">Select course</option>
                         <c:forEach items="${courses}" var="course">
                             <option value="${course.name}">
@@ -82,7 +82,7 @@
 
                 <%--                secondary--%>
                 <div class="select-container">
-                    <select class="select-box" name="userRole">
+                    <select class="select-box" name="enrolLevel">
                         <option value="value">Select Level</option>
                         <c:forEach items="${level}" var="leve">
                             <option value="${leve.name}">
@@ -98,7 +98,7 @@
             </div>
 <%--              last link here--%>
             <div class="indesc">
-                <input type="text" class="input" placeholder="Enter student ID" name="student">
+                <input type="text" class="input" placeholder="Enter student ID" name="student_id">
             </div>
 
             <div class="dcenter">

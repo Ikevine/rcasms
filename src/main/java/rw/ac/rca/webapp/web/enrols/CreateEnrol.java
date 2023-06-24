@@ -46,11 +46,12 @@ public class CreateEnrol extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         HttpSession httpSession = request.getSession();
 
         Enrol enrol = new Enrol();
-        int grade =Integer.parseInt(request.getParameter("grade"));
+        double grade =Double.parseDouble(request.getParameter("grade"));
 
         Date enrolDate = null;
 
@@ -61,16 +62,18 @@ public class CreateEnrol extends HttpServlet {
         }
 
         String academic_year = request.getParameter("academic");
+
         String course_id = request.getParameter("course");
         String enrolLevel_id = request.getParameter("enrolLevel");
         String semester = request.getParameter("semeter");
-        String student_id = request.getParameter("student");
+        int student_id =Integer.parseInt(request.getParameter("student_id"));
 
         AcademicYear academicYear = academicYearDAO.getByName(academic_year);
+        System.out.println(academicYear + "see name acade");
         Course course = courseDAO.getByName(course_id);
         EnrollmentLevel enrollmentLevel = enrollmentLevelDAO.getByName(enrolLevel_id);
         Semester semester1 = semesterDAO.getByName(semester);
-        Student student = studentDAO.getByFullname(student_id);
+        Student student = studentDAO.getStudentById(student_id);
 
         enrol.setEnrollmentDate(enrolDate);
         enrol.setCourse(course);

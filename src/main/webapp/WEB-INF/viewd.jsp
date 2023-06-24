@@ -30,38 +30,44 @@
                     <div class="dbody">
                         <div class="detail">
                             <h3>ID</h3>
-                            <p>123</p>
+                            <p>${inf.id}</p>
                         </div>
                         <div class="detail">
-                            <h3>Name</h3>
-                            <p>Ishimwe kevine</p>
+                            <h3>Full name</h3>
+                            <p>${inf.fullName}</p>
+                        </div>
+                        <div class="detail">
+                            <h3>DOB</h3>
+                            <p>${inf.dateOfBirth}</p>
+                        </div>
+                        <div class="detail">
+                            <h3>Parent name</h3>
+                            <p>${pinf.fullName}</p>
                         </div>
                         <div class="detail">
                             <h3>Address</h3>
-                            <p>Kigali</p>
+                            <p>${inf.address.country}, ${inf.address.city} , ${inf.address.streetAddress}</p>
                         </div>
                     </div>
                 </div>
                 <div class="rdetail">
-                    <div class="dlink">
-                        <a href="#">First Semester</a>
-                        <a href="#">second Semester</a>
-                        <a href="#">Third Semester</a>
-                    </div>
                     <div class="tbody">
                         <table>
                             <tr>
                                 <th>Subject</th>
-                                <th>Cat</th>
-                                <th>Exam</th>
-                                <th>Final</th>
+                                <th>Marks</th>
+                                <th>Semester</th>
+                                <th>Level</th>
                             </tr>
-                            <tr>
-                                <td>math</td>
-                                <td>34</td>
-                                <td>78</td>
-                                <td>45%</td>
-                            </tr>
+                            <c:forEach items="${einf}" var="inf" >
+                                <tr>
+                                    <td>${inf.course.name}</td>
+                                    <td>${inf.grade}</td>
+                                    <td>${inf.semester.name}</td>
+                                    <td>${inf.enrollmentLevel.name}</td>
+                                </tr>
+                            </c:forEach>
+
                         </table>
                     </div>
                 </div>

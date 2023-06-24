@@ -19,5 +19,5 @@ public interface EnrolDAO {
 	public boolean deleteEnrol(int enrol);
 	public Enrol getEnrolById(int EnrolId);
 	public List<Enrol> getAllEnrols();
-	
+	public  List<Enrol> getEnrolByStudent(int id);
 }

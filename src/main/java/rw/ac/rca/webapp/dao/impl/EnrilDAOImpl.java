@@ -50,6 +50,8 @@ public class EnrilDAOImpl extends DAO implements EnrolDAO {
         }
     }
 
+
+
     @Override
     public Enrol saveOrUpdateEnrol(Enrol enrol) {
         try{
@@ -111,4 +113,22 @@ public class EnrilDAOImpl extends DAO implements EnrolDAO {
             return  null;
         }
     }
+
+    @Override
+    public List<Enrol> getEnrolByStudent(int id) {
+        try{
+            begin();
+            Query query = getSession().createQuery("from Enrol where student = :ref");
+            query.setInteger("ref" , id);
+            List<Enrol> enrolList = query.list();
+            commit();
+            return  enrolList;
+        }
+        catch (Exception e){
+            rollback();
+            return null;
+        }
+    }
+
+
 }

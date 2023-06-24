@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class UpdateEnrol extends HttpServlet {
     private EnrolDAO enrolDAO = EnrilDAOImpl.getInstance();
@@ -22,7 +23,22 @@ public class UpdateEnrol extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        String pageDirection = request.getParameter("page");
+
         HttpSession httpSession = request.getSession();
+
+        List<Student> studentsI = studentDAO.getAllStudents();
+        List<Semester>semesters = semesterDAO.getallSemester();
+        List<Course>courses= courseDAO.getAllCourses();
+        List<EnrollmentLevel> enrollmentLevelList = enrollmentLevelDAO.getAllLevels();
+        List<AcademicYear>academicYears = academicYearDAO.getAllAcademicYears();
+
+        httpSession.setAttribute("students",studentsI);
+        httpSession.setAttribute("semesters" , semesters);
+        httpSession.setAttribute("courses" , courses);
+        httpSession.setAttribute("level" , enrollmentLevelList);
+        httpSession.setAttribute("academics" , academicYears);
+
         int id = Integer.parseInt(request.getParameter("id"));
         Enrol existing = enrolDAO.getEnrolById(id);
         request.setAttribute("exist" , existing);
@@ -36,7 +52,7 @@ public class UpdateEnrol extends HttpServlet {
         HttpSession httpSession = request.getSession();
 
         Enrol enrol = new Enrol();
-        int grade =Integer.parseInt(request.getParameter("grade"));
+        double grade =Double.parseDouble(request.getParameter("grade"));
 
         Date enrolDate = null;
 
@@ -45,29 +61,35 @@ public class UpdateEnrol extends HttpServlet {
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
-        int academic_year = Integer.parseInt(request.getParameter("academic"));
-        int course_id = Integer.parseInt(request.getParameter("course"));
-        int enrolLevel_id = Integer.parseInt(request.getParameter("enrolLevel"));
-        int semester = Integer.parseInt(request.getParameter("semeter"));
-        int student_id = Integer.parseInt(request.getParameter("student"));
 
-        AcademicYear academicYear = academicYearDAO.getAcademicYearById(academic_year);
-        Course course = courseDAO.getCourseById(course_id);
-        EnrollmentLevel enrollmentLevel = enrollmentLevelDAO.getEnrolmentLevel(enrolLevel_id);
-        Semester semester1 = semesterDAO.findBySemesterId(semester);
+
+        String academic_year = request.getParameter("academic");
+
+        String course_id = request.getParameter("course");
+        String enrolLevel_id = request.getParameter("enrolLevel");
+        String semester = request.getParameter("semeter");
+        int student_id =Integer.parseInt(request.getParameter("student_id"));
+
+        AcademicYear academicYear = academicYearDAO.getByName(academic_year);
+        System.out.println(academicYear + "see name acade");
+        Course course = courseDAO.getByName(course_id);
+        EnrollmentLevel enrollmentLevel = enrollmentLevelDAO.getByName(enrolLevel_id);
+        Semester semester1 = semesterDAO.getByName(semester);
         Student student = studentDAO.getStudentById(student_id);
 
-        enrol.setEnrollmentDate(enrolDate);
-        enrol.setCourse(course);
-        enrol.setAcademicYear(academicYear);
-        enrol.setStudent(student);
-        enrol.setGrade(grade);
-        enrol.setEnrollmentLevel(enrollmentLevel);
-        enrol.setSemester(semester1);
-
+        int id = Integer.parseInt(request.getParameter("id"));
+        Enrol existingenrol = enrolDAO.getEnrolById(id);
         try {
 
-            Enrol E1 = enrolDAO.updateEnrol(enrol);
+            existingenrol.setEnrollmentDate(enrolDate);
+            existingenrol.setCourse(course);
+            existingenrol.setAcademicYear(academicYear);
+            existingenrol.setStudent(student);
+            existingenrol.setGrade(grade);
+            existingenrol.setEnrollmentLevel(enrollmentLevel);
+            existingenrol.setSemester(semester1);
+
+            Enrol E1 = enrolDAO.updateEnrol(existingenrol);
             request.setAttribute("s", "Student is created successfully");
             request.getRequestDispatcher("listenril.php").forward(request, response);
 
